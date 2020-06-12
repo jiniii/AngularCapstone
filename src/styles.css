@@ -1,10 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~bootstrap/dist/css/bootstrap.min.css';
-a { cursor: pointer; }
+
+
+/* @import '~bootstrap/dist/css/bootstrap.min.css'; */
+
+html,
+body {
+    height: 100%;
+    margin: 0px;
+}
+
+a {
+    cursor: pointer;
+}
 
 .app-container {
     min-height: 320px;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .btn-delete-user {
@@ -13,6 +24,6 @@ a { cursor: pointer; }
     box-sizing: content-box;
 }
 
-.cart-item{
-    font-size:small
+.cart-item {
+    font-size: small
 }
