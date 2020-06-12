@@ -1,0 +1,11 @@
+.carousel-inner img {
+    width: 100%;
+    height: 350px;
+    max-height: 350px;
+    margin-top: 30px;
+  }
+  .add{
+    float: right;
+    margin-right: 50px;
+    margin-top: -27px;
+  }
