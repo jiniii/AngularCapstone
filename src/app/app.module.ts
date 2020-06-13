@@ -7,6 +7,7 @@ import { fakeBackendProvider } from './helpers/fake-backend';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
 
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';

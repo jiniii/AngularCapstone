@@ -6,6 +6,14 @@ import { first } from 'rxjs/operators';
 import { AccountService} from '../../services/account.service';
 import {AlertService} from '../../services/alert.service'
 
+export class User {
+  public email: string;
+  public password: string;
+  public firstName: string;
+  public lastName: string;
+  public location: string;
+  public monileNumber: number;
+}
 
 @Component({
   selector: 'app-register',
