@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import {User} from '../app/models/user.model';
+import { User } from '../app/models/user.model';
+import { AccountService } from '../app/services/account.service'
 
 @Component({
   selector: 'app-root',
@@ -8,16 +9,18 @@ import {User} from '../app/models/user.model';
 })
 export class AppComponent {
   title = 'capstoneProject';
-  //user: User;
-  user:boolean=true;
+  //isLogginIn: boolean = false;
+  user: User;
+  //user:boolean=true;
 
   constructor(
-   // private accountService: AccountService
-    ) {
-    //  this.accountService.user.subscribe(x => this.user = x);
+    private accountService: AccountService
+  ) {
+    this.accountService.email.subscribe(x => this.user = x);
+    console.log("useremail", this.user);
   }
 
   logout() {
-     // this.accountService.logout();
+    this.accountService.logout();
   }
 }

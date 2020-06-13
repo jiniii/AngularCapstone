@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AuthGuard } from '../../helpers/auth.guard';
 
 import { ProductsComponent } from './products.component';
 import { UpdateComponent } from '../update/update.component';
@@ -9,9 +10,9 @@ import { ProductDetailsComponent } from '../product-details/product-details.comp
 
 const empRoutes: Routes = [
   { path: '', component: ProductsComponent },
-  { path: 'addProduct', component: AddProductComponent },
+  { path: 'addProduct', component: AddProductComponent ,canActivate: [AuthGuard]},
   { path: 'display', component: ProductDetailsComponent },
-  { path: ':id', component: UpdateComponent },
+  { path: ':id', component: UpdateComponent,canActivate: [AuthGuard] },
 ]; 
 
 @NgModule({
