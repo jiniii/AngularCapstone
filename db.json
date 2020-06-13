@@ -1,6 +1,5 @@
 {
-    "Login": [
-        {
+    "Login": [{
             "email": "manisha@gmail",
             "password": 3333,
             "id": 1
@@ -11,80 +10,75 @@
             "id": 2
         }
     ],
-    "Register": [
-        {
-            "email": "manisha@gmail",
-            "password": 3333,
-            "firstName":"Manisha",
-            "lastName":"Jangid",
-            "location":"kkd",
-            "mobileNum":"947738748",
-            "id": 1
-        }
-    ],
-    "Products": [
-        {
+    "Register": [{
+        "email": "manisha@gmail.com",
+        "password": 3333,
+        "firstName": "Manisha",
+        "lastName": "Jangid",
+        "location": "kkd",
+        "mobileNum": "947738748",
+        "id": 1
+    }],
+    "Products": [{
             "id": 1,
             "productName": "Samsung Galaxy",
             "productDes": "64MP + 8MP + 5MP + 5MP rear camera | 32MP front facing camera,16.21 centimeters (6.4-inch) FHD+ capacitive touchscreen with 2340 x 1080 pixels resolution, 404 ppi pixel density and 16M color support",
-            "manufacturer":"Darshitha",
-            "quantity":"1",
-            "price":"18000",
-            "mobileNum":"947738748"
-            
+            "manufacturer": "Darshitha",
+            "quantity": "1",
+            "price": "18000",
+            "mobileNum": "947738748"
+
         },
         {
             "id": 2,
             "productName": "Redmi Note8",
             "productDes": "64MP AI Quad rear camera with portrait, ultra-wide lens, macro lens, LED flash, AI support, beautify support | 20MP front camera | Dedicated depth sensor Performance: Smooth gaming experience with powerful Helio G90T gaming processor, Game turbo and Liquid cooling technology",
-            "manufacturer":"Manisha",
-            "quantity":"5",
-            "price":"16000",
-            "mobileNum":"947738748"
-            
+            "manufacturer": "Manisha",
+            "quantity": "5",
+            "price": "16000",
+            "mobileNum": "947738748"
+
         },
         {
             "id": 3,
             "productName": "Honor",
             "productDes": "3333",
-            "manufacturer":"Manisha",
-            "quantity":"4",
-            "price":"12000",
-            "mobileNum":"947738748"
-            
+            "manufacturer": "Manisha",
+            "quantity": "4",
+            "price": "12000",
+            "mobileNum": "947738748"
+
         },
         {
             "id": 4,
             "productName": "Nokia",
             "productDes": "3333",
-            "manufacturer":"Manisha",
-            "quantity":"4",
-            "price":"10000",
-            "mobileNum":"947738748"
-            
+            "manufacturer": "Manisha",
+            "quantity": "4",
+            "price": "10000",
+            "mobileNum": "947738748"
+
         },
         {
             "id": 5,
             "productName": "lenovo",
             "productDes": "adsadsafdfaf  asdf",
-            "manufacturer":"Manisha",
-            "quantity":"6",
-            "price":"13000",
-            "mobileNum":"947738748"
-            
+            "manufacturer": "Manisha",
+            "quantity": "6",
+            "price": "13000",
+            "mobileNum": "947738748"
+
         },
         {
             "id": 6,
             "productName": "OnePlus",
             "productDes": "sdafda",
-            "manufacturer":"Manisha",
-            "quantity":"6",
-            "price":"30000",
-            "mobileNum":"947738748"
-            
+            "manufacturer": "Manisha",
+            "quantity": "6",
+            "price": "30000",
+            "mobileNum": "947738748"
+
         }
     ]
 
 }
-    
-    

@@ -1,6 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 //import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
+export class User {
+  public email: string;
+  public password: string;
+  public firstName: string;
+  public lastName: string;
+  public location: string;
+  public monileNumber: number;
+}
 
 @Component({
   selector: 'app-register',
@@ -12,10 +20,21 @@ export class RegisterComponent implements OnInit {
   // loading = false;
   // submitted = false;
 
+  model = new User();
+
+  locations: string[] = [
+    'Kochi',
+    'Pune',
+    'Chennai',
+    'Bengaluru',
+    'Kolkata'
+  ];
   constructor(
    // private formBuilder: FormBuilder
     ) { }
-
+    onSubmit(form) {
+      console.log(form.value)
+    }
   ngOnInit(): void {
     // this.form = this.formBuilder.group({
     //   firstName: ['', Validators.required],

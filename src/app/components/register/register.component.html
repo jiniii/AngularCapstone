@@ -1,4 +1,4 @@
-<div class="card">
+<!-- <div class="card">
     <h4 class="card-header">Register</h4>
     <div class="card-body">
 
@@ -46,4 +46,69 @@
             <p class="mt-5 mb-3 text-muted text-center">&copy; 2017-2018</p>
         </form>
     </div>
+</div> -->
+
+
+
+<!-- ---------------------------------------------------------------
+ -->
+<div class="container mt-5">
+    <form #userForm="ngForm" (ngSubmit)="userForm.form.valid && onSubmit(userForm)">
+
+        <div class="form-group">
+            <label>Email ID</label>
+            <input type="email" class="form-control" name="email" [(ngModel)]="model.email" #email="ngModel" [ngClass]="{ 'is-invalid': userForm.submitted && email.invalid }" email required>
+            <div *ngIf="userForm.submitted && email.invalid" class="invalid-feedback">
+                <div *ngIf="email.errors.required">Email is required</div>
+                <div *ngIf="email.errors.email">Must be a valid email address</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" class="form-control" name="password" [(ngModel)]="model.password" #password="ngModel" [ngClass]="{ 'is-invalid': userForm.submitted && password.invalid }" minlength="8" required>
+            <div *ngIf="userForm.submitted && password.invalid" class="invalid-feedback">
+                <div *ngIf="password.errors.required">Password is required</div>
+                <div *ngIf="password.errors.minlength">Password should be at least 8 characters long</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>First Name</label>
+            <input type="text" name="firstName" class="form-control" [(ngModel)]="model.firstName" #name="ngModel" [ngClass]="{ 'is-invalid': userForm.submitted && name.invalid }" required>
+            <div class="invalid-feedback" *ngIf="userForm.submitted && name.invalid">
+                <p *ngIf="name.errors.required">First Name is required</p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" name="lastName" class="form-control" [(ngModel)]="model.lastName" #name="ngModel" [ngClass]="{ 'is-invalid': userForm.submitted && name.invalid }" required>
+            <div class="invalid-feedback" *ngIf="userForm.submitted && name.invalid">
+                <p *ngIf="name.errors.required">Last Name is required</p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Location</label>
+            <select class="form-control" name="location" [(ngModel)]="location">
+              <option value="">Select an option</option>
+              <option *ngFor="let location of locations" [value]="location">
+                {{location}}
+              </option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Mobile Number</label>
+            <input type="tel" pattern="[0-9]{10}" name="mobileNumber" class="form-control" [(ngModel)]="model.mobileNumber" #name="ngModel" [ngClass]="{ 'is-invalid': userForm.submitted && name.invalid }" required>
+            <div class="invalid-feedback" *ngIf="userForm.submitted && name.invalid">
+                <p *ngIf="name.errors.required">Mobile number is required</p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <button class="btn btn-dark btn-block">Submit</button>
+        </div>
+    </form>
 </div>
