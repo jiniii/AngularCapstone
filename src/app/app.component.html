@@ -19,13 +19,13 @@
                 <a class="nav-link" routerLink="about" routerLinkActive="active">About</a>
             </li>
         </ul>
-        <div>
+        <div *ngIf="!user">
             <alert></alert>
             <button type="button" class="btn btn-outline-secondary" routerLink="account/register">Register</button>
             <button type="button" class="btn btn-outline-secondary ml-3" routerLink="account/login">Login</button>
         </div>
 
-        <button class="btn btn-outline-secondary ml-3" (click)="logout()">Logout</button>
+        <button class="btn btn-outline-secondary ml-3" (click)="logout()" *ngIf="user">Logout</button>
     </div>
 
 </nav>
