@@ -18,7 +18,9 @@ export class AddProductComponent implements OnInit {
   productPrice: string = "";
   products: Products[];
 
-  constructor(private route: Router, private myService: ProductService,private alertService: AlertService) { }
+  constructor(private route: Router, 
+    private myService: ProductService,
+    private alertService: AlertService) { }
 
   ngOnInit(): void {
   }

@@ -22,11 +22,11 @@ export class ProductsComponent implements OnInit {
     })
   }
   
-  delete(id) {
-    this.proService.deleteProduct(id).subscribe(data=>{
-      console.log("deleted item",data);
-      this.getDetails();
+  // delete(id) {
+  //   this.proService.deleteProduct(id).subscribe(data=>{
+  //     console.log("deleted item",data);
+  //     this.getDetails();
 
-    })
-  }
+  //   })
+  // }
 }

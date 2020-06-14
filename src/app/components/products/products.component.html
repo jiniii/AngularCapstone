@@ -85,7 +85,7 @@ Add New Product
                                 <td>{{i.manufacturer}}</td>
                                 <td>{{i.price}}</td>
                                 <td> <a [routerLink]="['/products/update',i.id]">Update</a></td>
-                                <td> <button type="button" (click)="delete(i.id)">Delete</button></td>
+                                <td> <button type="button" [routerLink]="['/products/delete',i.id]">Delete</button></td>
                             </tr>
 
                         </tbody>

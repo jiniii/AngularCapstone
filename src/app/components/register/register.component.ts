@@ -3,8 +3,8 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
 
-import { AccountService} from '../../services/account.service';
-import {AlertService} from '../../services/alert.service'
+import { AccountService } from '../../services/account.service';
+import { AlertService } from '../../services/alert.service'
 
 export class User {
   public email: string;
@@ -32,16 +32,16 @@ export class RegisterComponent implements OnInit {
   //   'Kolkata'
   // ];
   constructor(
-      private formBuilder: FormBuilder,
-      private route: ActivatedRoute,
-      private router: Router,
-      private accountService: AccountService,
-      private alertService: AlertService
+    private formBuilder: FormBuilder,
+    private route: ActivatedRoute,
+    private router: Router,
+    private accountService: AccountService,
+    private alertService: AlertService
   ) {
-      // redirect to home if already logged in
-      if (this.accountService.userValue) {
-          this.router.navigate(['/']);
-      }
+    // redirect to home if already logged in
+    if (this.accountService.userValue) {
+      this.router.navigate(['/']);
+    }
   }
 
   ngOnInit(): void {
@@ -54,7 +54,7 @@ export class RegisterComponent implements OnInit {
       mobileNo: ['', [Validators.required, Validators.minLength(10)]],
     });
   }
- get f() { return this.form.controls; }
+  get f() { return this.form.controls; }
 
   onSubmit() {
     this.submitted = true;
