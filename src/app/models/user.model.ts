@@ -8,3 +8,11 @@ export class User {
     mobileNum:number;
     token: string;
 }
+
+export class Products {
+    productName: string;
+    productDes:string;
+    manufacturer:string;
+    quantity:string;
+    price:string;
+}

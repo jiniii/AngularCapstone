@@ -25,7 +25,7 @@ export class ProductService {
     return this.http.delete(this.url+"/"+id);
   }
 
-  addProduct(proName, proDes,myMan,myQua,myPri,num) {
+  addProduct(proName, proDes,myMan,myQua,myPri) {
 
     const body = JSON.stringify({
         productName: proName,
@@ -33,10 +33,13 @@ export class ProductService {
         manufacturer:myMan,
         quantity:myQua,
         price:myPri,
-        mobileNum:num
-
     })
 
     return this.http.post(this.url, body, httpOpt);
   }
+
+  update(proName, proDes,myMan,myQua,myPri,num){
+
+  }
+
 }

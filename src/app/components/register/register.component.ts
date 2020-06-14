@@ -51,7 +51,7 @@ export class RegisterComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(8)]],
       location: ['', Validators.required],
-      mobileNo: ['', Validators.required, Validators.minLength(10)],
+      mobileNo: ['', [Validators.required, Validators.minLength(10)]],
     });
   }
  get f() { return this.form.controls; }

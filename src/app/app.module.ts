@@ -24,6 +24,7 @@ import { AlertComponent } from './components/login/alert.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     ReactiveFormsModule,
     HttpClientModule
   ],

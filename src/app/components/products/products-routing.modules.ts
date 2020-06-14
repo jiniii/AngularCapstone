@@ -11,8 +11,8 @@ import { ProductDetailsComponent } from '../product-details/product-details.comp
 const empRoutes: Routes = [
   { path: '', component: ProductsComponent },
   { path: 'addProduct', component: AddProductComponent ,canActivate: [AuthGuard]},
-  { path: 'display', component: ProductDetailsComponent },
-  { path: ':id', component: UpdateComponent,canActivate: [AuthGuard] },
+  { path: ':display', component: ProductDetailsComponent },
+  { path: 'update/:id', component: UpdateComponent,canActivate: [AuthGuard] },
 ]; 
 
 @NgModule({

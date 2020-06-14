@@ -45,52 +45,58 @@
       "manufacturer": "Darshitha",
       "quantity": "1",
       "price": "18000",
-      "mobileNum": "947738748"
+      "mobileNum": "947738748",
+      "src": "assets/SamsungIndi.jpg"
     },
     {
       "id": 2,
       "productName": "Redmi Note8",
       "productDes": "64MP AI Quad rear camera with portrait, ultra-wide lens, macro lens, LED flash, AI support, beautify support | 20MP front camera | Dedicated depth sensor Performance: Smooth gaming experience with powerful Helio G90T gaming processor, Game turbo and Liquid cooling technology",
-      "manufacturer": "Manisha",
+      "manufacturer": "Sudarshan",
       "quantity": "5",
       "price": "16000",
-      "mobileNum": "947738748"
+      "mobileNum": "947738748",
+      "src": "assets/redmiIndi.jpg"
     },
     {
       "id": 3,
       "productName": "Honor",
-      "productDes": "3333",
+      "productDes": "13MP+2MP dual camera and 16MP front facing camera ,14.83 centimeters (5.84-inch) multi-touch capacitive touchscreen with 2280 x 1080 pixels resolution 16M color support",
       "manufacturer": "Manisha",
       "quantity": "4",
       "price": "12000",
-      "mobileNum": "947738748"
+      "mobileNum": "947738748",
+      "src": "assets/honourIndi.jpg"
     },
     {
       "id": 4,
       "productName": "Nokia",
-      "productDes": "3333",
+      "productDes": "13MP rear camera with AF/F2.2/1.12µm and flash | 5MP front camera with FF/F2.2/1.12µm/77° FOV and face unlock ,15.9004 centimeters (6.26-inch) with 720 x 1520 pixels resolution",
       "manufacturer": "Manisha",
       "quantity": "4",
       "price": "10000",
-      "mobileNum": "947738748"
+      "mobileNum": "947738748",
+      "src": "assets/nokiaIndi.jpg"
     },
     {
       "id": 5,
-      "productName": "lenovo",
-      "productDes": "adsadsafdfaf  asdf",
+      "productName": "Lenovo",
+      "productDes": "13MP primary camera with auto focus, flash, HDR, panorama, night shot modes, front camera with bokeh suport | 5MP front facing camera 17.52 centimeters (6.9 inch) FHD IPS LCD Display multi-touch capacitive touchscreen with 1080 x 2160 pixels resolution 16M color support with 81% screen-to-body ratio",
       "manufacturer": "Manisha",
       "quantity": "6",
       "price": "13000",
-      "mobileNum": "947738748"
+      "mobileNum": "947738748",
+      "src": "assets/lenovoIndi.jpg"
     },
     {
       "id": 6,
       "productName": "OnePlus",
-      "productDes": "sdafda",
+      "productDes": "48+12+16MP triple rear camera with telephoto lens + ultrawide angle lens | 16MP front camera with 4K video capture @ 30/60 FPS, ultrashot, nightscape, portrait, pro mode, panorama, HDR, AI scene detection, RAW image,16.63 centimeters (6.55 inch) 90Hz fluid AMOLED with 2400 x 1080 pixels resolution and 402 ppi pixel density",
       "manufacturer": "Manisha",
       "quantity": "6",
-      "price": "30000",
-      "mobileNum": "947738748"
+      "price": "34000",
+      "mobileNum": "947738748",
+      "src": "assets/oneplusIndi.jpg"
     }
   ]
 }
