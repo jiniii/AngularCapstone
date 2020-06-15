@@ -10,7 +10,7 @@ Add New Product
                     <div class="card">
                         <div class="card-header">Filters</div>
                         <div class="card-body">
-                             <form>
+                            <form>
                                 <div class="form-group">
                                     <label for="form">From</label>
                                     <input type="number" id="from" class="form-control">
@@ -20,7 +20,7 @@ Add New Product
                                     <input type="number" id="to" class="form-control">
                                 </div>
                                 <button class="btn btn-primary">Filter By Price</button>
-                            </form> 
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -66,7 +66,7 @@ Add New Product
                     </div>
                 </div>
                 <br>
-                
+
                 <div class="container">
                     <h2>Mobile Products</h2>
                     <table class="table table-striped">
@@ -84,8 +84,8 @@ Add New Product
                                 <td><a [routerLink]="['/products',i.productName]">{{i.productName}}</a></td>
                                 <td>{{i.manufacturer}}</td>
                                 <td>{{i.price}}</td>
-                                <td> <a [routerLink]="['/products/update',i.id]">Update</a></td>
-                                <td> <button type="button" [routerLink]="['/products/delete',i.id]">Delete</button></td>
+                                <td> <button class="dis edit" [routerLink]="['/products/update',i.id]"><i class="fa fa-pencil" aria-hidden="true"></i></button></td>
+                                <td> <button type="button" class="btn btn-danger dis" [routerLink]="['/products/delete',i.id]"><i class="fa fa-trash" aria-hidden="true"></i></button></td>
                             </tr>
 
                         </tbody>
