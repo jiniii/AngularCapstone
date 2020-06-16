@@ -21,6 +21,10 @@ export class ProductService {
     return this.http.get(this.url);
   }
 
+  getHomeProduct() {
+    return this.http.get("http://localhost:3000/homeProducts");
+  }
+
   deleteProduct(id){
     return this.http.delete(this.url+"/"+id);
   }

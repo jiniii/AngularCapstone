@@ -112,72 +112,42 @@
         "productName": "OnePlus 8 5G (Glacial Green 6GB RAM+128GB Storage)",
         "productDes": "48MP rear camera with 4k video at 30/60 fps, 1080p video at 30/60 fps, super slow motion: 720p video at 480 fps, 1080p video at 240fps, time-lapse: 1080p 30fps, 4k 30fps, cine aspect ratio video recording, ultrashot hdr, nightscape, micro, portrait, pro mode, panorama, cat&dog face detection&focus, ai scene detection, raw image | 16MP front facing camera 16.637 centimeters (6.55-inch) 90Hz fluid display with 2400 x 1080 pixels resolution, 402 ppi pixel density",
         "manufacturer": "OnePlus",
-        "quantity": "1",
         "price": "41,999",
-        "mobileNum": "947738748",
         "src": "assets/oneplus85G.jpg"
     }, {
         "id": 4,
         "productName": "Redmi Note 8 Pro (Electric Blue, 6GB RAM, 128GB Storage with Helio G90T Processor)",
         "productDes": "64MP AI Quad rear camera with Portrait ultra-wide lens, macro lens, led flash, AI support, beautify support | 20MP front facing camera, Performance: Smooth gaming experience with powerful Helio G90T gaming processor, Game turbo and Liquid cooling technology",
         "manufacturer": "Redmi",
-        "quantity": "1",
         "price": "16,999",
-        "mobileNum": "947738748",
         "src": "assets/redminote8.jpg"
     }, {
         "id": 5,
         "productName": "Samsung Galaxy M31 (Space Black, 6GB RAM, 128GB Storage)",
         "productDes": "64MP + 8MP + 5MP + 5MP rear camera | 32MP front facing camera, 16.21 centimeters (6.4-inch) FHD+ capacitive touchscreen with 2340 x 1080 pixels resolution, 404 ppi pixel density and 16M color support",
         "manufacturer": "Samsung",
-        "quantity": "1",
         "price": "16,999",
-        "mobileNum": "947738748",
         "src": "assets/samsunggalaxym31.jpg"
     }, {
         "id": 6,
-        "productName": "Samsung Galaxy",
-        "productDes": "64MP + 8MP + 5MP + 5MP rear camera | 32MP front facing camera,16.21 centimeters (6.4-inch) FHD+ capacitive touchscreen with 2340 x 1080 pixels resolution, 404 ppi pixel density and 16M color support",
-        "manufacturer": "Darshitha",
-        "quantity": "1",
-        "price": "18000",
-        "mobileNum": "947738748",
+        "productName": "OnePlus 7T (Glacier Blue, 8GB RAM, Fluid AMOLED Display, 128GB Storage, 3800mAH Battery)",
+        "productDes": "48+12+16MP triple rear camera with telephoto lens + ultrawide angle lens | 16MP front camera with 4K video capture @ 30/60 FPS, ultrashot, nightscape, portrait, pro mode, panorama, HDR, AI scene detection, RAW image, 16.63 centimeters (6.55 inch) 90Hz fluid AMOLED with 2400 x 1080 pixels resolution and 402 ppi pixel density",
+        "manufacturer": "OnePlus",
+        "price": "34,999",
         "src": "assets/samsung galaxyM21.jpg"
     }, {
         "id": 7,
-        "productName": "Samsung Galaxy",
+        "productName": "Redmi Note 8 (Space Black, 6GB RAM, 128GB Storage)",
         "productDes": "64MP + 8MP + 5MP + 5MP rear camera | 32MP front facing camera,16.21 centimeters (6.4-inch) FHD+ capacitive touchscreen with 2340 x 1080 pixels resolution, 404 ppi pixel density and 16M color support",
-        "manufacturer": "Darshitha",
-        "quantity": "1",
-        "price": "18000",
-        "mobileNum": "947738748",
-        "src": "assets/samsung galaxyM21.jpg"
+        "manufacturer": "Redmi",
+        "price": "14,999",
+        "src": "assets/redminote8.jpg"
     }, {
         "id": 8,
-        "productName": "Samsung Galaxy",
-        "productDes": "64MP + 8MP + 5MP + 5MP rear camera | 32MP front facing camera,16.21 centimeters (6.4-inch) FHD+ capacitive touchscreen with 2340 x 1080 pixels resolution, 404 ppi pixel density and 16M color support",
-        "manufacturer": "Darshitha",
-        "quantity": "1",
-        "price": "18000",
-        "mobileNum": "947738748",
-        "src": "assets/samsung galaxyM21.jpg"
-    }, {
-        "id": 9,
-        "productName": "Samsung Galaxy",
-        "productDes": "64MP + 8MP + 5MP + 5MP rear camera | 32MP front facing camera,16.21 centimeters (6.4-inch) FHD+ capacitive touchscreen with 2340 x 1080 pixels resolution, 404 ppi pixel density and 16M color support",
-        "manufacturer": "Darshitha",
-        "quantity": "1",
-        "price": "18000",
-        "mobileNum": "947738748",
-        "src": "assets/samsung galaxyM21.jpg"
-    }, {
-        "id": 10,
-        "productName": "Samsung Galaxy",
-        "productDes": "64MP + 8MP + 5MP + 5MP rear camera | 32MP front facing camera,16.21 centimeters (6.4-inch) FHD+ capacitive touchscreen with 2340 x 1080 pixels resolution, 404 ppi pixel density and 16M color support",
-        "manufacturer": "Darshitha",
-        "quantity": "1",
-        "price": "18000",
-        "mobileNum": "947738748",
-        "src": "assets/samsung galaxyM21.jpg"
+        "productName": "Vivo U10 (Electric Blue, 5000 mAH 18W Fast Charge Battery, 3GB RAM, 32GB Storage)",
+        "productDes": "16.15 centimeters (6.35-inch) halo fullview display with 720 x 1544 pixels resolution, Memory, Storage & SIM: 3GB RAM | 32GB internal memory expandable up to 256GB | Dual SIM (nano+nano) dual-standby (4G+4G)",
+        "manufacturer": "Vivo",
+        "price": "8,990",
+        "src": "assets/viviU10.jpg"
     }]
 }
