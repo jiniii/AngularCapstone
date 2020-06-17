@@ -1,0 +1,22 @@
+.example-card {
+    max-width: 300px;
+    min-width: 100px;
+    margin: 20px;
+    padding: 20px;
+}
+
+.details {
+    margin-top: 40px;
+    font-family: auto;
+}
+
+.img-card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+img {
+    margin: 20px;
+    padding: 20px;
+}

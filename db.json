@@ -33,7 +33,7 @@
         "id": 1
     }],
     "Products": [{
-            "id": 1,
+            "id": 0,
             "productName": "Samsung Galaxy",
             "productDes": "64MP + 8MP + 5MP + 5MP rear camera | 32MP front facing camera,16.21 centimeters (6.4-inch) FHD+ capacitive touchscreen with 2340 x 1080 pixels resolution, 404 ppi pixel density and 16M color support",
             "manufacturer": "Darshitha",
@@ -43,7 +43,7 @@
             "src": "assets/samsung galaxyM21.jpg"
         },
         {
-            "id": 2,
+            "id": 1,
             "productName": "Redmi Note8",
             "productDes": "64MP AI Quad rear camera with portrait, ultra-wide lens, macro lens, LED flash, AI support, beautify support | 20MP front camera | Dedicated depth sensor Performance: Smooth gaming experience with powerful Helio G90T gaming processor, Game turbo and Liquid cooling technology",
             "manufacturer": "Sudarshan",
@@ -53,7 +53,7 @@
             "src": "assets/redminote8.jpg"
         },
         {
-            "id": 3,
+            "id": 2,
             "productName": "Honor",
             "productDes": "13MP+2MP dual camera and 16MP front facing camera ,14.83 centimeters (5.84-inch) multi-touch capacitive touchscreen with 2280 x 1080 pixels resolution 16M color support",
             "manufacturer": "Manisha",
@@ -63,7 +63,7 @@
             "src": "assets/viviU10.jpg"
         },
         {
-            "id": 4,
+            "id": 3,
             "productName": "Nokia",
             "productDes": "13MP rear camera with AF/F2.2/1.12µm and flash | 5MP front camera with FF/F2.2/1.12µm/77° FOV and face unlock ,15.9004 centimeters (6.26-inch) with 720 x 1520 pixels resolution",
             "manufacturer": "Manisha",
@@ -73,7 +73,7 @@
             "src": "assets/technospark.jpg"
         },
         {
-            "id": 5,
+            "id": 4,
             "productName": "Lenovo",
             "productDes": "13MP primary camera with auto focus, flash, HDR, panorama, night shot modes, front camera with bokeh suport | 5MP front facing camera 17.52 centimeters (6.9 inch) FHD IPS LCD Display multi-touch capacitive touchscreen with 1080 x 2160 pixels resolution 16M color support with 81% screen-to-body ratio",
             "manufacturer": "Manisha",
@@ -83,7 +83,7 @@
             "src": "assets/lenovos60.jpg"
         },
         {
-            "id": 6,
+            "id": 5,
             "productName": "OnePlus",
             "productDes": "48+12+16MP triple rear camera with telephoto lens + ultrawide angle lens | 16MP front camera with 4K video capture @ 30/60 FPS, ultrashot, nightscape, portrait, pro mode, panorama, HDR, AI scene detection, RAW image,16.63 centimeters (6.55 inch) 90Hz fluid AMOLED with 2400 x 1080 pixels resolution and 402 ppi pixel density",
             "manufacturer": "Manisha",

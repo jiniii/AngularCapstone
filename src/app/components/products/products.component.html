@@ -81,7 +81,7 @@ Add New Product
                         </thead>
                         <tbody>
                             <tr *ngFor="let i of products">
-                                <td><a [routerLink]="['/products',i.productName]">{{i.productName}}</a></td>
+                                <td><a [routerLink]="['/products',i.id]">{{i.productName}}</a></td>
                                 <td>{{i.manufacturer}}</td>
                                 <td>{{i.price}}</td>
                                 <td> <button class="dis edit" [routerLink]="['/products/update',i.id]"><i class="fa fa-pencil" aria-hidden="true"></i></button></td>

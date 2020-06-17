@@ -8,12 +8,14 @@ import { UpdateComponent } from '../update/update.component';
 import { AddProductComponent } from '../add-product/add-product.component';
 import { ProductDetailsComponent } from '../product-details/product-details.component';
 import { DeleteComponent } from '../delete/delete.component';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
     imports: [
         CommonModule,
         FormsModule,
-        ProductsRoutingModule
+        ProductsRoutingModule,
+        MatCardModule
     ],
     declarations: [
         ProductsComponent,

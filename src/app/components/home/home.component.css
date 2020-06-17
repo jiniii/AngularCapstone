@@ -4,11 +4,16 @@
     display: inline;
     margin: 20px;
     padding: 20px;
+    cursor: pointer;
 }
 
 .aroundcard {
     display: flex;
     flex-wrap: wrap;
+}
+
+mat-card-title:hover {
+    color: #0066c0;
 }
 
 

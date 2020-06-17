@@ -12,7 +12,8 @@ import { DeleteComponent } from '../delete/delete.component';
 const empRoutes: Routes = [
   { path: '', component: ProductsComponent },
   { path: 'addProduct', component: AddProductComponent ,canActivate: [AuthGuard]},
-  { path: ':display', component: ProductDetailsComponent },
+  { path: 'details/:id', component: ProductDetailsComponent },
+  { path: ':id', component: ProductDetailsComponent },
   { path:'delete/:id', component: DeleteComponent,canActivate:[AuthGuard]},
   { path: 'update/:id', component: UpdateComponent,canActivate: [AuthGuard] }
 ]; 
