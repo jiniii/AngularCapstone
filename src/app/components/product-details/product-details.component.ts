@@ -1,6 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ProductService } from '../../services/product.service'
+import { CartService } from 'src/app/services/cart.service';
+import { Products } from 'src/app/models/user.model';
+import { MessengerService } from 'src/app/services/messenger.service';
 
 
 @Component({
@@ -10,6 +13,7 @@ import { ProductService } from '../../services/product.service'
 })
 export class ProductDetailsComponent implements OnInit {
 
+  productItem: Products;
   productName: any;
   productImage: any;
   products: any;
@@ -17,11 +21,10 @@ export class ProductDetailsComponent implements OnInit {
   productdetails: any;
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute,
-    private productSer: ProductService) { }
+    private productSer: ProductService,private cartService: CartService,private msg: MessengerService, ) { }
 
   ngOnInit(): void {
     this.getProduct();
-    //this.getImage();
   }
 
   getProduct() {
@@ -54,8 +57,11 @@ export class ProductDetailsComponent implements OnInit {
       for (let i = 0; i < 6; i++) {
         this.productImage = data[i]['src'];
       }
-      console.log("image", this.productImage)
     })
+  }
+    
+  buy(){
+    confirm("Thanks for the Purchase! your Product will be delivered to your address.")
   }
 
 }

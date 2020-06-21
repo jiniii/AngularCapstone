@@ -1,27 +1,30 @@
 <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
 
     <a class="navbar-brand" routerLink="/">E-Cart</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler my-icon" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon "></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
                 <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
-                  true}">Home</a>
+                  true}"><i class="fa fa-fw fa-home"></i>Home</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item ">
                 <a class="nav-link" routerLink="products" routerLinkActive="active">Products</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item ">
                 <a class="nav-link" routerLink="about" routerLinkActive="active">About</a>
             </li>
         </ul>
+        <!-- <form class="form-inline my-2 my-md-0 add">
+            <input class="form-control" type="text" placeholder="Search" aria-label="Search"  [(ngModel)]="searchText">
+          </form> -->
         <div *ngIf="!user">
 
-            <!-- <button type="button" class="btn btn-outline-secondary" routerLink="account/register">Register</button> -->
-            <button type="button" class="btn btn-outline-secondary ml-3" routerLink="account/login">Login</button>
+            <button type="button" class="btn btn-outline-secondary ml-3" routerLink="account/login">
+                <i class="fa fa-fw fa-user"></i>Login</button>
         </div>
 
         <button class="btn btn-outline-secondary ml-3" (click)="logout()" *ngIf="user">Logout</button>
@@ -31,8 +34,12 @@
 
 <alert></alert>
 <router-outlet></router-outlet>
-<footer class="HJlsB9">
+<nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-dark">
+    <a class="navbar-brand" routerLink="">&copy; E-Cart.com </a>
+    
+</nav>
+<!-- <footer class="HJlsB9">
     <div class="_1DXv5h">
-        <span class="_2tFDQF"> © 2020 <span> E-Cart.com </span></span>
+        <span class="_2tFDQF"> © 2020 <span>E-Cart.com</span></span>
     </div>
-</footer>
+</footer> -->

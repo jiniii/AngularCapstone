@@ -22,3 +22,21 @@
 ._2tFDQF {
     color: #fff;
 }
+
+.fixed-bottom {
+    position: fixed;
+    right: 0;
+    bottom: -16px;
+    left: 0;
+    z-index: 1030;
+}
+
+/***********Responsive*************/
+
+@media (min-width: 768px) and (max-width: 1023px){
+   
+    /* .my-icon{
+        margin-top: -28px;
+    } */
+    
+}

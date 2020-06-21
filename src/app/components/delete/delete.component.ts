@@ -12,6 +12,7 @@ import {AlertService} from '../../services/alert.service'
 export class DeleteComponent implements OnInit {
   productId: any;
   productName: string;
+  products: any;
 
   constructor(private route: Router,
     private activatedRoute: ActivatedRoute,
@@ -20,21 +21,31 @@ export class DeleteComponent implements OnInit {
 
   ngOnInit() {
     this.getProduct();
+    this.getDetails();
   }
   getProduct() {
     this.activatedRoute.paramMap.subscribe(params => {
-      console.log("productid",params)
       this.productId = params.get('id');
-      // this.productName = params.get('display');
-      console.log("deleted id", this.productId)
     })
   }
 
   delete() {
-    this.proService.deleteProduct(this.productId).subscribe(data => {
-      this.alertService.success('Your Product is Deleted Successfully', { keepAfterRouteChange: true });
-
+    let c =confirm("Are you Sure? Do you want to Delete this Product")
+    if( c == true){
+      this.proService.deleteProduct(this.productId).subscribe(data => {
+        this.alertService.success('Your Product is Deleted Successfully', { keepAfterRouteChange: true });
+  
+      })
+    } else{
+      this.back();
+    }
+    
+  }
+  getDetails() {
+          this.proService.getProduct().subscribe(data => {
+          this.products = data[this.productId];
     })
+ 
   }
 
   back() {

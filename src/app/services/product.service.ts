@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http'
+import { Products } from '../models/user.model';
+import { Observable } from 'rxjs';
 
 const httpOpt = {
   headers: new HttpHeaders({ 'content-Type': 'application/json' })
@@ -14,13 +16,11 @@ export class ProductService {
   quantity: number;
   url = "http://localhost:3000";
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient) {}
 
+  getProduct(): Observable<Products[]> {
+    return this.http.get<Products[]>(this.url + "/Products");
   }
-  getProduct() {
-    return this.http.get(this.url + "/Products");
-  }
-
   getHomeProduct() {
     return this.http.get(this.url + "/homeProducts");
   }

@@ -1,21 +1,21 @@
 
-<h4 style="text-align: center;margin-top: 10px;">Deleted Product</h4>
+<h4 style="text-align: center;margin-top: 10px;">Delete Product</h4>
 <div class="container mt-5" style="text-align: left;float:right" >
   
-          <label>Enter Product Name:</label>&nbsp;
-          <input type="text" value="productName">  <!-- need to display the clicked detail of the product-->
+          <label>Product Name: {{products.productName}}</label>&nbsp;
+            <!-- need to display the clicked detail of the product-->
      <br>
-          <label>Enter Product Description:</label>&nbsp;
-          <input type="text" value="productDes">
+          <label>Product Description: {{products.productDes | slice: 0:80 }}...</label>&nbsp;
+          
      <br>
-          <label>Enter Product Manufacturer:</label>&nbsp;
-          <input type="text" value="productManu">
+          <label>Product Manufacturer: {{products.manufacturer}}</label>&nbsp;
+          
      <br>
-          <label>Enter Product Quantity:</label>&nbsp;
-          <input type="number" value="productQuan">
+          <label>Product Quantity: {{products.quantity}}</label>&nbsp;
+          
      <br>
-          <label>Enter Product Price:</label>&nbsp;
-          <input type="number" value="productPrice">
+          <label>Product Price: {{products.price}}</label>&nbsp;
+          
       <br><br>
 
           <button type="button" class="btn btn-dark" (click)="delete()">Delete</button> &nbsp;

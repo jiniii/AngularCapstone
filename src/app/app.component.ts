@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 import { User } from '../app/models/user.model';
 import { AccountService } from '../app/services/account.service';
 
@@ -9,9 +9,8 @@ import { AccountService } from '../app/services/account.service';
 })
 export class AppComponent {
   title = 'capstoneProject';
-  //isLogginIn: boolean = false;
   user: User;
-  //user:boolean=true;
+  searchText: string;
 
   constructor(
     private accountService: AccountService
