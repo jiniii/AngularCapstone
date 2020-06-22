@@ -11,7 +11,7 @@ import { Router } from '@angular/router'
 export class HomeComponent implements OnInit {
 
   products: any = [];
-  constructor(private proService: ProductService,private router:Router) { }
+  constructor(private proService: ProductService, private router: Router) { }
 
   ngOnInit(): void {
     this.getDetails();
@@ -20,7 +20,6 @@ export class HomeComponent implements OnInit {
   getDetails() {
     this.proService.getHomeProduct().subscribe(data => {
       this.products = data;
-      console.log("products", data)
     })
   }
 }

@@ -11,12 +11,12 @@ import { DeleteComponent } from '../delete/delete.component';
 
 const empRoutes: Routes = [
   { path: '', component: ProductsComponent },
-  { path: 'addProduct', component: AddProductComponent ,canActivate: [AuthGuard]},
+  { path: 'addProduct', component: AddProductComponent, canActivate: [AuthGuard] },
   { path: 'details/:id', component: ProductDetailsComponent },
   { path: ':id', component: ProductDetailsComponent },
-  { path:'delete/:id', component: DeleteComponent,canActivate:[AuthGuard]},
-  { path: 'update/:id', component: UpdateComponent,canActivate: [AuthGuard] }
-]; 
+  { path: 'delete/:id', component: DeleteComponent, canActivate: [AuthGuard] },
+  { path: 'update/:id', component: UpdateComponent, canActivate: [AuthGuard] }
+];
 
 @NgModule({
   imports: [

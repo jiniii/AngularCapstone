@@ -4,21 +4,24 @@
         <form [formGroup]="form" (ngSubmit)="onSubmit()">
             <div class="form-group">
                 <label for="firstName">First Name</label>
-                <input type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+                <input type="text" formControlName="firstName" class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
                 <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
                     <div *ngIf="f.firstName.errors.required">First Name is required</div>
                 </div>
             </div>
             <div class="form-group">
                 <label for="lastName">Last Name</label>
-                <input type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+                <input type="text" formControlName="lastName" class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
                 <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
                     <div *ngIf="f.lastName.errors.required">Last Name is required</div>
                 </div>
             </div>
             <div class="form-group">
                 <label for="email">Email Id</label>
-                <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                <input type="text" formControlName="email" class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
                 <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
                     <div *ngIf="f.email.errors.required">Email ID is required</div>
                     <div *ngIf="f.email.errors.email">Must be a valid email address</div>
@@ -26,7 +29,8 @@
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                <input type="password" formControlName="password" class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
                 <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
                     <div *ngIf="f.password.errors.required">Password is required</div>
                     <div *ngIf="f.password.errors.minlength">Password must be at least 8 characters</div>
@@ -34,14 +38,16 @@
             </div>
             <div class="form-group">
                 <label for="location">Location</label>
-                <input type="location" formControlName="location" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.location.errors }" />
+                <input type="location" formControlName="location" class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && f.location.errors }" />
                 <div *ngIf="submitted && f.location.errors" class="invalid-feedback">
                     <div *ngIf="f.location.errors.required">Location is required</div>
                 </div>
             </div>
             <div class="form-group">
                 <label for="mobileNo">Mobile Number</label>
-                <input type="mobileNo"  pattern="[0-9]{10}" formControlName="mobileNo" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.mobileNo.errors }" />
+                <input type="mobileNo" pattern="[0-9]{10}" formControlName="mobileNo" class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && f.mobileNo.errors }" />
                 <div *ngIf="submitted && f.mobileNo.errors" class="invalid-feedback">
                     <div *ngIf="f.mobileNo.errors.required">Mobile Number is required</div>
                     <div *ngIf="f.mobileNo.errors.minlength">Mobile Number must be at least 10 characters</div>

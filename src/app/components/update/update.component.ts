@@ -11,8 +11,7 @@ export class UpdateComponent implements OnInit {
   constructor(private route: Router, private activatedRoute: ActivatedRoute) { }
   ngOnInit(): void {
   }
-  cancel(){
-      console.log("back button clicked")
-      this.route.navigate(['products']);
+  cancel() {
+    this.route.navigate(['products']);
   }
 }

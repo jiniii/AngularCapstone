@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http'
 import { Products } from '../models/user.model';
 import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment'
 
 const httpOpt = {
   headers: new HttpHeaders({ 'content-Type': 'application/json' })
@@ -14,19 +15,18 @@ const httpOpt = {
 export class ProductService {
   name: string;
   quantity: number;
-  url = "http://localhost:3000";
 
   constructor(private http: HttpClient) {}
 
   getProduct(): Observable<Products[]> {
-    return this.http.get<Products[]>(this.url + "/Products");
+    return this.http.get<Products[]>(`${environment.apiUrl}/Products` );
   }
   getHomeProduct() {
-    return this.http.get(this.url + "/homeProducts");
+    return this.http.get(`${environment.apiUrl}/homeProducts`);
   }
 
   deleteProduct(id) {
-    return this.http.delete(this.url + "/Products/" + id);
+    return this.http.delete(`${environment.apiUrl}/Products/${id}`);
   }
 
   addProduct(proName, proDes, myMan, myQua, myPri) {
@@ -39,7 +39,7 @@ export class ProductService {
       price: myPri,
     })
 
-    return this.http.post(this.url + "/Products", body, httpOpt);
+    return this.http.post(`${environment.apiUrl}/Products/`,body,httpOpt);
   }
 
   update(proName, proDes, myMan, myQua, myPri, num) {

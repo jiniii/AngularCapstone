@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { environment } from '../../environments/environment'
 
 import { CartItem } from '../models/cart-item';
 import { Products } from '../models/user.model';
@@ -10,13 +11,12 @@ import { Products } from '../models/user.model';
   providedIn: 'root'
 })
 export class CartService {
-   cartUrl="http://localhost:3000/cart"
 
   constructor(private http: HttpClient) { }
 
   getCartItems(): Observable<CartItem[]> {
     //TODO: Mapping the obtained result to our CartItem props. (pipe() and map())
-    return this.http.get<CartItem[]>(this.cartUrl).pipe(
+    return this.http.get<CartItem[]>(`${environment.apiUrl}/cart`).pipe(
       map((result: any[]) => {
         let cartItems: CartItem[] = [];
 
@@ -42,7 +42,6 @@ export class CartService {
   }
 
   addProductToCart(product: Products): Observable<any> {
-    console.log("service",this.cartUrl,{product})
-    return this.http.post(this.cartUrl, { product });
+    return this.http.post(`${environment.apiUrl}/cart`, { product });
   }
 }

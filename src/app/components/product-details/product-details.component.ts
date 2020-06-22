@@ -1,10 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ProductService } from '../../services/product.service'
-import { CartService } from 'src/app/services/cart.service';
 import { Products } from 'src/app/models/user.model';
-import { MessengerService } from 'src/app/services/messenger.service';
-
 
 @Component({
   selector: 'app-product-details',
@@ -21,7 +18,7 @@ export class ProductDetailsComponent implements OnInit {
   productdetails: any;
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute,
-    private productSer: ProductService,private cartService: CartService,private msg: MessengerService, ) { }
+    private productSer: ProductService ) { }
 
   ngOnInit(): void {
     this.getProduct();
@@ -34,7 +31,7 @@ export class ProductDetailsComponent implements OnInit {
     })
   }
   getDetails() {
-    if ((this.router.url).includes("details")){
+    if ((this.router.url).includes("details")) {
       this.productSer.getHomeProduct().subscribe(data => {
         this.products = data[this.productId];
       })
@@ -42,8 +39,9 @@ export class ProductDetailsComponent implements OnInit {
     else {
       this.productSer.getProduct().subscribe(data => {
         this.products = data[this.productId];
-    })}
- 
+      })
+    }
+
   }
   back() {
     if ((this.router.url).includes("details"))
@@ -59,8 +57,8 @@ export class ProductDetailsComponent implements OnInit {
       }
     })
   }
-    
-  buy(){
+
+  buy() {
     confirm("Thanks for the Purchase! your Product will be delivered to your address.")
   }
 

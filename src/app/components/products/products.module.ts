@@ -19,7 +19,6 @@ import { ProductItemComponent } from '../product-item/product-item.component';
         ProductsRoutingModule,
         MatCardModule,
     ],
-    //exports:[ProductDetailsComponent],
     declarations: [
         ProductsComponent,
         ProductItemComponent,

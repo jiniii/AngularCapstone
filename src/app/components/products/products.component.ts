@@ -10,28 +10,17 @@ import { Products } from 'src/app/models/user.model';
 })
 export class ProductsComponent implements OnInit {
   products: Products[] = [];
-  
-  constructor(private proService: ProductService,  ) { }
+
+  constructor(private proService: ProductService, ) { }
 
   ngOnInit(): void {
-   this.getDetails();
+    this.getDetails();
   }
 
-  getDetails(){
+  getDetails() {
     this.proService.getProduct().subscribe((product) => {
       this.products = product;
-      console.log("products",this.products)
     })
-    
-  }
-  
-  
-  
-  // delete(id) {
-  //   this.proService.deleteProduct(id).subscribe(data=>{
-  //     console.log("deleted item",data);
-  //     this.getDetails();
 
-  //   })
-  // }
+  }
 }

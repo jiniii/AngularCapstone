@@ -1,21 +1,21 @@
-    <h4 style="text-align: center;margin-top: 10px;">Add New Product</h4>
-      <div class="container mt-5" style="text-align: left;float:right" >
-        
-                <label> Product Name:</label>&nbsp;
-                <input type="text" [(ngModel)]="productName"  placeholder="Product Name">
-           <br>
-                <label> Product Description:</label>&nbsp;
-                <input type="text" [(ngModel)]="productDes"  placeholder="Product Description">
-           <br>
-                <label> Product Manufacturer:</label>&nbsp;
-                <input type="text" [(ngModel)]="productManu"  placeholder="Product Manufacturer">
-           <br>
-                <label> Product Quantity:</label>&nbsp;
-                <input type="number" [(ngModel)]="productQuan"  placeholder="Product Quantity">
-           <br>
-                <label> Product Price:</label>&nbsp;
-                <input type="number" [(ngModel)]="productPrice"  placeholder="Product Price">
-            <br><br>
-                <button type="button" class="btn btn-dark" (click)="addProduct()">Submit</button> &nbsp;
-                <button type="button" class="btn btn-dark" (click)="back()">Back</button>
-    </div>
+<h4 style="text-align: center;margin-top: 10px;">Add New Product</h4>
+<div class="container mt-5" style="text-align: left;float:right">
+
+     <label> Product Name:</label>&nbsp;
+     <input type="text" [(ngModel)]="productName" placeholder="Product Name">
+     <br>
+     <label> Product Description:</label>&nbsp;
+     <input type="text" [(ngModel)]="productDes" placeholder="Product Description">
+     <br>
+     <label> Product Manufacturer:</label>&nbsp;
+     <input type="text" [(ngModel)]="productManu" placeholder="Product Manufacturer">
+     <br>
+     <label> Product Quantity:</label>&nbsp;
+     <input type="number" [(ngModel)]="productQuan" placeholder="Product Quantity">
+     <br>
+     <label> Product Price:</label>&nbsp;
+     <input type="number" [(ngModel)]="productPrice" placeholder="Product Price">
+     <br><br>
+     <button type="button" class="btn btn-dark" (click)="addProduct()">Submit</button> &nbsp;
+     <button type="button" class="btn btn-dark" (click)="back()">Back</button>
+</div>

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../../services/product.service';
 import { Products } from '../../models/user.model'
 import { Router } from '@angular/router';
-import {AlertService} from '../../services/alert.service'
+import { AlertService } from '../../services/alert.service'
 
 @Component({
   selector: 'app-add-product',
@@ -18,7 +18,7 @@ export class AddProductComponent implements OnInit {
   productPrice: string = "";
   products: Products[];
 
-  constructor(private route: Router, 
+  constructor(private route: Router,
     private myService: ProductService,
     private alertService: AlertService) { }
 
@@ -28,12 +28,11 @@ export class AddProductComponent implements OnInit {
   addProduct() {
     if (this.productName != "" && this.productDes != "" && this.productManu != "" && this.productQuan != "" && this.productPrice != "") {
       this.myService.addProduct(this.productName, this.productDes, this.productManu, this.productQuan, this.productPrice).subscribe(data => {
-        console.log("data added", data);
         this.alertService.success('Your Product is Added Successfully', { keepAfterRouteChange: true });
       });
     }
     else
-    this.alertService.error('Fields cannot be empty!', { keepAfterRouteChange: true });
+      this.alertService.error('Fields cannot be empty!', { keepAfterRouteChange: true });
   }
 
   back() {

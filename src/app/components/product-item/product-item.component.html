@@ -1,60 +1,42 @@
-<!-- <div class="card mb-4 shadow-sm">
-  <img class="bd-placeholder-img card-img-top p-2" width="100%" [src]="productItem.imageUrl" />
 
-  <div class="card-body"> 
-    <p class="card-text">
-      <strong>{{ productItem.price | currency:'INR' }}</strong>
-      <i *ngIf="addedToWishlist" class="fas fa-heart float-right" (click)="handleRemoveFromWishlist()"></i>
-      <i *ngIf="!addedToWishlist" class="far fa-heart float-right" (click)="handleAddToWishlist()"></i>
-    </p>
-    <p class="card-text">{{ productItem.description | slice: 0:80 }}...</p>
-    <div class="d-flex justify-content-between align-items-center">
-      <div class="btn-group">
-        <button type="button" class="btn btn-sm btn-primary product-btn" (click)="handleAddToCart()">Add to
+<h2>Mobile Products</h2>
+<button class="add btn btn-dark" [routerLink]="['/products/addProduct']">
+  Add New Product
+</button>
+
+<table class="table table-dark table-striped">
+  <!--*ngIf="(productItem | filter: searchText).length > 0; else noResults"-->
+  <thead>
+    <tr>
+      <th>Product Name</th>
+      <th>Manufacturer</th>
+      <th>Price</th>
+      <th>update</th>
+      <th>Delete</th>
+      <th>Add to Cart</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let i of productItem">
+      <!--| filter: searchText; let i = index-->
+      <td><a [routerLink]="['/products',i.id]">{{i.productName}}</a></td>
+      <td>{{i.manufacturer}}</td>
+      <td>{{i.price | currency:'INR'}}</td>
+      <td> <button class="dis edit" [routerLink]="['/products/update',i.id]">
+          <i class="fa fa-pencil" aria-hidden="true"></i></button>
+      </td>
+      <td> <button type="button" class="btn btn-danger dis" [routerLink]="['/products/delete',i.id]">
+          <i class="fa fa-trash" aria-hidden="true"></i></button>
+      </td>
+      <td>
+        <button type="button" class="btn btn-sm btn-primary product-btn" (click)="handleAddToCart(i)">Add to
           Cart</button>
-        <button type="button" class="btn btn-sm btn-outline-secondary product-btn">View Details</button>
-      </div>
-    </div>
-  </div>
-</div> -->
+      </td>
+    </tr>
 
-  <h2>Mobile Products</h2>
-  <button class="add btn btn-dark" [routerLink]="['/products/addProduct']">
-      Add New Product
-  </button>
-  
-  <table class="table table-dark table-striped">    <!--*ngIf="(productItem | filter: searchText).length > 0; else noResults"-->
-      <thead>
-          <tr>
-              <th>Product Name</th>
-              <th>Manufacturer</th>
-              <th>Price</th>
-              <th>update</th>
-              <th>Delete</th>
-              <th>Add to Cart</th>
-          </tr>
-      </thead>
-      <tbody>
-          <tr *ngFor="let i of productItem">   <!--| filter: searchText; let i = index-->
-              <td><a [routerLink]="['/products',i.id]">{{i.productName}}</a></td>
-              <td>{{i.manufacturer}}</td>
-              <td>{{i.price | currency:'INR'}}</td>
-              <td> <button class="dis edit" [routerLink]="['/products/update',i.id]">
-                      <i class="fa fa-pencil" aria-hidden="true"></i></button>
-              </td>
-              <td> <button type="button" class="btn btn-danger dis"
-                      [routerLink]="['/products/delete',i.id]">
-                      <i class="fa fa-trash" aria-hidden="true"></i></button>
-              </td>
-              <td> 
-                <button type="button" class="btn btn-sm btn-primary product-btn" (click)="handleAddToCart(i)">Add to
-                Cart</button>
-              </td>
-          </tr>
+  </tbody>
+</table>
 
-      </tbody>
-  </table>
-
-  <ng-template #noResults>
-    <p>No results found for "{{searchText}}".</p>
-  </ng-template>
+<!-- <ng-template #noResults>
+  <p>No results found for "{{searchText}}".</p>
+</ng-template> -->

@@ -1,23 +1,16 @@
-
 <h4 style="text-align: center;margin-top: 10px;">Delete Product</h4>
-<div class="container mt-5" style="text-align: left;float:right" >
-  
-          <label>Product Name: {{products.productName}}</label>&nbsp;
-            <!-- need to display the clicked detail of the product-->
-     <br>
-          <label>Product Description: {{products.productDes | slice: 0:80 }}...</label>&nbsp;
-          
-     <br>
-          <label>Product Manufacturer: {{products.manufacturer}}</label>&nbsp;
-          
-     <br>
-          <label>Product Quantity: {{products.quantity}}</label>&nbsp;
-          
-     <br>
-          <label>Product Price: {{products.price}}</label>&nbsp;
-          
-      <br><br>
+<div class="container mt-5" style="text-align: left;float:right">
 
-          <button type="button" class="btn btn-dark" (click)="delete()">Delete</button> &nbsp;
-          <button type="button" class="btn btn-dark" (click)="back()">Back</button>
+     <label>Product Name: {{products.productName}}</label>&nbsp;
+     <br>
+     <label>Product Description: {{products.productDes | slice: 0:80 }}...</label>&nbsp;
+     <br>
+     <label>Product Manufacturer: {{products.manufacturer}}</label>&nbsp;
+     <br>
+     <label>Product Quantity: {{products.quantity}}</label>&nbsp;
+     <br>
+     <label>Product Price: {{products.price}}</label>&nbsp;
+     <br><br>
+     <button type="button" class="btn btn-dark" (click)="delete()">Delete</button> &nbsp;
+     <button type="button" class="btn btn-dark" (click)="back()">Back</button>
 </div>
