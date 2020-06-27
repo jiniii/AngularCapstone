@@ -12,8 +12,6 @@ export class ProductItemComponent implements OnInit {
 
   @Input() productItem: Products;
 
-  //@Output() searchText: string;
-
   products: Products[] = [];
 
   constructor(

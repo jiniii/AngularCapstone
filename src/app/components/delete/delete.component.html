@@ -1,15 +1,15 @@
 <h4 style="text-align: center;margin-top: 10px;">Delete Product</h4>
 <div class="container mt-5" style="text-align: left;float:right">
 
-     <label>Product Name: {{products.productName}}</label>&nbsp;
+     <h6 class="my-color">Product Name: </h6><label>{{products.productName}}</label>&nbsp;
      <br>
-     <label>Product Description: {{products.productDes | slice: 0:80 }}...</label>&nbsp;
+     <h6 class="my-color">Product Description:  </h6><label>{{products.productDes | slice: 0:80 }}...</label>&nbsp;
      <br>
-     <label>Product Manufacturer: {{products.manufacturer}}</label>&nbsp;
+     <h6 class="my-color">Product Manufacturer:  </h6><label>{{products.manufacturer}}</label>&nbsp;
      <br>
-     <label>Product Quantity: {{products.quantity}}</label>&nbsp;
+     <h6 class="my-color">Product Quantity: </h6><label>{{products.quantity}}</label>&nbsp;
      <br>
-     <label>Product Price: {{products.price}}</label>&nbsp;
+     <h6 class="my-color">Product Price:  </h6><label>{{products.price | currency:'INR'}}</label>&nbsp;
      <br><br>
      <button type="button" class="btn btn-dark" (click)="delete()">Delete</button> &nbsp;
      <button type="button" class="btn btn-dark" (click)="back()">Back</button>

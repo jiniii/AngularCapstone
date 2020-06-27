@@ -2,7 +2,6 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ProductService } from '../../services/product.service'
 import { Products } from 'src/app/models/user.model';
 
-
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
@@ -11,7 +10,7 @@ import { Products } from 'src/app/models/user.model';
 export class ProductsComponent implements OnInit {
   products: Products[] = [];
 
-  constructor(private proService: ProductService, ) { }
+  constructor(private proService: ProductService) { }
 
   ngOnInit(): void {
     this.getDetails();

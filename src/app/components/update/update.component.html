@@ -1,38 +1,50 @@
-<h2>Update Product</h2>
-<form>
-    <div class="form-group">
-        <label for="proName">Product Name</label>
-        <input type="text" id="proName" class="form-control" required>
+<div class="card">
+    <h2 class="card-header">Update Product</h2>
+    <div class="card-body">
+        <form [formGroup]="editProduct" (ngSubmit)="updateProduct()">
+            <div class="form-group" [formGroup]="editProduct">
+                <label>Product Name</label>
+                <input type="text" id="productName" class="form-control" formControlName="productName">
 
+            </div>
+
+            <div class="form-group" [formGroup]="editProduct">
+                <label>Description</label>
+                <input type="text" id="productDesc" class="form-control" formControlName="productDes">
+
+            </div>
+
+            <div class="form-group" [formGroup]="editProduct">
+                <label>Manufacturer</label>
+                <input type="text" id="productManu" class="form-control" formControlName="manufacturer">
+
+            </div>
+            <div class="form-group" [formGroup]="editProduct">
+                <label>Quantity</label>
+                <input type="number" id="mobileNum" class="form-control" formControlName="quantity" required>
+
+            </div>
+            <div class="form-group" [formGroup]="editProduct">
+                <label>Price</label>
+                <input type="number" id="productPrice" class="form-control" formControlName="price">
+
+            </div>
+            <div class="form-group" [formGroup]="editProduct">
+                <label>Mobile Number</label>
+                <input type="number" id="mobileNum" class="form-control" formControlName="mobileNum">
+
+            </div>
+            <div class="form-group" [formGroup]="editProduct">
+                <label>Image</label>
+                <input type="text" id="image" class="form-control" formControlName="src">
+
+            </div>
+
+            <div class="form-group" [formGroup]="editProduct">
+                <button class="btn btn-primary" type="submit" [disabled]="editProduct.invalid">Submit</button> &nbsp;
+                <button class="btn btn-primary" (click)="cancel()">Back</button>
+            </div>
+            <p class="mt-5 mb-3 text-muted text-center">&copy; 2017-2018</p>
+        </form>
     </div>
-
-    <div class="form-group">
-        <label for="proDiscription">Description</label>
-        <input type="text" id="proDiscription" class="form-control" required>
-
-    </div>
-
-    <div class="form-group">
-        <label for="manufacturer">Manufacturer</label>
-        <input type="text" id="manufacturer" class="form-control" required>
-
-    </div>
-
-    <div class="form-group">
-        <label for="price">Price</label>
-        <input type="number" id="price" class="form-control" required>
-
-    </div>
-
-    <div class="form-group">
-        <label for="quantity">Quantity</label>
-        <input type="number" id="quantity" class="form-control" required>
-
-    </div>
-
-    <div class="form-group">
-        <button class="btn btn-primary" type="submit">Submit</button> &nbsp;
-        <button class="btn btn-primary" (click)="cancel()">Cancel</button>
-    </div>
-    <p class="mt-5 mb-3 text-muted text-center">&copy; 2017-2018</p>
-</form>
+</div>

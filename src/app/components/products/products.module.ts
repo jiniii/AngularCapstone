@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { ProductsRoutingModule } from './products-routing.modules';
 import { ProductsComponent } from './products.component';
 import { UpdateComponent } from '../update/update.component';
@@ -16,6 +17,7 @@ import { ProductItemComponent } from '../product-item/product-item.component';
     imports: [
         CommonModule,
         FormsModule,
+        ReactiveFormsModule,
         ProductsRoutingModule,
         MatCardModule,
     ],

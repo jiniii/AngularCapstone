@@ -34,7 +34,6 @@ export class DeleteComponent implements OnInit {
     if (c == true) {
       this.proService.deleteProduct(this.productId).subscribe(data => {
         this.alertService.success('Your Product is Deleted Successfully', { keepAfterRouteChange: true });
-
       })
     } else {
       this.back();

@@ -1,4 +1,3 @@
-
 <h2>Mobile Products</h2>
 <button class="add btn btn-dark" [routerLink]="['/products/addProduct']">
   Add New Product
@@ -19,7 +18,7 @@
   <tbody>
     <tr *ngFor="let i of productItem">
       <!--| filter: searchText; let i = index-->
-      <td><a [routerLink]="['/products',i.id]">{{i.productName}}</a></td>
+      <td><a [routerLink]="['/products',i.id]">{{i.productName | slice: 0:15}}</a></td>
       <td>{{i.manufacturer}}</td>
       <td>{{i.price | currency:'INR'}}</td>
       <td> <button class="dis edit" [routerLink]="['/products/update',i.id]">

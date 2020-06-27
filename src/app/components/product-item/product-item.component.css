@@ -9,3 +9,9 @@ a {
     text-decoration: none;
     background-color: transparent;
 }
+@media screen and (min-width: 320px) and (max-width: 768px){
+.add {
+    margin-left: 272px;
+    margin-top: -42px;
+    }
+}

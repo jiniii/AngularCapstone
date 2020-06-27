@@ -18,7 +18,7 @@ export class ProductDetailsComponent implements OnInit {
   productdetails: any;
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute,
-    private productSer: ProductService ) { }
+    private productSer: ProductService) { }
 
   ngOnInit(): void {
     this.getProduct();
@@ -32,7 +32,7 @@ export class ProductDetailsComponent implements OnInit {
   }
   getDetails() {
     if ((this.router.url).includes("details")) {
-      this.productSer.getHomeProduct().subscribe(data => {
+      this.productSer.getProduct().subscribe(data => {
         this.products = data[this.productId];
       })
     }
@@ -59,6 +59,8 @@ export class ProductDetailsComponent implements OnInit {
   }
 
   buy() {
+    //functionality need to be added, need to send the purchased product to 
+    //server and if any item in cart list should be removed
     confirm("Thanks for the Purchase! your Product will be delivered to your address.")
   }
 

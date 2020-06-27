@@ -5,12 +5,13 @@
     margin-top: 30px;
 }
 
-
-
 button {
     border: none;
 }
 
 .edit {
     background: none;
+}
+.btn{
+    width: 100%;
 }
