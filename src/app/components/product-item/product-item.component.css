@@ -13,5 +13,7 @@ a {
 .add {
     margin-left: 272px;
     margin-top: -42px;
+    float:none;
+    margin-right:0px;
     }
 }

@@ -12,6 +12,7 @@ import { MatCardModule } from '@angular/material/card';
 import { CartComponent } from '../cart/cart.component';
 import { CartItemComponent } from '../cart/cart-item/cart-item.component';
 import { ProductItemComponent } from '../product-item/product-item.component';
+import { FilterPipe } from 'src/app/filter.pipe';
 
 @NgModule({
     imports: [
@@ -29,7 +30,8 @@ import { ProductItemComponent } from '../product-item/product-item.component';
         DeleteComponent,
         ProductDetailsComponent,
         CartComponent,
-        CartItemComponent
+        CartItemComponent,
+        FilterPipe
     ]
 })
 export class ProductsModule { }

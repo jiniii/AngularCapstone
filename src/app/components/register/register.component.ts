@@ -1,8 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
-
 import { AccountService } from '../../services/account.service';
 import { AlertService } from '../../services/alert.service'
 
@@ -11,19 +10,22 @@ import { AlertService } from '../../services/alert.service'
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
-export class RegisterComponent implements OnInit {
-  
-  form: FormGroup;
-  loading = false;
-  submitted = false;
-  locations: any = [
-    'Kochi',
-    'Pune',
-    'Chennai',
-    'Bengaluru',
-    'Kolkata'
-  ];
 
+export class RegisterComponent implements OnInit, OnDestroy {
+
+  form: FormGroup;
+  loading: boolean;
+  submitted: boolean;
+  locations: any;
+
+  /**
+   * Constructor loads the Router,ActivatedRoute,FormBuilder,AlertService,AccountService modules
+   * @param formBuilder 
+   * @param route 
+   * @param router 
+   * @param accountService 
+   * @param alertService 
+   */
   constructor(
     private formBuilder: FormBuilder,
     private route: ActivatedRoute,
@@ -37,7 +39,20 @@ export class RegisterComponent implements OnInit {
     }
   }
 
+  /**
+   * ngOnInit():To initialize all the declared variables
+   */
   ngOnInit(): void {
+    this.loading = false;
+    this.submitted = false;
+    this.locations == [
+      'Kochi',
+      'Pune',
+      'Chennai',
+      'Bengaluru',
+      'Kolkata',
+      'Hyderabad'
+    ];
     this.form = this.formBuilder.group({
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
@@ -47,8 +62,25 @@ export class RegisterComponent implements OnInit {
       mobileNo: ['', [Validators.required, Validators.minLength(10)]],
     });
   }
+
+  /**
+   * ngOnDestroy(): To Destroy all the declared variables
+   */
+  ngOnDestroy() {
+    this.locations = null;
+    this.loading = null;
+    this.submitted = null;
+    this.form = null;
+  }
+
+  /**
+   * get f(): To get form control values
+   */
   get f() { return this.form.controls; }
 
+  /**
+   * onSubmit(): To Submit the Register form details
+   */
   onSubmit() {
     this.submitted = true;
     // reset alerts on submit

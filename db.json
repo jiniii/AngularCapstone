@@ -7,24 +7,6 @@
     }
   ],
   "register": [
-    {
-      "email": "manisha@gmail",
-      "password": 3333,
-      "firstName": "Manisha",
-      "lastName": "Jangid",
-      "location": "kkd",
-      "mobileNum": "947738748",
-      "id": 1
-    },
-    {
-      "firstName": "Mamatha",
-      "lastName": "halli",
-      "email": "mamas@fja",
-      "password": "mamatha",
-      "location": "kkd",
-      "mobileNo": "2345224233",
-      "id": 2
-    }
   ],
   "authenticate": [
     {

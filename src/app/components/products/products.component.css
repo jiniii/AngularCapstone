@@ -17,4 +17,14 @@ button {
 }
 .margin{
     margin-top: 50px;
+
+}
+@media screen and (min-width: 320px) and (max-width: 768px){
+.row{
+    display:inline-block;
+    }
+/* .margin{
+    margin-top: 50px;
+    left: -36px;
+    } */
 }
