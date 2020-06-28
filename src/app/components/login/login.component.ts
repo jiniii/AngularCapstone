@@ -1,26 +1,29 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
-
 import { AccountService } from '../../services/account.service';
 import { AlertService } from '../../services/alert.service'
-
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
-
-
-
+export class LoginComponent implements OnInit, OnDestroy {
   loginForm: FormGroup;
-  loading = false;
-  submitted = false;
+  loading: boolean;
+  submitted: boolean;
   returnUrl: string;
 
+  /**
+   * constructor that loads FormBuilder ,ActivatedRoute, Router, AccountService,  AlertService modules
+   * @param formBuilder 
+   * @param route 
+   * @param router 
+   * @param accountService 
+   * @param alertService 
+   */
   constructor(
     private formBuilder: FormBuilder,
     private route: ActivatedRoute,
@@ -34,7 +37,13 @@ export class LoginComponent implements OnInit {
     }
   }
 
+  /**
+   * ngOnInit():To initialize all the declared variables
+   */
   ngOnInit() {
+    this.loading = false;
+    this.submitted = false;
+    this.returnUrl = '';
     this.loginForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required]
@@ -44,9 +53,25 @@ export class LoginComponent implements OnInit {
     this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
   }
 
-  // convenience getter for easy access to form fields
+  /**
+   * ngOnDestroy(): To Destroy all the declared variables
+   */
+  ngOnDestroy() {
+    this.loading = null;
+    this.submitted = null;
+    this.loginForm = null;
+    this.returnUrl = null;
+  }
+
+
+  /**
+   * get f(): convenience getter for easy access to form fields
+   */
   get f() { return this.loginForm.controls; }
 
+  /**
+   * to submit login details
+   */
   onSubmit() {
     this.submitted = true;
 

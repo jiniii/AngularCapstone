@@ -58,13 +58,13 @@
                     <label>Image</label>
                     <select class="custom-select" formControlName="src">
                          <option value="">Choose your Image</option>
-                         <option *ngFor="let src of Images" [ngValue]="src" (change)="changeCity($event)">{{src}}</option>
-                       </select>
+                         <option *ngFor="let src of images" [ngValue]="src" (change)="changeCity($event)">{{src}}
+                         </option>
+                    </select>
                     <div *ngIf="submitted && f.src.errors" class="invalid-feedback">
                          <div *ngIf="f.src.errors.required">Product Image is required</div>
                     </div>
                </div>
-              
 
                <div class="form-group" [formGroup]="addProducts">
                     <button class="btn btn-primary" type="submit">ADD</button> &nbsp;

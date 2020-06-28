@@ -11,16 +11,18 @@ export class CartItemComponent implements OnInit {
 
   @Input() cartItem: any
 
-  constructor( private cartService: CartService,  private msg: MessengerService,) { }
+  constructor(private cartService: CartService, private msg: MessengerService, ) { }
 
   ngOnInit() {
   }
 
+  /**
+   * to remove the product from cart
+   * @param removedProduct 
+   */
   removeItem(removedProduct) {
-    console.log("removeproduct",removedProduct)
     this.cartService.removeProduct(removedProduct).subscribe(() => {
       this.msg.sendMsg(removedProduct);
-      console.log("removed ",removedProduct)
       alert("Product removed from cart Successfully!")
     })
   }

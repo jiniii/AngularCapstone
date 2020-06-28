@@ -1,7 +1,6 @@
 import { Component, OnInit, OnDestroy, Input } from '@angular/core';
 import { Router, NavigationStart } from '@angular/router';
 import { Subscription } from 'rxjs';
-
 import { Alert, AlertType } from '../../models/alert.model';
 import { AlertService } from '../../services/alert.service';
 
@@ -19,8 +18,16 @@ export class AlertComponent implements OnInit, OnDestroy {
     alertSubscription: Subscription;
     routeSubscription: Subscription;
 
+    /**
+     * constructor that initializes Router, AlertService modules
+     * @param router 
+     * @param alertService 
+     */
     constructor(private router: Router, private alertService: AlertService) { }
 
+    /**
+     * ngOnInit():To initialize all the declared variables
+     */
     ngOnInit() {
         // subscribe to new alert notifications
         this.alertSubscription = this.alertService.onAlert(this.id)
@@ -52,12 +59,19 @@ export class AlertComponent implements OnInit, OnDestroy {
         });
     }
 
+    /**
+     * ngOnDestroy(): To Destroy all the declared variables
+     */
     ngOnDestroy() {
         // unsubscribe to avoid memory leaks
         this.alertSubscription.unsubscribe();
         this.routeSubscription.unsubscribe();
     }
 
+    /**
+     * to remove the alert message
+     * @param alert 
+     */
     removeAlert(alert: Alert) {
         // check if already removed to prevent error on auto close
         if (!this.alerts.includes(alert)) return;
@@ -76,6 +90,9 @@ export class AlertComponent implements OnInit, OnDestroy {
         }
     }
 
+    /**
+     * css classes for alerts
+     */
     cssClass(alert: Alert) {
         if (!alert) return;
 

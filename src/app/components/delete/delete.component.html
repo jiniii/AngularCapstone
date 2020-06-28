@@ -3,13 +3,13 @@
 
      <h6 class="my-color">Product Name: </h6><label>{{products.productName}}</label>&nbsp;
      <br>
-     <h6 class="my-color">Product Description:  </h6><label>{{products.productDes | slice: 0:80 }}...</label>&nbsp;
+     <h6 class="my-color">Product Description: </h6><label>{{products.productDes | slice: 0:80 }}...</label>&nbsp;
      <br>
-     <h6 class="my-color">Product Manufacturer:  </h6><label>{{products.manufacturer}}</label>&nbsp;
+     <h6 class="my-color">Product Manufacturer: </h6><label>{{products.manufacturer}}</label>&nbsp;
      <br>
      <h6 class="my-color">Product Quantity: </h6><label>{{products.quantity}}</label>&nbsp;
      <br>
-     <h6 class="my-color">Product Price:  </h6><label>{{products.price | currency:'INR'}}</label>&nbsp;
+     <h6 class="my-color">Product Price: </h6><label>{{products.price | currency:'INR'}}</label>&nbsp;
      <br><br>
      <button type="button" class="btn btn-dark" (click)="delete()">Delete</button> &nbsp;
      <button type="button" class="btn btn-dark" (click)="back()">Back</button>
