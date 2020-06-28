@@ -6,8 +6,7 @@
       "id": 2
     }
   ],
-  "register": [
-  ],
+  "register": [],
   "authenticate": [
     {
       "firstName": "Mamatha",
