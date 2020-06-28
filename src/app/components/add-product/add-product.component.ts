@@ -19,8 +19,10 @@ export class AddProductComponent implements OnInit {
     "assets/lenovos60.jpg",
     "assets/samsung galaxyM21.jpg",
     "assets/oneplus85G.jpg",
+    "assets/oneplus7T.jpg",
     "assets/viviU10.jpg",
     "assets/redminote8.jpg",
+    "assets/redminote9pro.jpg",
     "assets/samsunggalaxym31.jpg"
   ];
 

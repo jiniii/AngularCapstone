@@ -58,13 +58,14 @@
             </div>
             <div class="form-group" [formGroup]="editProduct">
                 <label>Image</label>
-                <input type="text" id="image" class="form-control" formControlName="src"
-                [ngClass]="{ 'is-invalid': submitted && f.src.errors }">
+                <select class="custom-select" formControlName="src">
+                     <option value="">Choose your Image</option>
+                     <option *ngFor="let src of Images" [ngValue]="src" (change)="changeCity($event)">{{src}}</option>
+                   </select>
                 <div *ngIf="submitted && f.src.errors" class="invalid-feedback">
                      <div *ngIf="f.src.errors.required">Product Image is required</div>
                 </div>
-
-            </div>
+           </div>
 
             <div class="form-group" [formGroup]="editProduct">
                 <button class="btn btn-primary" type="submit">Submit</button> &nbsp;

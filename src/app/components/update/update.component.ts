@@ -22,6 +22,17 @@ export class UpdateComponent implements OnInit {
   productId: string;
   products: any;
   submitted: boolean = false;
+  Images: any= [
+    "assets/technospark.jpg",
+    "assets/lenovos60.jpg",
+    "assets/samsung galaxyM21.jpg",
+    "assets/oneplus85G.jpg",
+    "assets/oneplus7T.jpg",
+    "assets/viviU10.jpg",
+    "assets/redminote8.jpg",
+    "assets/redminote9pro.jpg",
+    "assets/samsunggalaxym31.jpg"
+  ];
 
   constructor(private route: Router, private activatedRoute: ActivatedRoute,
     private proService: ProductService, private alertService: AlertService
