@@ -107,29 +107,19 @@
       "price": 13499,
       "mobileNum": "9786755666",
       "src": "assets/samsung galaxyM21.jpg"
-    },
-    {
-      "productName": "Lenovo New 3",
-      "productDes": "13MP primary camera with auto focus, flash, HDR, panorama, night shot modes, front camera with bokeh suport | 5MP front facing camera 17.52 centimeters (6.9 inch) FHD IPS LCD Display multi-touch capacitive touchscreen with 1080 x 2160 pixels resolution 16M color support with 81% screen-to-body ratio",
-      "manufacturer": "Lenovo",
-      "quantity": 2,
-      "price": 12666,
-      "mobileNum": "9765765565",
-      "src": "assets/lenovos60.jpg",
-      "id": 7
     }
   ],
   "cart": [
     {
       "product": {
-        "id": 0,
-        "productName": "Samsung Galaxy M31 (Ocean Blue, 6GB RAM, 128GB Storage)",
-        "productDes": "64MP + 8MP + 5MP + 5MP rear camera | 32MP front facing camera,16.21 centimeters (6.4-inch) FHD+ capacitive touchscreen with 2340 x 1080 pixels resolution, 404 ppi pixel density and 16M color support",
-        "manufacturer": "Samsung",
-        "quantity": "1",
-        "price": 14999,
+        "id": 3,
+        "productName": "Fantastic 2.2 (Black 2GB RAM, 16GB Storage)",
+        "productDes": "13MP rear camera with AF/F2.2/1.12µm and flash | 5MP front camera with FF/F2.2/1.12µm/77° FOV and face unlock ,15.9004 centimeters (6.26-inch) with 720 x 1520 pixels resolution",
+        "manufacturer": "Fantastic",
+        "quantity": "4",
+        "price": 10000,
         "mobileNum": "947738748",
-        "src": "assets/samsunggalaxym31.jpg"
+        "src": "assets/technospark.jpg"
       },
       "id": 1
     }

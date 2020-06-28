@@ -33,7 +33,10 @@ export class DeleteComponent implements OnInit {
     let c = confirm("Are you Sure? Do you want to Delete this Product")
     if (c == true) {
       this.proService.deleteProduct(this.productId).subscribe(data => {
-        this.alertService.success('Your Product is Deleted Successfully', { keepAfterRouteChange: true });
+        this.alertService.success("Your Product is Deleted Successfully", { keepAfterRouteChange: true });
+      },
+      error =>{
+        console.log(error);
       })
     } else {
       this.back();
@@ -43,6 +46,9 @@ export class DeleteComponent implements OnInit {
   getDetails() {
     this.proService.getProduct().subscribe(data => {
       this.products = data[this.productId];
+    },
+    error =>{
+      console.log(error);
     })
 
   }

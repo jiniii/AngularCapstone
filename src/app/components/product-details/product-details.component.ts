@@ -34,11 +34,17 @@ export class ProductDetailsComponent implements OnInit {
     if ((this.router.url).includes("details")) {
       this.productSer.getProduct().subscribe(data => {
         this.products = data[this.productId];
+      },
+      error =>{
+        console.log(error);
       })
     }
     else {
       this.productSer.getProduct().subscribe(data => {
         this.products = data[this.productId];
+      },
+      error =>{
+        console.log(error);
       })
     }
 
@@ -55,6 +61,9 @@ export class ProductDetailsComponent implements OnInit {
       for (let i = 0; i < 6; i++) {
         this.productImage = data[i]['src'];
       }
+    },
+    error =>{
+      console.log(error);
     })
   }
 

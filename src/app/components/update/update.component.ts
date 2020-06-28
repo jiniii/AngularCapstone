@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ProductService } from 'src/app/services/product.service';
 import { AlertService } from 'src/app/services/alert.service';
 
@@ -21,6 +21,7 @@ export class UpdateComponent implements OnInit {
   });;
   productId: string;
   products: any;
+  submitted: boolean = false;
 
   constructor(private route: Router, private activatedRoute: ActivatedRoute,
     private proService: ProductService, private alertService: AlertService
@@ -32,27 +33,38 @@ export class UpdateComponent implements OnInit {
       this.getProducts();
     })
   }
+  get f() { return this.editProduct.controls; }
 
   getProducts() {
     this.proService.getProduct().subscribe(data => {
       this.products = data[this.productId];
         this.editProduct = new FormGroup({
-          productName: new FormControl(this.products.productName),
-          productDes: new FormControl(this.products.productDes),
-          manufacturer: new FormControl(this.products.manufacturer),
-          quantity: new FormControl(this.products.quantity),
-          price: new FormControl(this.products.price),
-          mobileNum: new FormControl(this.products.mobileNum),
-          src: new FormControl(this.products.src)
+          productName: new FormControl(this.products.productName, Validators.required),
+          productDes: new FormControl(this.products.productDes, Validators.required),
+          manufacturer: new FormControl(this.products.manufacturer, Validators.required),
+          quantity: new FormControl(this.products.quantity, Validators.required),
+          price: new FormControl(this.products.price, Validators.required),
+          mobileNum: new FormControl(this.products.mobileNum, [Validators.required, Validators.minLength(10)]),
+          src: new FormControl(this.products.src, Validators.required)
 
         });
       })
   }
 
   updateProduct() {
-    this.proService.update(this.productId, this.editProduct.value).subscribe(data => {
-      this.alertService.success('Your Product is Updated Successfully', { keepAfterRouteChange: true });
-    })
+    this.submitted = true;
+    if (this.editProduct.invalid) {
+      console.log("form is not valid")
+      return ;
+    } else{
+      this.proService.update(this.productId, this.editProduct.value).subscribe(data => {
+        this.alertService.success('Your Product is Updated Successfully', { keepAfterRouteChange: true });
+      },
+      error =>{
+        console.log(error);
+      })
+    }
+   
   }
 
   cancel() {

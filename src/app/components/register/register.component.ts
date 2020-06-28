@@ -6,31 +6,24 @@ import { first } from 'rxjs/operators';
 import { AccountService } from '../../services/account.service';
 import { AlertService } from '../../services/alert.service'
 
-export class User {
-  public email: string;
-  public password: string;
-  public firstName: string;
-  public lastName: string;
-  public location: string;
-  public monileNumber: number;
-}
-
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
+  
   form: FormGroup;
   loading = false;
   submitted = false;
-  // locations: string[] = [
-  //   'Kochi',
-  //   'Pune',
-  //   'Chennai',
-  //   'Bengaluru',
-  //   'Kolkata'
-  // ];
+  locations: any = [
+    'Kochi',
+    'Pune',
+    'Chennai',
+    'Bengaluru',
+    'Kolkata'
+  ];
+
   constructor(
     private formBuilder: FormBuilder,
     private route: ActivatedRoute,
@@ -58,12 +51,12 @@ export class RegisterComponent implements OnInit {
 
   onSubmit() {
     this.submitted = true;
-
     // reset alerts on submit
     this.alertService.clear();
 
     // stop here if form is invalid
     if (this.form.invalid) {
+      console.log("form values", this.form)
       return;
     }
 

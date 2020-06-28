@@ -36,21 +36,23 @@
                     <div *ngIf="f.password.errors.minlength">Password must be at least 8 characters</div>
                 </div>
             </div>
+          
             <div class="form-group">
-                <label for="location">Location</label>
-                <input type="location" formControlName="location" class="form-control"
-                    [ngClass]="{ 'is-invalid': submitted && f.location.errors }" />
-                <div *ngIf="submitted && f.location.errors" class="invalid-feedback">
-                    <div *ngIf="f.location.errors.required">Location is required</div>
+                <select class="custom-select" formControlName="location">
+                  <option value="">Choose your city</option>
+                  <option *ngFor="let city of locations" [ngValue]="city" (change)="changeCity($event)">{{city}}</option>
+                </select>
+                <div  *ngIf="submitted && f.location.errors?.required" class="invalid-feedback">
+                   Please enter your city name
                 </div>
-            </div>
+              </div> 
             <div class="form-group">
                 <label for="mobileNo">Mobile Number</label>
-                <input type="mobileNo" pattern="[0-9]{10}" formControlName="mobileNo" class="form-control"
+                <input type="number" pattern="[0-9]{10}" formControlName="mobileNo" class="form-control"
                     [ngClass]="{ 'is-invalid': submitted && f.mobileNo.errors }" />
                 <div *ngIf="submitted && f.mobileNo.errors" class="invalid-feedback">
                     <div *ngIf="f.mobileNo.errors.required">Mobile Number is required</div>
-                    <div *ngIf="f.mobileNo.errors.minlength">Mobile Number must be at least 10 characters</div>
+                    <div *ngIf="f.mobileNo.errors.minlength">Mobile Number must be at least 10 numbers</div>
                 </div>
             </div>
             <div class="form-group">

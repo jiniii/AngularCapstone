@@ -18,6 +18,9 @@ export class HomeComponent implements OnInit {
   getDetails() {
     this.proService.getProduct().subscribe(data => {
       this.products = data;
+    },
+    error =>{
+      console.log(error);
     })
   }
 }

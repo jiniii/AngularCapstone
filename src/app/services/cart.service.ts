@@ -40,7 +40,9 @@ export class CartService {
       })
     );
   }
-
+  removeProduct(id){
+    return this.http.delete(`${environment.apiUrl}/cart/${id}`);
+  }
   addProductToCart(product: Products): Observable<any> {
     return this.http.post(`${environment.apiUrl}/cart`, { product });
   }

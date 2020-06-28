@@ -3,3 +3,6 @@
   <span>{{ cartItem.qty }}</span>:
   <strong>{{ (cartItem.qty * cartItem.price) | currency:'INR' }}</strong>
 </div>
+
+<button type="button" class="btn btn-secondary my-btn" (click)="removeItem(cartItem.id)">Remove</button>
+
