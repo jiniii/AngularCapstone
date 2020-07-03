@@ -45,7 +45,7 @@ export class RegisterComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.loading = false;
     this.submitted = false;
-    this.locations == [
+    this.locations = [
       'Kochi',
       'Pune',
       'Chennai',
@@ -94,7 +94,7 @@ export class RegisterComponent implements OnInit, OnDestroy {
 
     this.loading = true;
     this.accountService.register(this.form.value)
-      .pipe(first())
+    //  .pipe(first())
       .subscribe(
         data => {
           this.alertService.success('Registration successful', { keepAfterRouteChange: true });

@@ -1,22 +1,10 @@
 {
-  "loginUsers": [
-    {
-      "email": "mamatha@gmail",
-      "password": 23333,
-      "id": 2
-    }
+  "loginUsers": [],
+  "register": [
+    
   ],
-  "register": [],
   "authenticate": [
-    {
-      "firstName": "Mamatha",
-      "lastName": "halli",
-      "email": "mamas@fja",
-      "password": "mamatha",
-      "location": "kkd",
-      "mobileNo": "2345224233",
-      "id": 1
-    }
+   
   ],
   "Products": [
     {
