@@ -9,6 +9,12 @@ export class User {
     token: string;
 }
 
+export class LoggedUser{
+    id:string;
+    email:string;
+    password:string;
+}
+
 export class Products {
     id:number;
     productName: string;

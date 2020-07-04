@@ -10,13 +10,11 @@ import { AccountService } from '../app/services/account.service';
 export class AppComponent {
   title = 'capstoneProject';
   user: User;
-  searchText: string;
 
   constructor(
     private accountService: AccountService
   ) {
     this.accountService.email.subscribe(x => this.user = x);
-    console.log("useremail", this.user);
   }
 
   logout() {

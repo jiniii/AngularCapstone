@@ -1,10 +1,49 @@
 {
-  "loginUsers": [],
   "register": [
-    
+    {
+      "firstName": "asf",
+      "lastName": "adfs",
+      "email": "adsf@asdf",
+      "password": "adfadfadfadf",
+      "location": "Chennai",
+      "mobileNo": 6978657567,
+      "id": 1
+    },
+    {
+      "firstName": "asdf",
+      "lastName": "asdf",
+      "email": "asdfgadf@asdf",
+      "password": "asdfadsadadfa",
+      "location": "Kolkata",
+      "mobileNo": 7685768578,
+      "id": 2
+    },
+    {
+      "firstName": "Mamatha",
+      "lastName": "H",
+      "email": "mamatha@gmail.com",
+      "password": "mamatha123",
+      "location": "Pune",
+      "mobileNo": 9865754332,
+      "id": 3
+    }
   ],
   "authenticate": [
-   
+    {
+      "email": "adsf@asdf",
+      "password": "adfadfadfadf",
+      "id": 1
+    },
+    {
+      "email": "asdfgadf@asdf",
+      "password": "asdfadsadadfa",
+      "id": 2
+    },
+    {
+      "email": "mamatha@gmail.com",
+      "password": "mamatha123",
+      "id": 3
+    }
   ],
   "Products": [
     {

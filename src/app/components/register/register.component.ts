@@ -4,6 +4,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
 import { AccountService } from '../../services/account.service';
 import { AlertService } from '../../services/alert.service'
+import { of } from 'rxjs';
+import { HttpResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-register',
@@ -17,6 +19,7 @@ export class RegisterComponent implements OnInit, OnDestroy {
   loading: boolean;
   submitted: boolean;
   locations: any;
+  users: any;
 
   /**
    * Constructor loads the Router,ActivatedRoute,FormBuilder,AlertService,AccountService modules
@@ -53,6 +56,7 @@ export class RegisterComponent implements OnInit, OnDestroy {
       'Kolkata',
       'Hyderabad'
     ];
+    this.users = [];
     this.form = this.formBuilder.group({
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
@@ -61,6 +65,7 @@ export class RegisterComponent implements OnInit, OnDestroy {
       location: ['', Validators.required],
       mobileNo: ['', [Validators.required, Validators.minLength(10)]],
     });
+    this.getRegisteredUsers();
   }
 
   /**
@@ -71,12 +76,22 @@ export class RegisterComponent implements OnInit, OnDestroy {
     this.loading = null;
     this.submitted = null;
     this.form = null;
+    this.users = null;
   }
 
   /**
    * get f(): To get form control values
    */
   get f() { return this.form.controls; }
+
+  /**
+   * To get Registered User Details
+   */
+  getRegisteredUsers() {
+    this.accountService.getRegisteredUsers().subscribe(data => {
+      this.users = data;
+    })
+  }
 
   /**
    * onSubmit(): To Submit the Register form details
@@ -88,13 +103,33 @@ export class RegisterComponent implements OnInit, OnDestroy {
 
     // stop here if form is invalid
     if (this.form.invalid) {
-      console.log("form values", this.form)
       return;
     }
-
     this.loading = true;
+    this.register();
+  }
+  /**
+  * To register for new users and validating if already a existing email id is there in the db
+  */
+  register() {
+    const user = this.form.value;
+    if (this.users.find(x => x.email === user.email)) {
+      this.alertService.error('Email Id "' + user.email + '" is already taken');
+      this.form.reset();
+      this.loading = false;
+
+    } else {
+      this.ok();
+    }
+  }
+
+  /**
+   * on Successfull registration
+   * @param body 
+   */
+  ok(body?) {
     this.accountService.register(this.form.value)
-    //  .pipe(first())
+      .pipe(first())
       .subscribe(
         data => {
           this.alertService.success('Registration successful', { keepAfterRouteChange: true });

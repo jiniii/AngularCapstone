@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { environment } from '../../environments/environment';
-import { User } from '../models/user.model';
+import { User,LoggedUser } from '../models/user.model';
 
 @Injectable({ providedIn: 'root' })
 
@@ -41,12 +41,17 @@ export class AccountService {
         this.router.navigate(['/account/login']);
     }
 
-    register(email: User) {
-        return this.http.post(`${environment.apiUrl}/register`, email);
+    register(user: User) {
+        console.log("user registered",user)
+        return this.http.post(`${environment.apiUrl}/register`, user);
     }
 
-    getAll() {
-        return this.http.get<User[]>(`${environment.apiUrl}/loginUsers`);
+    getRegisteredUsers() {
+        return this.http.get<User[]>(`${environment.apiUrl}/register`);
+    }
+
+    getLoggedInUsers(){
+        return this.http.get<LoggedUser[]>(`${environment.apiUrl}/authenticate`)
     }
 
 }
