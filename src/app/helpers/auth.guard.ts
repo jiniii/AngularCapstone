@@ -5,20 +5,26 @@ import { AccountService } from '../services/account.service';
 
 @Injectable({ providedIn: 'root' })
 export class AuthGuard implements CanActivate {
+    user: any;
+    isUserLogged: boolean = false;
     constructor(
         private router: Router,
-        private accountService: AccountService
     ) { }
 
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
-        const email = this.accountService.userValue;
-        if (email) {
-            // authorised so return true
+        this.user = localStorage.getItem("email");
+        if (this.user != null) {
+            this.isUserLogged = true;
             return true;
+        } else {
+            // not logged in so redirect to login page with the return url
+            this.isUserLogged = false;
+            this.router.navigate(['/account/login'], { queryParams: { returnUrl: state.url } });
+            return false;
         }
 
-        // not logged in so redirect to login page with the return url
-        this.router.navigate(['/account/login'], { queryParams: { returnUrl: state.url } });
-        return false;
+
+
+
     }
 }

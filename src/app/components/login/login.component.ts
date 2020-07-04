@@ -6,6 +6,7 @@ import { AccountService } from '../../services/account.service';
 import { AlertService } from '../../services/alert.service'
 import { of } from 'rxjs';
 import { HttpResponse } from '@angular/common/http';
+import { User } from 'src/app/models/user.model';
 
 @Component({
   selector: 'app-login',
@@ -19,6 +20,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   returnUrl: string;
   users: any;
   existingUser: any;
+  user:User
 
   /**
    * constructor that loads FormBuilder ,ActivatedRoute, Router, AccountService,  AlertService modules
@@ -95,7 +97,6 @@ export class LoginComponent implements OnInit, OnDestroy {
   getLoggedUser() {
     this.accountService.getLoggedInUsers().subscribe(data => {
       this.existingUser = data;
-      console.log("existinguser", this.existingUser)
     })
   }
 
@@ -123,7 +124,6 @@ export class LoginComponent implements OnInit, OnDestroy {
   authenticate() {
     const { email, password } = this.loginForm.value;
     const user = this.users.find(x => x.email === email && x.password === password);
-    console.log("checking authentication", user)
     if (!user) {
       this.alertService.error('EmailId or password is incorrect');
       this.loginForm.reset();
@@ -151,7 +151,6 @@ export class LoginComponent implements OnInit, OnDestroy {
     const existing = this.existingUser.find(x => x.email === email && x.password === password);
     //checking for existing user, if user is new then data will be sent to db
     if (!existing) {
-      console.log("caame to if not existing user")
       this.accountService.login(this.f.email.value, this.f.password.value)
         .pipe(first())
         .subscribe(
@@ -165,8 +164,8 @@ export class LoginComponent implements OnInit, OnDestroy {
           });
 
     } else {      //data is existing, then user is allowed to enter into homepage
-      console.log("came to existing user")
       localStorage.setItem('email', JSON.stringify(this.f.email.value));
+      location.reload();
       this.router.navigate([this.returnUrl]);
     }
   }

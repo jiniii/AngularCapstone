@@ -1,6 +1,16 @@
 <div class="container">
     <h3>E-commerce shopping cart</h3>
+    <div *ngIf="displayUser">
+        <h6>User Details</h6>
+        <label><b>User FirstName:</b> {{users.firstName}}</label><br>
+        <label><b>User LastName:</b> {{users.lastName}}</label><br>
+        <label><b>User Location:</b> {{users.location}}</label><br>
+        <label><b>User MobileNo:</b> {{users.mobileNo}}</label><br>
+        <label><b>User Email Address:</b> {{users.email}}</label>
+    </div>
     <br><br><br><br><br>
     <p>Login to view your cart</p>
+    <p>{{currentUser}}</p>
+    <!--you can modify it,just for checking-->
     <p>New users? Please register !</p>
 </div>

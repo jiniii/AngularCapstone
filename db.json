@@ -1,48 +1,34 @@
 {
   "register": [
     {
-      "firstName": "asf",
-      "lastName": "adfs",
-      "email": "adsf@asdf",
-      "password": "adfadfadfadf",
-      "location": "Chennai",
-      "mobileNo": 6978657567,
-      "id": 1
-    },
-    {
-      "firstName": "asdf",
-      "lastName": "asdf",
-      "email": "asdfgadf@asdf",
-      "password": "asdfadsadadfa",
-      "location": "Kolkata",
-      "mobileNo": 7685768578,
-      "id": 2
-    },
-    {
       "firstName": "Mamatha",
       "lastName": "H",
       "email": "mamatha@gmail.com",
       "password": "mamatha123",
       "location": "Pune",
       "mobileNo": 9865754332,
-      "id": 3
+      "id": 1
+    },
+    {
+      "firstName": "new User",
+      "lastName": "asd",
+      "email": "user@gmail.com",
+      "password": "user1234567",
+      "location": "Kolkata",
+      "mobileNo": 9675674665,
+      "id": 2
     }
   ],
   "authenticate": [
     {
-      "email": "adsf@asdf",
-      "password": "adfadfadfadf",
+      "email": "mamatha@gmail.com",
+      "password": "mamatha123",
       "id": 1
     },
     {
-      "email": "asdfgadf@asdf",
-      "password": "asdfadsadadfa",
+      "email": "user@gmail.com",
+      "password": "user1234567",
       "id": 2
-    },
-    {
-      "email": "mamatha@gmail.com",
-      "password": "mamatha123",
-      "id": 3
     }
   ],
   "Products": [
@@ -117,19 +103,5 @@
       "src": "assets/samsung galaxyM21.jpg"
     }
   ],
-  "cart": [
-    {
-      "product": {
-        "id": 3,
-        "productName": "Fantastic 2.2 (Black 2GB RAM, 16GB Storage)",
-        "productDes": "13MP rear camera with AF/F2.2/1.12µm and flash | 5MP front camera with FF/F2.2/1.12µm/77° FOV and face unlock ,15.9004 centimeters (6.26-inch) with 720 x 1520 pixels resolution",
-        "manufacturer": "Fantastic",
-        "quantity": "4",
-        "price": 10000,
-        "mobileNum": "947738748",
-        "src": "assets/technospark.jpg"
-      },
-      "id": 1
-    }
-  ]
+  "cart": []
 }

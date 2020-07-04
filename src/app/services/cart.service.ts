@@ -27,6 +27,7 @@ export class CartService {
             if (cartItems[i].productId === item.product.id) {
               cartItems[i].qty++
               productExists = true
+             // cartItems[i].email
               break;
             }
           }

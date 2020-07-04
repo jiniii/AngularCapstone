@@ -37,12 +37,12 @@ export class AccountService {
     logout() {
         // remove user from local storage and set current user to null
         localStorage.removeItem('email');
+        localStorage.removeItem('registerDetails');
         this.userSubject.next(null);
         this.router.navigate(['/account/login']);
     }
 
     register(user: User) {
-        console.log("user registered",user)
         return this.http.post(`${environment.apiUrl}/register`, user);
     }
 
@@ -53,5 +53,4 @@ export class AccountService {
     getLoggedInUsers(){
         return this.http.get<LoggedUser[]>(`${environment.apiUrl}/authenticate`)
     }
-
 }
