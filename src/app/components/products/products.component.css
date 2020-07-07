@@ -12,19 +12,30 @@ button {
 .edit {
     background: none;
 }
-.btn{
-    width: 100%;
-}
-.margin{
-    margin-top: 50px;
 
+.btn {
+    width: 100%;
+    font-size: small;
 }
-@media screen and (min-width: 320px) and (max-width: 768px){
-.row{
-    display:inline-block;
+
+.margin {
+    margin-top: 50px;
+}
+
+.cartbutton {
+    height: 40px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .row {
+        display: inline-block;
     }
-/* .margin{
+    /* .margin{
     margin-top: 50px;
     left: -36px;
     } */
+    .cartbutton {
+        margin-bottom: 10px;
+        ;
+    }
 }

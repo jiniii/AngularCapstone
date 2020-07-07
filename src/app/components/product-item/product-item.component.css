@@ -1,7 +1,8 @@
 .add {
     float: right;
-    margin-right: 50px;
-    margin-top: -44px;
+    /* margin-right: 50px;
+    margin-top: -44px; */
+    margin-bottom: 10px;
 }
 
 a {
@@ -9,11 +10,28 @@ a {
     text-decoration: none;
     background-color: transparent;
 }
-@media screen and (min-width: 320px) and (max-width: 768px){
-.add {
-    margin-left: 272px;
+
+button {
+    border: none;
+    height: 35px;
+}
+
+.edit {
+    color: white;
+    background: none;
+}
+
+.product-btn {
+    color: black;
+    background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .add {
+        /* margin-left: 272px;
     margin-top: -42px;
     float:none;
-    margin-right:0px;
+    margin-right:0px; */
+        margin: 20px 0px;
     }
 }

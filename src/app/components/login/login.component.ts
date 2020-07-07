@@ -125,7 +125,7 @@ export class LoginComponent implements OnInit, OnDestroy {
     const { email, password } = this.loginForm.value;
     const user = this.users.find(x => x.email === email && x.password === password);
     if (!user) {
-      this.alertService.error('EmailId or password is incorrect');
+      this.alertService.error('Email Id or password is incorrect');
       this.loginForm.reset();
       this.loading = false;
     } else {

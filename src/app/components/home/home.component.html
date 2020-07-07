@@ -45,8 +45,7 @@
             <img mat-card-image src={{prod.src}} alt="Photo of a Shiba Inu">
             <mat-card-content>
                 Price:<strong style="color: crimson;"> Rs.{{prod.price}}</strong> &nbsp;
-                <button type="button" class="btn btn-sm btn-outline-secondary product-btn"
-                    [routerLink]="['/products/details',prod.id]">View Details</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary product-btn" [routerLink]="['/products/details',prod.id]">View Details</button>
             </mat-card-content>
             <!-- <mat-card-actions>
                 <button mat-button>LIKE</button>
