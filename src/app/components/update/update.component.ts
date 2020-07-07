@@ -54,7 +54,13 @@ export class UpdateComponent implements OnInit, OnDestroy {
       "assets/viviU10.jpg",
       "assets/redminote8.jpg",
       "assets/redminote9pro.jpg",
-      "assets/samsunggalaxym31.jpg"
+      "assets/samsunggalaxym31.jpg",
+      "assets/SamsungM30.jpg",
+      "assets/samsungM30s.jpg",
+      "assets/samsungM40.jpg",
+      "assets/OppoA31.jpg",
+      "assets/OPPOF15.jpg",
+      "assets/OppoReno3.jpg"
     ];
     this.getProductId();
   }

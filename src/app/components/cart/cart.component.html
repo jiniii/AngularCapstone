@@ -1,7 +1,9 @@
-<div *ngIf="cartItems.length === 0" class="alert alert-info">Your Cart is Empty.</div>
-<div class="cart-item">
+
+<div *ngIf="cartItems.length === 0" class="alert alert-info" style="width: 49%;top: 10px;left: 5px;">Your Cart is Empty.</div>
+<div class="cart-item" style="padding: 5px 5px 5px 5px;
+width: 50%;">
   <div class="card">
-    <div class="card-header"><i class="fa fa-cart-plus"></i> Cart List</div>
+    <div class="card-header"><i class="fa fa-shopping-cart">{{cartItems.length}}</i> Cart List </div>
     <div class="cart-item">
       <ul *ngIf="cartItems.length > 0" class="list-group">
         <li class="list-group-item" *ngFor="let item of cartItems">

@@ -1,7 +1,9 @@
+<div style="margin-bottom: 50px;">
+
 <div class="container margin">
     <h2>Mobile Products</h2>
     <div class="container-body">
-        <div class="col-sm-6 col-lg-2" style="margin-top:50;display:inline-block;float:left;">
+        <div class="col-sm-6 col-lg-2 cart-align">
             <div class="cart-item">
                 <div class="card">
                     <div class="card-header">Filters</div>
@@ -22,15 +24,14 @@
             </div>
         </div>
         <div class="col-sm-12 col-lg-8 " style="display:inline-block">
-            <!-- <div class="my-class"> -->
             <app-product-item [productItem]="products"></app-product-item>
-            <!-- </div> -->
         </div>
-        <!-- <div class="col margin">
+        <!-- <div class="col-sm-12 col-lg-2" style="display:inline-block;float:right;">
             <app-cart></app-cart>
         </div> -->
         <div class="col-sm-12 col-lg-1" style="display:inline-block;float:right;">
             <button routerLink="cart" class="btn btn-sm btn-dark cartbutton"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart</button>
         </div>
     </div>
+</div>
 </div>
