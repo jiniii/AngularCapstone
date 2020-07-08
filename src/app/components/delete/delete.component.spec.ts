@@ -29,9 +29,8 @@ describe('DeleteComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  // it('should have a title in header h1', () => {
-  //   fixture.detectChanges();
-  //   const btn = fixture.debugElement.nativeElement.querySelector('h1');
-  //   expect(btn.innerHTML).toBe('Delete Product');
-  // });
+  it('should contain heading "Delete Product"', () => {
+    const heading: HTMLElement = fixture.nativeElement.querySelector('h4');
+    expect(heading.textContent).toContain('Delete Product');
+  });
 });

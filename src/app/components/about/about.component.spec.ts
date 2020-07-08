@@ -25,4 +25,10 @@ describe('AboutComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should contain "E-commerce shopping cart"', () => {
+    const heading: HTMLElement = fixture.nativeElement;
+    expect(heading.textContent).toContain('E-commerce shopping cart');
+  });
+
 });

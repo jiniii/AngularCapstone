@@ -25,4 +25,9 @@ describe('CartComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should contain "Cart List"', () => {
+    const heading: HTMLElement = fixture.nativeElement.querySelector('.card-header');
+    expect(heading.textContent).toContain('Cart List');
+  });
 });
