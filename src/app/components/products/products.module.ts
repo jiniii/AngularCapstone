@@ -13,6 +13,7 @@ import { CartComponent } from '../cart/cart.component';
 import { CartItemComponent } from '../cart/cart-item/cart-item.component';
 import { ProductItemComponent } from '../product-item/product-item.component';
 import { FilterPipe } from 'src/app/filter.pipe';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
     imports: [
@@ -21,6 +22,7 @@ import { FilterPipe } from 'src/app/filter.pipe';
         ReactiveFormsModule,
         ProductsRoutingModule,
         MatCardModule,
+        RouterModule
     ],
     declarations: [
         ProductsComponent,
@@ -32,6 +34,9 @@ import { FilterPipe } from 'src/app/filter.pipe';
         CartComponent,
         CartItemComponent,
         FilterPipe
+    ],
+    exports:[
+        ReactiveFormsModule,
     ]
 })
 export class ProductsModule { }

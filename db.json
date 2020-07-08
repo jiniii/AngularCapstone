@@ -17,6 +17,15 @@
       "location": "Kolkata",
       "mobileNo": 9675674665,
       "id": 2
+    },
+    {
+      "firstName": "a",
+      "lastName": "b",
+      "email": "ab@gmail.com",
+      "password": "1234567890",
+      "location": "Kochi",
+      "mobileNo": 9876543210,
+      "id": 3
     }
   ],
   "authenticate": [
@@ -29,6 +38,11 @@
       "email": "user@gmail.com",
       "password": "user1234567",
       "id": 2
+    },
+    {
+      "email": "ab@gmail.com",
+      "password": "1234567890",
+      "id": 3
     }
   ],
   "Products": [
@@ -163,19 +177,5 @@
       "id": 12
     }
   ],
-  "cart": [
-    {
-      "product": {
-        "id": 0,
-        "productName": "Samsung Galaxy M31 (Ocean Blue, 6GB RAM, 128GB Storage)",
-        "productDes": "64MP + 8MP + 5MP + 5MP rear camera | 32MP front facing camera,16.21 centimeters (6.4-inch) FHD+ capacitive touchscreen with 2340 x 1080 pixels resolution, 404 ppi pixel density and 16M color support",
-        "manufacturer": "Samsung",
-        "quantity": "1",
-        "price": 14999,
-        "mobileNum": "947738748",
-        "src": "assets/samsunggalaxym31.jpg"
-      },
-      "id": 1
-    }
-  ]
+  "cart": []
 }

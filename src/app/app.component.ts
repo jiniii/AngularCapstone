@@ -8,7 +8,7 @@ import { AccountService } from '../app/services/account.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'capstoneProject';
+  title = 'E-Cart';
   user: User;
 
   constructor(

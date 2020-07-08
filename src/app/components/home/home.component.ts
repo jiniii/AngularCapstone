@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit, OnDestroy {
    * constructor that loads ProductService module
    * @param proService 
    */
-  constructor(private proService: ProductService) { }
+  constructor(public proService: ProductService) { }
 
   /**
    * ngOnInit():To initialize all the declared variables

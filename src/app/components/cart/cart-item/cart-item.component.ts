@@ -9,7 +9,7 @@ import { MessengerService } from 'src/app/services/messenger.service';
 })
 export class CartItemComponent implements OnInit {
 
-  @Input() cartItem: any
+  @Input() cartItem: any =[];
 
   constructor(private cartService: CartService, private msg: MessengerService, ) { }
 
