@@ -1,7 +1,8 @@
-import { Component, OnInit, Input, Output, OnDestroy } from '@angular/core';
+import { Component, OnInit, Input, OnDestroy } from '@angular/core';
 import { MessengerService } from 'src/app/services/messenger.service'
 import { CartService } from 'src/app/services/cart.service'
 import { Products } from 'src/app/models/user.model';
+import { ProductService } from 'src/app/services/product.service';
 
 @Component({
   selector: 'app-product-item',
@@ -10,9 +11,9 @@ import { Products } from 'src/app/models/user.model';
 })
 export class ProductItemComponent implements OnInit, OnDestroy {
 
-  @Input() productItem: Products;
   searchText: string;
   products: Products[];
+  config: any;
 
   /**
    * constructor that loads MessengerService,CartService modules
@@ -22,6 +23,7 @@ export class ProductItemComponent implements OnInit, OnDestroy {
   constructor(
     private msg: MessengerService,
     private cartService: CartService,
+    private proService: ProductService
   ) { }
 
   /**
@@ -30,6 +32,12 @@ export class ProductItemComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.searchText = '';
     this.products = [];
+    this.getDetails();
+    this.config = {
+      itemsPerPage: 5,
+      currentPage: 1,
+      totalItems: this.products.length
+    };
   }
 
   /**
@@ -38,6 +46,7 @@ export class ProductItemComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.searchText = null;
     this.products = null;
+    this.config = null;
   }
 
   /**
@@ -48,6 +57,21 @@ export class ProductItemComponent implements OnInit, OnDestroy {
     this.cartService.addProductToCart(addedProduct).subscribe(() => {
       this.msg.sendMsg(addedProduct);
       alert("Product added into cart Successfully!")
+    })
+  }
+  /**
+   * To change the page from current page
+   * @param event 
+   */
+  pageChanged(event){
+    this.config.currentPage = event;
+  }
+  /**
+   * To get the product details
+   */
+  getDetails() {
+    this.proService.getProduct().subscribe((product) => {
+      this.products = product;
     })
   }
 }

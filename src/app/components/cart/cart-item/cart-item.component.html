@@ -1,7 +1,10 @@
-<div class="cart-item">
-  <span>{{ cartItem.productName }}</span> x
+<div>
+  <hr>
+  <img src={{cartItem.src}} alt="pic" width="250" height="300">
+  <label class="my-style">{{ cartItem.productName }}</label> x
   <span>{{ cartItem.qty }}</span>:
   <strong>{{ (cartItem.qty * cartItem.price) | currency:'INR' }}</strong>
+  <br>
+  <button type="button" class="btn btn-primary my-btn"
+    (click)="removeItem(cartItem.id)">Remove</button>
 </div>
-
-<button type="button" class="btn btn-secondary my-btn" (click)="removeItem(cartItem.id)">Remove</button>

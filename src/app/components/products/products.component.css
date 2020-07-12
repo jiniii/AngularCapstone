@@ -17,10 +17,8 @@ button {
     width: 100%;
     font-size: small;
 }
-
 .margin {
     margin-top: 20px;
-    /* bottom: 40px; */
 }
 .cart-align{
     margin-top:50;
@@ -36,13 +34,10 @@ button {
     .row {
         display: inline-block;
     }
-    /* .margin{
-    margin-top: 50px;
-    left: -36px;
-    } */
+  
     .cartbutton {
         margin-bottom: 10px;
-        ;
+       
     }
     
 }

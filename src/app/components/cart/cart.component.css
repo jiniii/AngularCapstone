@@ -1,0 +1,21 @@
+.bottom{
+    margin-bottom: 50px;
+}
+.empty-cart{
+    top: 10px;
+    margin: 5px;
+    width: 50%;
+}
+.shopping{
+    padding: 5px 5px 5px 5px;
+}
+.font-shop{
+    font-size: 30px;
+    margin-top: 5px;
+}
+.total{
+    font-size: 20px;
+}
+.alignment{
+    float: right;
+}

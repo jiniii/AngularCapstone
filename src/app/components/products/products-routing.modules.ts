@@ -8,12 +8,12 @@ import { AddProductComponent } from '../add-product/add-product.component';
 import { ProductDetailsComponent } from '../product-details/product-details.component';
 import { DeleteComponent } from '../delete/delete.component';
 import { CartComponent } from '../cart/cart.component';
-
+import { CanDeactivateFormGuard } from 'src/app/helpers/canDeactivate';
 
 const empRoutes: Routes = [
   { path: '', component: ProductsComponent },
   { path:'cart',component:CartComponent,canActivate:[AuthGuard]},
-  { path: 'addProduct', component: AddProductComponent, canActivate: [AuthGuard] },
+  { path: 'addProduct', component: AddProductComponent, canActivate: [AuthGuard], canDeactivate:[CanDeactivateFormGuard] },
   { path: 'details/:id', component: ProductDetailsComponent },
   { path: ':id', component: ProductDetailsComponent },
   { path: 'delete/:id', component: DeleteComponent, canActivate: [AuthGuard] },

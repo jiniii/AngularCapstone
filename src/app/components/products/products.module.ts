@@ -13,6 +13,7 @@ import { CartComponent } from '../cart/cart.component';
 import { CartItemComponent } from '../cart/cart-item/cart-item.component';
 import { ProductItemComponent } from '../product-item/product-item.component';
 import { FilterPipe } from 'src/app/filter.pipe';
+import { NgxPaginationModule } from 'ngx-pagination';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
@@ -22,7 +23,8 @@ import { RouterModule } from '@angular/router';
         ReactiveFormsModule,
         ProductsRoutingModule,
         MatCardModule,
-        RouterModule
+        RouterModule,
+        NgxPaginationModule
     ],
     declarations: [
         ProductsComponent,
@@ -33,7 +35,7 @@ import { RouterModule } from '@angular/router';
         ProductDetailsComponent,
         CartComponent,
         CartItemComponent,
-        FilterPipe
+        FilterPipe,
     ],
     exports:[
         ReactiveFormsModule,
