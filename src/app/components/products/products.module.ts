@@ -15,6 +15,8 @@ import { ProductItemComponent } from '../product-item/product-item.component';
 import { FilterPipe } from 'src/app/filter.pipe';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { RouterModule } from '@angular/router';
+import { ChartComponent } from '../chart/chart.component';
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
     imports: [
@@ -24,7 +26,8 @@ import { RouterModule } from '@angular/router';
         ProductsRoutingModule,
         MatCardModule,
         RouterModule,
-        NgxPaginationModule
+        NgxPaginationModule,
+        ChartsModule
     ],
     declarations: [
         ProductsComponent,
@@ -36,8 +39,9 @@ import { RouterModule } from '@angular/router';
         CartComponent,
         CartItemComponent,
         FilterPipe,
+        ChartComponent
     ],
-    exports:[
+    exports: [
         ReactiveFormsModule,
     ]
 })
