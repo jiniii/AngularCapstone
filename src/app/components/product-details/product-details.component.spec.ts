@@ -14,9 +14,9 @@ describe('ProductDetailsComponent', () => {
       imports: [
         RouterTestingModule, HttpClientTestingModule, MatCardModule
       ],
-      declarations: [ ProductDetailsComponent ]
+      declarations: [ProductDetailsComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -27,5 +27,10 @@ describe('ProductDetailsComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should contain heading "Product Details"', () => {
+    const heading = fixture.debugElement.nativeElement.querySelector('h4');
+    expect(heading.innerHTML).toBe('Product Details');
   });
 });

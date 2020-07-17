@@ -8,28 +8,29 @@ import { MatCardModule } from '@angular/material/card';
 import { HttpClientTestingModule } from '@angular/common/http/testing'
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
-  describe('AppComponent', () => {
-    beforeEach(async(() => {
-      TestBed.configureTestingModule({
-        imports: [
-          RouterTestingModule, HttpClientTestingModule, MatCardModule,AppRoutingModule,FormsModule,
-        ],
-        declarations: [
-          AppComponent, HomeComponent, AboutComponent, AlertComponent,
-        ],
-      }).compileComponents();
-    }));
+describe('AppComponent', () => {
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      imports: [
+        RouterTestingModule, HttpClientTestingModule, MatCardModule, AppRoutingModule, FormsModule,
+      ],
+      declarations: [
+        AppComponent, HomeComponent, AboutComponent, AlertComponent, PageNotFoundComponent
+      ],
+    }).compileComponents();
+  }));
 
-    it('should create the app', () => {
-      const fixture = TestBed.createComponent(AppComponent);
-      const app = fixture.componentInstance;
-      expect(app).toBeTruthy();
-    });
- 
-    it(`should have as title 'E-Cart'`, async(() => {
-      const fixture = TestBed.createComponent(AppComponent);
-      const app = fixture.debugElement.componentInstance;
-      expect(app.title).toEqual('E-Cart');
-    }));
+  it('should create the app', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app).toBeTruthy();
   });
+
+  it(`should have as title 'E-Cart'`, async(() => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.debugElement.componentInstance;
+    expect(app.title).toEqual('E-Cart');
+  }));
+});

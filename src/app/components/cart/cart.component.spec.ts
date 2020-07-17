@@ -1,8 +1,8 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { CartComponent } from './cart.component';
 import { HttpClientModule } from '@angular/common/http';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { CartItemComponent } from './cart-item/cart-item.component';
+import { CartComponent } from './cart.component';
+
 
 describe('CartComponent', () => {
   let component: CartComponent;
@@ -11,9 +11,9 @@ describe('CartComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientModule],
-      declarations: [ CartComponent,CartItemComponent ]
+      declarations: [CartComponent, CartItemComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -27,7 +27,8 @@ describe('CartComponent', () => {
   });
 
   it('should contain "Cart List"', () => {
-    const heading: HTMLElement = fixture.nativeElement.querySelector('.card-header');
+    const heading: HTMLElement = fixture.nativeElement.querySelector('h6');
     expect(heading.textContent).toContain('Cart List');
   });
+  
 });

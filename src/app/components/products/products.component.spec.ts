@@ -1,11 +1,12 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { ProductsComponent } from './products.component';
-import { RouterTestingModule } from '@angular/router/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { FilterPipe } from 'src/app/filter.pipe';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
+import { RouterTestingModule } from '@angular/router/testing';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { FilterPipe } from 'src/app/filter.pipe';
 import { ProductItemComponent } from '../product-item/product-item.component';
+import { ProductsComponent } from './products.component';
+
 
 describe('ProductsComponent', () => {
   let component: ProductsComponent;
@@ -14,11 +15,11 @@ describe('ProductsComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule, HttpClientTestingModule,FormsModule
+        RouterTestingModule, HttpClientTestingModule, FormsModule, NgxPaginationModule
       ],
-      declarations: [ ProductsComponent,FilterPipe,ProductItemComponent ]
+      declarations: [ProductsComponent, FilterPipe, ProductItemComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
