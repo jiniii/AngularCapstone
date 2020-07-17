@@ -132,7 +132,6 @@ export class RegisterComponent implements OnInit, OnDestroy {
       .pipe(first())
       .subscribe(
         data => {
-          localStorage.setItem('registerDetails', JSON.stringify(this.form.value));
           this.alertService.success('Registration successful', { keepAfterRouteChange: true });
           this.router.navigate(['../login'], { relativeTo: this.route });
         },
