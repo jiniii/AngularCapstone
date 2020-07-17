@@ -1,195 +1,217 @@
 {
-  "register": [
-    {
-      "firstName": "Mamatha",
-      "lastName": "H",
-      "email": "mamatha@gmail.com",
-      "password": "mamatha123",
-      "location": "Pune",
-      "mobileNo": 9865754332,
-      "id": 1
-    },
-    {
-      "firstName": "new User",
-      "lastName": "asd",
-      "email": "user@gmail.com",
-      "password": "user1234567",
-      "location": "Kolkata",
-      "mobileNo": 9675674665,
-      "id": 2
-    },
-    {
-      "firstName": "a",
-      "lastName": "b",
-      "email": "ab@gmail.com",
-      "password": "1234567890",
-      "location": "Kochi",
-      "mobileNo": 9876543210,
-      "id": 3
-    }
-  ],
-  "authenticate": [
-    {
-      "email": "mamatha@gmail.com",
-      "password": "mamatha123",
-      "id": 1
-    },
-    {
-      "email": "user@gmail.com",
-      "password": "user1234567",
-      "id": 2
-    },
-    {
-      "email": "ab@gmail.com",
-      "password": "1234567890",
-      "id": 3
-    }
-  ],
-  "Products": [
-    {
-      "id": 0,
-      "productName": "Samsung Galaxy M31 (Ocean Blue, 6GB RAM, 128GB Storage)",
-      "productDes": "64MP + 8MP + 5MP + 5MP rear camera | 32MP front facing camera,16.21 centimeters (6.4-inch) FHD+ capacitive touchscreen with 2340 x 1080 pixels resolution, 404 ppi pixel density and 16M color support",
-      "manufacturer": "Samsung",
-      "quantity": "1",
-      "price": 14999,
-      "mobileNum": "947738748",
-      "src": "assets/samsunggalaxym31.jpg"
-    },
-    {
-      "id": 1,
-      "productName": "Redmi Note 8 Pro (Electric Blue, 6GB RAM, 128GB Storage with Helio G90T Processor)",
-      "productDes": "64MP AI Quad rear camera with Portrait ultra-wide lens, macro lens, led flash, AI support, beautify support | 20MP front facing camera, Performance: Smooth gaming experience with powerful Helio G90T gaming processor, Game turbo and Liquid cooling technology",
-      "manufacturer": "Redmi",
-      "quantity": "5",
-      "price": 16999,
-      "mobileNum": "947738748",
-      "src": "assets/redminote8.jpg"
-    },
-    {
-      "id": 2,
-      "productName": "Vivo U10 (Electric Blue, 5000 mAH 18W Fast Charge Battery, 3GB RAM, 32GB Storage)",
-      "productDes": "16.15 centimeters (6.35-inch) halo fullview display with 720 x 1544 pixels resolution, Memory, Storage & SIM: 3GB RAM | 32GB internal memory expandable up to 256GB | Dual SIM (nano+nano) dual-standby (4G+4G)",
-      "manufacturer": "Vivo",
-      "quantity": "4",
-      "price": 8990,
-      "mobileNum": "947738748",
-      "src": "assets/viviU10.jpg"
-    },
-    {
-      "id": 3,
-      "productName": "Fantastic 2.2 (Black 2GB RAM, 16GB Storage)",
-      "productDes": "13MP rear camera with AF/F2.2/1.12µm and flash | 5MP front camera with FF/F2.2/1.12µm/77° FOV and face unlock ,15.9004 centimeters (6.26-inch) with 720 x 1520 pixels resolution",
-      "manufacturer": "Fantastic",
-      "quantity": "4",
-      "price": 10000,
-      "mobileNum": 9477387484,
-      "src": "assets/technospark.jpg"
-    },
-    {
-      "id": 4,
-      "productName": "OnePlus 8 5G (Glacial Green 6GB RAM+128GB Storage)",
-      "productDes": "48+12+16MP triple rear camera with telephoto lens + ultrawide angle lens | 16MP front camera with 4K video capture @ 30/60 FPS, ultrashot, nightscape, portrait, pro mode, panorama, HDR, AI scene detection, RAW image,16.63 centimeters (6.55 inch) 90Hz fluid AMOLED with 2400 x 1080 pixels resolution and 402 ppi pixel density",
-      "manufacturer": "OnePlus",
-      "quantity": "6",
-      "price": 41999,
-      "mobileNum": "947738748",
-      "src": "assets/oneplus85G.jpg"
-    },
-    {
-      "id": 5,
-      "productName": "Samsung Galaxy M21 (Midnight Blue, 4GB RAM, 64GB Storage)",
-      "productDes": "48MP (F2.0) Main Camera +8MP (F2.2) Ultra Wide Camera +5MP(F2.2) Depth Camera | 20MP (F2.2) front facing camera 16.21 centimeters (6.4-inch) FHD+ capacitive touchscreen with 2340 x 1080 pixels resolution 16M color support",
-      "manufacturer": "Samsung",
-      "quantity": "4",
-      "price": 13499,
-      "mobileNum": "9786755666",
-      "src": "assets/samsung galaxyM21.jpg"
-    },
-    {
-      "id": 6,
-      "productName": "Samsung Galaxy M30s (Blue, 6GB RAM, 128GB Storage)",
-      "productDes": "48MP + 8MP + 5MP triple rear camera | 16MP front facing camera, 16.21 centimeters (6.4-inch) FHD+ capacitive touchscreen with 2340 x 1080 pixels resolution 16M color support",
-      "manufacturer": "Samsung Galaxy",
-      "quantity": 3,
-      "price": 16999,
-      "mobileNum": 9788687657,
-      "src": "assets/samsungM30s.jpg"
-    },
-    {
-      "id": 7,
-      "productName": "Samsung Galaxy M30 (Gradation Blue, 4GB RAM, Super AMOLED Display, 64GB Storage, 5000mAH Battery)",
-      "productDes": "13 MP + 5 MP + 5 MP Triple rear camera | 16MP front facing camera, 16.21 centimeters (6.4-inch) FHD+ multi-touch capacitive touchscreen with 2340 x 1080 pixels resolution and 16M color support, Memory, Storage and SIM: 4GB RAM | 64GB internal memory expandable up to 512GB | Dual SIM (nano+nano) dual-standby (4G+4G)",
-      "manufacturer": "Samsung Galaxy",
-      "quantity": 5,
-      "price": 12999,
-      "mobileNum": 8765445456,
-      "src": "assets/SamsungM30.jpg"
-    },
-    {
-      "id": 8,
-      "productName": "Samsung Galaxy M40 (Midnight Blue, 6GB RAM, 128GB Storage)",
-      "productDes": "32MP + 8MP + 5MP triple rear camera; 16MP front facing camera; Rear Camera - F Number (Multiple):F1.7 , F2.2 , F2.2, 16.00 centimeters (6.3-inch) FHD+ capacitive touchscreen with 2340 x 1080 pixels resolution 16M color support Memory, Storage & SIM: 6GB RAM | 128GB storage expandable up to 512GB with Hybrid slot | Dual nano SIM with dual standby (4G+4G)",
-      "manufacturer": "Samsung Galaxy",
-      "quantity": 4,
-      "price": 15999,
-      "mobileNum": 7879794565,
-      "src": "assets/samsungM40.jpg"
-    },
-    {
-      "id": 9,
-      "productName": "Oppo A31 (Mystery Black, 6GB RAM, 128GB Storage) ",
-      "productDes": "12+2+2MP triple rear camera (12MP main camera+2MP macro lens+2MP depth camera) with Portrait bokeh, macro lens, dazzle color mode, AI beautification | 8MP front camera 16.5 centimeters (6.5-inch) waterdrop multi touch screen with an 89% screen to body ratio | 1600 x 720 pixels resolution, 269 ppi pixel density,",
-      "manufacturer": "Oppo",
-      "quantity": 4,
-      "price": 14990,
-      "mobileNum": 8665744344,
-      "src": "assets/OppoA31.jpg"
-    },
-    {
-      "id": 10,
-      "productName": "OPPO F15 (Lightening Black, 8GB RAM, 128GB Storage)",
-      "productDes": "48MP+8MP+2MP+2MP rear camera with photo, video, professional mode, panorama, portrait, night scene, time-lapse photography, slow motion | 16MP front camera, 16.2 centimeters (6.4-inch) AMOLED screen display with 2400 x 1080 pixels resolution, 408 ppi pixel density and 16M color support | Gorilla glass 5 | DC screen dimming 2.0 | 90.7% screen to body ratio",
-      "manufacturer": "Oppo",
-      "quantity": 3,
-      "price": 18990,
-      "mobileNum": 7687645746,
-      "src": "assets/OPPOF15.jpg"
-    },
-    {
-      "productName": "Oppo Reno3 Pro (Midnight Black, 8GB RAM, 128GB Storage)",
-      "productDes": "64MP+13MP+8MP+2MP rear quad camera with 20x digital zoom, ultra clear 108MP image, ultra dark mode, macroshot (3 cm), ultra-wide angle, dual lens bokeh | 44MP+2MP dual punch hole front camera with ultra night mode, ultra steady video 2.0, video bokeh",
-      "manufacturer": "Oppo",
-      "quantity": 3,
-      "price": 29990,
-      "mobileNum": 9708907988,
-      "src": "assets/OppoReno3.jpg",
-      "id": 11
-    },
-    {
-      "productName": "Mr mrs",
-      "productDes": "13MP primary camera with auto focus, flash, HDR, panorama, night shot modes, front camera with bokeh suport | 5MP front facing camera 17.52 centimeters (6.9 inch) FHD IPS LCD Display multi-touch capacitive touchscreen with 1080 x 2160 pixels resolution 16M color support with 81% screen-to-body ratio",
-      "manufacturer": "Lenovo",
-      "quantity": 4,
-      "price": 45545,
-      "mobileNum": 6896789675,
-      "src": "assets/redminote8.jpg",
-      "id": 12
-    }
-  ],
-  "cart": [
-    {
-      "product": {
-        "productName": "Oppo Reno3 Pro (Midnight Black, 8GB RAM, 128GB Storage)",
-        "productDes": "64MP+13MP+8MP+2MP rear quad camera with 20x digital zoom, ultra clear 108MP image, ultra dark mode, macroshot (3 cm), ultra-wide angle, dual lens bokeh | 44MP+2MP dual punch hole front camera with ultra night mode, ultra steady video 2.0, video bokeh",
-        "manufacturer": "Oppo",
-        "quantity": 3,
-        "price": 29990,
-        "mobileNum": 9708907988,
-        "src": "assets/OppoReno3.jpg",
-        "id": 11
-      },
-      "id": 1
-    }
-  ]
+    "register": [{
+            "firstName": "Mamatha",
+            "lastName": "H",
+            "email": "mamatha@gmail.com",
+            "password": "mamatha123",
+            "location": "Pune",
+            "mobileNo": 9865754332,
+            "id": 1
+        },
+        {
+            "firstName": "new User",
+            "lastName": "asd",
+            "email": "user@gmail.com",
+            "password": "user1234567",
+            "location": "Kolkata",
+            "mobileNo": 9675674665,
+            "id": 2
+        },
+        {
+            "firstName": "a",
+            "lastName": "b",
+            "email": "ab@gmail.com",
+            "password": "1234567890",
+            "location": "Kochi",
+            "mobileNo": 9876543210,
+            "id": 3
+        }
+    ],
+    "authenticate": [{
+            "email": "mamatha@gmail.com",
+            "password": "mamatha123",
+            "id": 1
+        },
+        {
+            "email": "user@gmail.com",
+            "password": "user1234567",
+            "id": 2
+        },
+        {
+            "email": "ab@gmail.com",
+            "password": "1234567890",
+            "id": 3
+        }
+    ],
+    "Products": [{
+            "id": 0,
+            "watch": 0,
+            "productName": "Samsung Galaxy M31 (Ocean Blue, 6GB RAM, 128GB Storage)",
+            "productDes": "64MP + 8MP + 5MP + 5MP rear camera | 32MP front facing camera,16.21 centimeters (6.4-inch) FHD+ capacitive touchscreen with 2340 x 1080 pixels resolution, 404 ppi pixel density and 16M color support",
+            "manufacturer": "Samsung",
+            "quantity": "1",
+            "price": 14999,
+            "mobileNum": "947738748",
+            "src": "assets/samsunggalaxym31.jpg"
+        },
+        {
+            "id": 1,
+            "watch": 0,
+            "productName": "Redmi Note 8 Pro (Electric Blue, 6GB RAM, 128GB Storage with Helio G90T Processor)",
+            "productDes": "64MP AI Quad rear camera with Portrait ultra-wide lens, macro lens, led flash, AI support, beautify support | 20MP front facing camera, Performance: Smooth gaming experience with powerful Helio G90T gaming processor, Game turbo and Liquid cooling technology",
+            "manufacturer": "Redmi",
+            "quantity": "5",
+            "price": 16999,
+            "mobileNum": "947738748",
+            "src": "assets/redminote8.jpg"
+        },
+        {
+            "id": 2,
+            "watch": 0,
+            "productName": "Vivo U10 (Electric Blue, 5000 mAH 18W Fast Charge Battery, 3GB RAM, 32GB Storage)",
+            "productDes": "16.15 centimeters (6.35-inch) halo fullview display with 720 x 1544 pixels resolution, Memory, Storage & SIM: 3GB RAM | 32GB internal memory expandable up to 256GB | Dual SIM (nano+nano) dual-standby (4G+4G)",
+            "manufacturer": "Vivo",
+            "quantity": "4",
+            "price": 8990,
+            "mobileNum": "947738748",
+            "src": "assets/viviU10.jpg"
+        },
+        {
+            "id": 3,
+            "watch": 1,
+            "productName": "Fantastic 2.2 (Black 2GB RAM, 16GB Storage)",
+            "productDes": "13MP rear camera with AF/F2.2/1.12µm and flash | 5MP front camera with FF/F2.2/1.12µm/77° FOV and face unlock ,15.9004 centimeters (6.26-inch) with 720 x 1520 pixels resolution",
+            "manufacturer": "Fantastic",
+            "quantity": "4",
+            "price": 10000,
+            "mobileNum": 9477387484,
+            "src": "assets/technospark.jpg"
+        },
+        {
+            "id": 4,
+            "watch": 0,
+            "productName": "OnePlus 8 5G (Glacial Green 6GB RAM+128GB Storage)",
+            "productDes": "48+12+16MP triple rear camera with telephoto lens + ultrawide angle lens | 16MP front camera with 4K video capture @ 30/60 FPS, ultrashot, nightscape, portrait, pro mode, panorama, HDR, AI scene detection, RAW image,16.63 centimeters (6.55 inch) 90Hz fluid AMOLED with 2400 x 1080 pixels resolution and 402 ppi pixel density",
+            "manufacturer": "OnePlus",
+            "quantity": "6",
+            "price": 41999,
+            "mobileNum": "947738748",
+            "src": "assets/oneplus85G.jpg"
+        },
+        {
+            "id": 5,
+            "watch": 0,
+            "productName": "Samsung Galaxy M21 (Midnight Blue, 4GB RAM, 64GB Storage)",
+            "productDes": "48MP (F2.0) Main Camera +8MP (F2.2) Ultra Wide Camera +5MP(F2.2) Depth Camera | 20MP (F2.2) front facing camera 16.21 centimeters (6.4-inch) FHD+ capacitive touchscreen with 2340 x 1080 pixels resolution 16M color support",
+            "manufacturer": "Samsung",
+            "quantity": "4",
+            "price": 13499,
+            "mobileNum": "9786755666",
+            "src": "assets/samsung galaxyM21.jpg"
+        },
+        {
+            "id": 6,
+            "watch": 0,
+            "productName": "Samsung Galaxy M30s (Blue, 6GB RAM, 128GB Storage)",
+            "productDes": "48MP + 8MP + 5MP triple rear camera | 16MP front facing camera, 16.21 centimeters (6.4-inch) FHD+ capacitive touchscreen with 2340 x 1080 pixels resolution 16M color support",
+            "manufacturer": "Samsung Galaxy",
+            "quantity": 3,
+            "price": 16999,
+            "mobileNum": 9788687657,
+            "src": "assets/samsungM30s.jpg"
+        },
+        {
+            "id": 7,
+            "watch": 0,
+            "productName": "Samsung Galaxy M30 (Gradation Blue, 4GB RAM, Super AMOLED Display, 64GB Storage, 5000mAH Battery)",
+            "productDes": "13 MP + 5 MP + 5 MP Triple rear camera | 16MP front facing camera, 16.21 centimeters (6.4-inch) FHD+ multi-touch capacitive touchscreen with 2340 x 1080 pixels resolution and 16M color support, Memory, Storage and SIM: 4GB RAM | 64GB internal memory expandable up to 512GB | Dual SIM (nano+nano) dual-standby (4G+4G)",
+            "manufacturer": "Samsung Galaxy",
+            "quantity": 5,
+            "price": 12999,
+            "mobileNum": 8765445456,
+            "src": "assets/SamsungM30.jpg"
+        },
+        {
+            "id": 8,
+            "watch": 0,
+            "productName": "Samsung Galaxy M40 (Midnight Blue, 6GB RAM, 128GB Storage)",
+            "productDes": "32MP + 8MP + 5MP triple rear camera; 16MP front facing camera; Rear Camera - F Number (Multiple):F1.7 , F2.2 , F2.2, 16.00 centimeters (6.3-inch) FHD+ capacitive touchscreen with 2340 x 1080 pixels resolution 16M color support Memory, Storage & SIM: 6GB RAM | 128GB storage expandable up to 512GB with Hybrid slot | Dual nano SIM with dual standby (4G+4G)",
+            "manufacturer": "Samsung Galaxy",
+            "quantity": 4,
+            "price": 15999,
+            "mobileNum": 7879794565,
+            "src": "assets/samsungM40.jpg"
+        },
+        {
+            "id": 9,
+            "watch": 0,
+            "productName": "Oppo A31 (Mystery Black, 6GB RAM, 128GB Storage) ",
+            "productDes": "12+2+2MP triple rear camera (12MP main camera+2MP macro lens+2MP depth camera) with Portrait bokeh, macro lens, dazzle color mode, AI beautification | 8MP front camera 16.5 centimeters (6.5-inch) waterdrop multi touch screen with an 89% screen to body ratio | 1600 x 720 pixels resolution, 269 ppi pixel density,",
+            "manufacturer": "Oppo",
+            "quantity": 4,
+            "price": 14990,
+            "mobileNum": 8665744344,
+            "src": "assets/OppoA31.jpg"
+        },
+        {
+            "id": 10,
+            "watch": 0,
+            "productName": "OPPO F15 (Lightening Black, 8GB RAM, 128GB Storage)",
+            "productDes": "48MP+8MP+2MP+2MP rear camera with photo, video, professional mode, panorama, portrait, night scene, time-lapse photography, slow motion | 16MP front camera, 16.2 centimeters (6.4-inch) AMOLED screen display with 2400 x 1080 pixels resolution, 408 ppi pixel density and 16M color support | Gorilla glass 5 | DC screen dimming 2.0 | 90.7% screen to body ratio",
+            "manufacturer": "Oppo",
+            "quantity": 3,
+            "price": 18990,
+            "mobileNum": 7687645746,
+            "src": "assets/OPPOF15.jpg"
+        },
+        {
+            "productName": "Oppo Reno3 Pro (Midnight Black, 8GB RAM, 128GB Storage)",
+            "productDes": "64MP+13MP+8MP+2MP rear quad camera with 20x digital zoom, ultra clear 108MP image, ultra dark mode, macroshot (3 cm), ultra-wide angle, dual lens bokeh | 44MP+2MP dual punch hole front camera with ultra night mode, ultra steady video 2.0, video bokeh",
+            "manufacturer": "Oppo",
+            "quantity": 3,
+            "price": 29990,
+            "mobileNum": 9708907988,
+            "src": "assets/OppoReno3.jpg",
+            "id": 11,
+            "watch": 0
+        },
+        {
+            "productName": "Mr mrs",
+            "productDes": "13MP primary camera with auto focus, flash, HDR, panorama, night shot modes, front camera with bokeh suport | 5MP front facing camera 17.52 centimeters (6.9 inch) FHD IPS LCD Display multi-touch capacitive touchscreen with 1080 x 2160 pixels resolution 16M color support with 81% screen-to-body ratio",
+            "manufacturer": "Lenovo",
+            "quantity": 4,
+            "price": 45545,
+            "mobileNum": 6896789675,
+            "src": "assets/redminote8.jpg",
+            "id": 12,
+            "watch": 0
+        }
+    ],
+    "cart": [{
+            "product": {
+                "productName": "Lenovo",
+                "productDes": "13MP primary camera with auto focus, flash, HDR, panorama, night shot modes, front camera with bokeh suport | 5MP front facing camera 17.52 centimeters (6.9 inch) FHD IPS LCD Display multi-touch capacitive touchscreen with 1080 x 2160 pixels resolution 16M color support with 81% screen-to-body ratio",
+                "manufacturer": "Lenovo",
+                "quantity": 3,
+                "price": 32323,
+                "mobileNum": 9678965656,
+                "src": "assets/OPPOF15.jpg",
+                "id": 13
+            },
+            "id": 3
+        },
+        {
+            "product": {
+                "id": 0,
+                "productName": "Samsung Galaxy M31 (Ocean Blue, 6GB RAM, 128GB Storage)",
+                "productDes": "64MP + 8MP + 5MP + 5MP rear camera | 32MP front facing camera,16.21 centimeters (6.4-inch) FHD+ capacitive touchscreen with 2340 x 1080 pixels resolution, 404 ppi pixel density and 16M color support",
+                "manufacturer": "Samsung",
+                "quantity": "1",
+                "price": 14999,
+                "mobileNum": "947738748",
+                "src": "assets/samsunggalaxym31.jpg"
+            },
+            "id": 4
+        }
+    ]
 }

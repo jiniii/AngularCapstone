@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ChartOptions, ChartType, ChartDataSets } from 'chart.js';
 import { Label } from 'ng2-charts';
+import { ProductService } from 'src/app/services/product.service';
+import { Products } from 'src/app/models/user.model';
 
 @Component({
   selector: 'app-chart',
@@ -17,12 +19,21 @@ export class ChartComponent implements OnInit {
   public barChartPlugins = [];
 
   public barChartData: ChartDataSets[] = [
-    { data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A' },
-    { data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B' }
+    { data: [65, 59, 80, 81, 56, 55, 40], label: 'Top 3' },
+    { data: [28, 48, 40, 19, 80, 27, 70], label: 'Top 5' },
+    { data: [65, 59, 80, 81, 56, 55, 40], label: 'Top 10' },
   ];
-  constructor() { }
+  products: Products[];
+  constructor(private service:ProductService) { }
 
   ngOnInit() {
+    
   }
 
+  getDetails() {
+    this.service.getProduct().subscribe((product) => {
+      this.products = product;
+    })
+  }
+  
 }
