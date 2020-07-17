@@ -4,6 +4,7 @@ import { HomeComponent } from './home.component';
 import { RouterTestingModule } from '@angular/router/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { MatCardModule } from '@angular/material/card';
+import { By } from '@angular/platform-browser';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -39,5 +40,4 @@ describe('HomeComponent', () => {
     component.ngOnInit();
     expect(component.proService.getProduct).toHaveBeenCalled();
   });
-  
 });

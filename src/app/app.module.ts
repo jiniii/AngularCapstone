@@ -4,7 +4,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ChartsModule } from 'ng2-charts';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './components/about/about.component';
@@ -29,7 +28,6 @@ import { ProductService } from './services/product.service';
     HttpClientModule,
     BrowserAnimationsModule,
     MatCardModule,
-    ChartsModule
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]

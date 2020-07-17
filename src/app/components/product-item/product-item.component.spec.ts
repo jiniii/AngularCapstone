@@ -31,4 +31,12 @@ describe('ProductItemComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it('should contain "Add New Product" button', () => {
+    const heading: HTMLElement = fixture.nativeElement.querySelectorAll('button')[0];
+    expect(heading.textContent).toContain('Add New Product');
+  });
+  it('should contain "View Cart', () => {
+    const heading: HTMLElement = fixture.nativeElement.querySelectorAll('button')[1];
+    expect(heading.textContent).toContain(' View Cart');
+  });
 });

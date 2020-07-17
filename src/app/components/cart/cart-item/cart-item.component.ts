@@ -11,7 +11,7 @@ export class CartItemComponent implements OnInit {
 
   @Input() cartItem: any =[];
 
-  constructor(private cartService: CartService, private msg: MessengerService, ) { }
+  constructor(private cartService: CartService, private msg: MessengerService) { }
 
   ngOnInit() {
   }

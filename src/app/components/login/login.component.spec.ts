@@ -28,4 +28,24 @@ describe('LoginComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it('should contain "Login"', () => {
+    const heading: HTMLElement = fixture.nativeElement.querySelector('h4');
+    expect(heading.textContent).toContain('Login');
+  });
+  it('should contain "Email"', () => {
+    const heading: HTMLElement = fixture.nativeElement.querySelectorAll('label')[0];
+    expect(heading.textContent).toContain('Email');
+  });
+  it('should contain "Password"', () => {
+    const heading: HTMLElement = fixture.nativeElement.querySelectorAll('label')[1];
+    expect(heading.textContent).toContain('Password');
+  });
+  it('should contain "Login" button', () => {
+    const heading: HTMLElement = fixture.nativeElement.querySelectorAll('button')[0];
+    expect(heading.textContent).toContain('Login');
+  });
+  it('should contain "Register" anchor tag', () => {
+    const heading: HTMLElement = fixture.nativeElement.querySelector('a');
+    expect(heading.textContent).toContain('Register');
+  });
 });

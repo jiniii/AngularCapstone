@@ -24,4 +24,8 @@ describe('CartItemComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it('should contain "Remove"', () => {
+    const heading: HTMLElement = fixture.nativeElement.querySelectorAll('button')[0];
+    expect(heading.textContent).toContain('Remove');
+  });
 });

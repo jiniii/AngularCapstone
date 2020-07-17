@@ -33,4 +33,32 @@ describe('DeleteComponent', () => {
     const heading: HTMLElement = fixture.nativeElement.querySelector('h4');
     expect(heading.textContent).toContain('Delete Product');
   });
+  it('should contain "Product Name: "', () => {
+    const heading: HTMLElement = fixture.nativeElement.querySelectorAll('h6')[0];
+    expect(heading.textContent).toContain('Product Name: ');
+  });
+  it('should contain "Product Description: "', () => {
+    const heading: HTMLElement = fixture.nativeElement.querySelectorAll('h6')[1];
+    expect(heading.textContent).toContain('Product Description: ');
+  });
+  it('should contain "Product Manufacturer: "', () => {
+    const heading: HTMLElement = fixture.nativeElement.querySelectorAll('h6')[2];
+    expect(heading.textContent).toContain('Product Manufacturer: ');
+  });
+  it('should contain "Product Quantity: "', () => {
+    const heading: HTMLElement = fixture.nativeElement.querySelectorAll('h6')[3];
+    expect(heading.textContent).toContain('Product Quantity: ');
+  });
+  it('should contain "Product Price: "', () => {
+    const heading: HTMLElement = fixture.nativeElement.querySelectorAll('h6')[4];
+    expect(heading.textContent).toContain('Product Price: ');
+  });
+  it('should contain "Delete"', () => {
+    const heading: HTMLElement = fixture.nativeElement.querySelectorAll('button')[0];
+    expect(heading.textContent).toContain('Delete');
+  });
+  it('should contain "Back"', () => {
+    const heading: HTMLElement = fixture.nativeElement.querySelectorAll('button')[1];
+    expect(heading.textContent).toContain('Back');
+  });
 });

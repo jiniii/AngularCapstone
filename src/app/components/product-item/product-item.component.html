@@ -1,9 +1,10 @@
-<div class="container" style="display:inline-block">
+<div class="container display">
     <button class="add btn btn-dark" [routerLink]="['/products/addProduct']">
         Add New Product
     </button>
-    <div class="col-sm-1 col-md-4 col-lg-2" style="display:inline-block;float:right;">
-        <button routerLink="cart" class="btn btn-sm btn-dark cartbutton"><i class="fa fa-shopping-cart" aria-hidden="true"></i> View Cart</button>
+    <div class="col-sm-1 col-md-4 col-lg-2 view">
+        <button routerLink="cart" class="btn btn-sm btn-dark cartbutton"><i class="fa fa-shopping-cart"
+                aria-hidden="true"></i> View Cart</button>
     </div>
     <div class="form-group mb-4">
         <input class="form-control" type="text" [(ngModel)]="searchText" placeholder="Search">
@@ -16,8 +17,8 @@
                 <th class="th-sm">Product Name</th>
                 <th class="th-sm">Manufacturer</th>
                 <th class="th-sm">Price</th>
-                <th class="th-sm"></th>
-                <th class="th-sm"></th>
+                <th class="th-sm">Update</th>
+                <th class="th-sm">Delete</th>
                 <th class="th-sm"></th>
             </tr>
         </thead>
@@ -30,12 +31,13 @@
                 <td> <button class="dis edit" [routerLink]="['/products/update',i.id]">
                         <i class="fa fa-pencil" aria-hidden="true"></i></button>
                 </td>
-                <td> <button type="button" class="btn btn-danger dis" [routerLink]="['/products/delete',i.id]">
+                <td> 
+                    <button type="button" class="btn btn-danger dis" [routerLink]="['/products/delete',i.id]">
                         <i class="fa fa-trash" aria-hidden="true"></i></button>
                 </td>
                 <td>
-                    <button type="button" class="btn btn-sm btn-primary product-btn" (click)="handleAddToCart(i)">Add to
-                        Cart</button>
+                    <button type="button" class="btn btn-sm btn-primary product-btn" (click)="handleAddToCart(i)">
+                        Add to Cart</button>
                 </td>
             </tr>
         </tbody>

@@ -180,29 +180,16 @@
   "cart": [
     {
       "product": {
-        "productName": "Lenovo",
-        "productDes": "13MP primary camera with auto focus, flash, HDR, panorama, night shot modes, front camera with bokeh suport | 5MP front facing camera 17.52 centimeters (6.9 inch) FHD IPS LCD Display multi-touch capacitive touchscreen with 1080 x 2160 pixels resolution 16M color support with 81% screen-to-body ratio",
-        "manufacturer": "Lenovo",
+        "productName": "Oppo Reno3 Pro (Midnight Black, 8GB RAM, 128GB Storage)",
+        "productDes": "64MP+13MP+8MP+2MP rear quad camera with 20x digital zoom, ultra clear 108MP image, ultra dark mode, macroshot (3 cm), ultra-wide angle, dual lens bokeh | 44MP+2MP dual punch hole front camera with ultra night mode, ultra steady video 2.0, video bokeh",
+        "manufacturer": "Oppo",
         "quantity": 3,
-        "price": 32323,
-        "mobileNum": 9678965656,
-        "src": "assets/OPPOF15.jpg",
-        "id": 13
+        "price": 29990,
+        "mobileNum": 9708907988,
+        "src": "assets/OppoReno3.jpg",
+        "id": 11
       },
-      "id": 3
-    },
-    {
-      "product": {
-        "id": 0,
-        "productName": "Samsung Galaxy M31 (Ocean Blue, 6GB RAM, 128GB Storage)",
-        "productDes": "64MP + 8MP + 5MP + 5MP rear camera | 32MP front facing camera,16.21 centimeters (6.4-inch) FHD+ capacitive touchscreen with 2340 x 1080 pixels resolution, 404 ppi pixel density and 16M color support",
-        "manufacturer": "Samsung",
-        "quantity": "1",
-        "price": 14999,
-        "mobileNum": "947738748",
-        "src": "assets/samsunggalaxym31.jpg"
-      },
-      "id": 4
+      "id": 1
     }
   ]
 }

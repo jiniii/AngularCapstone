@@ -3,6 +3,7 @@ import { MessengerService } from 'src/app/services/messenger.service'
 import { Products } from '../../models/user.model';
 import { CartService } from 'src/app/services/cart.service';
 import { CartItem } from 'src/app/models/cart-item';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cart',
@@ -16,7 +17,8 @@ export class CartComponent implements OnInit, OnDestroy {
 
   constructor(
     private msg: MessengerService,
-    private cartService: CartService
+    private cartService: CartService,
+    private route: Router 
   ) { }
 
   /**
@@ -64,5 +66,11 @@ export class CartComponent implements OnInit, OnDestroy {
     this.cartItems.forEach(item => {
       this.cartTotal = this.cartTotal + (item.qty * item.price);
     })
+  }
+  /**
+   * to navigate back to products page
+   */
+  back() {
+    this.route.navigate(['products']);
   }
 }

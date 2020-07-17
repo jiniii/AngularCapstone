@@ -6,7 +6,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { FilterPipe } from 'src/app/filter.pipe';
 import { ProductItemComponent } from '../product-item/product-item.component';
 import { ProductsComponent } from './products.component';
-
+import { ChartComponent } from '../chart/chart.component';
+import { ChartsModule } from 'ng2-charts';
 
 describe('ProductsComponent', () => {
   let component: ProductsComponent;
@@ -15,9 +16,9 @@ describe('ProductsComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule, HttpClientTestingModule, FormsModule, NgxPaginationModule
+        RouterTestingModule, HttpClientTestingModule, FormsModule, NgxPaginationModule,ChartsModule
       ],
-      declarations: [ProductsComponent, FilterPipe, ProductItemComponent]
+      declarations: [ProductsComponent, FilterPipe, ProductItemComponent,ChartComponent]
     })
       .compileComponents();
   }));
@@ -30,5 +31,9 @@ describe('ProductsComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+  it('should contain "Mobile Products', () => {
+    const heading: HTMLElement = fixture.nativeElement.querySelector('h3');
+    expect(heading.textContent).toContain('Mobile Products');
   });
 });

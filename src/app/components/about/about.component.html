@@ -1,7 +1,8 @@
 <div class="container">
     <h3>E-commerce shopping cart</h3>
     <div *ngIf="displayUser">
-        <h6>User Details</h6>
+        <br>
+        <h5>User Details</h5>
         <label>FirstName: {{myUser.firstName}}</label><br>
         <label>LastName: {{myUser.lastName}}</label><br>
         <label>Location: {{myUser.location}}</label><br>
@@ -11,7 +12,7 @@
     </div>
     <br>
     <div *ngIf="!displayUser">
-    <p>Login to view your cart</p>
-    <p>New users? Please register !</p>
+        <p>Login to view your cart</p>
+        <p>New users? Please register !</p>
     </div>
 </div>
