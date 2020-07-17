@@ -2,15 +2,16 @@
     <h3>E-commerce shopping cart</h3>
     <div *ngIf="displayUser">
         <h6>User Details</h6>
-        <label>User FirstName: {{myUser.firstName}}</label><br>
-        <label>User LastName: {{myUser.lastName}}</label><br>
-        <label>User Location: {{myUser.location}}</label><br>
-        <label>User MobileNo: {{myUser.mobileNo}}</label><br>
-        <label>User Email Address: {{myUser.email}}</label>
+        <label>FirstName: {{myUser.firstName}}</label><br>
+        <label>LastName: {{myUser.lastName}}</label><br>
+        <label>Location: {{myUser.location}}</label><br>
+        <label>MobileNo: {{myUser.mobileNo}}</label><br>
+        <label>Email Address: {{myUser.email}}</label>
         <br>
     </div>
     <br>
+    <div *ngIf="!displayUser">
     <p>Login to view your cart</p>
-    <p>{{currentUser}}</p>
     <p>New users? Please register !</p>
+    </div>
 </div>
