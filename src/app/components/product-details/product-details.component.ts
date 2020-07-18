@@ -98,13 +98,4 @@ export class ProductDetailsComponent implements OnInit, OnDestroy {
       })
   }
 
-  /**
-   * to buy the product
-   */
-  buy() {
-    //functionality need to be added, need to send the purchased product to 
-    //server and if any item in cart list should be removed
-    confirm("Thanks for the Purchase! your Product will be delivered to your address.")
-  }
-
 }

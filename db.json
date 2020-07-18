@@ -10,31 +10,13 @@
       "id": 1
     },
     {
-      "firstName": "new User",
-      "lastName": "asd",
-      "email": "user@gmail.com",
-      "password": "user1234567",
-      "location": "Kolkata",
-      "mobileNo": 9675674665,
-      "id": 2
-    },
-    {
       "firstName": "a",
       "lastName": "b",
       "email": "ab@gmail.com",
       "password": "1234567890",
       "location": "Kochi",
       "mobileNo": 9876543210,
-      "id": 3
-    },
-    {
-      "firstName": "New",
-      "lastName": "a",
-      "email": "NewCHeck@afda",
-      "password": "adafdafa",
-      "location": "Chennai",
-      "mobileNo": 9684657446,
-      "id": 4
+      "id": 2
     }
   ],
   "authenticate": [
@@ -44,19 +26,9 @@
       "id": 1
     },
     {
-      "email": "user@gmail.com",
-      "password": "user1234567",
-      "id": 2
-    },
-    {
       "email": "ab@gmail.com",
       "password": "1234567890",
-      "id": 3
-    },
-    {
-      "email": "NewCHeck@afda",
-      "password": "adafdafa",
-      "id": 4
+      "id": 2
     }
   ],
   "Products": [
@@ -193,6 +165,10 @@
       "watch": 0
     }
   ],
-  "cart": [],
-  "buy":[]
+  "cart": [
+    
+  ],
+  "buy": [
+
+  ]
 }

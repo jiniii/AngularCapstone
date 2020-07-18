@@ -11,8 +11,10 @@
         <li class="total">
           <hr>
           <label class="alignment">Total({{cartItems.length}} items): {{ cartTotal | currency:'INR' }} </label>
+           <button type="button" class="btn btn-dark alignment product-btn" (click)="buy(cartItems)">Proceed To Buy</button>
         </li>
       </ul>
+
     </div>
   </div>
 </div>

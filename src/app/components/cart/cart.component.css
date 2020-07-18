@@ -1,5 +1,5 @@
 .bottom{
-    margin-bottom: 50px;
+    margin-bottom: 70px;
 }
 .empty-cart{
     top: 10px;
@@ -23,6 +23,12 @@
     margin-top:15px;
     margin-right: 15px;
 }
+.product-btn {
+    color: black;
+    margin-right:30px;
+    background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
+}
+
 @media screen and (max-width: 400px) and (min-width: 320px) {
    
     .mybtn{

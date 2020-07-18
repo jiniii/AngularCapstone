@@ -32,10 +32,10 @@ button {
 
 @media screen and (min-width: 360px) and (max-width: 768px) {
     .add {
-        margin: 20px 0px !important;
+        margin-top: 20px;
     }
     .view{
-        margin: 20px 0px !important;
+        margin-top: 20px !important;
         margin-left: 0px !important;
     }
 }
