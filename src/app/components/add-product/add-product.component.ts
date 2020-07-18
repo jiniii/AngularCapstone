@@ -50,7 +50,7 @@ export class AddProductComponent implements OnInit, OnDestroy {
       manufacturer: ['', Validators.required],
       quantity: ['', Validators.required],
       price: ['', Validators.required],
-      mobileNum: ['', [Validators.required, Validators.minLength(10)]],
+      mobileNum: ['', [Validators.required, Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]],
       src: ['', Validators.required],
     });;
     this.hasUnsavedChanges = false;
@@ -65,7 +65,7 @@ export class AddProductComponent implements OnInit, OnDestroy {
     this.addProducts = null;
     this.hasUnsavedChanges = null;
   }
-  
+
 
   /**
    * get f(): convenience getter for easy access to form fields
@@ -78,7 +78,6 @@ export class AddProductComponent implements OnInit, OnDestroy {
   Product() {
     this.submitted = true;
     if (this.addProducts.invalid) {
-      this.submitted = false;
       return;
     } else {
       this.myService.addProduct(this.addProducts.value).subscribe(data => {

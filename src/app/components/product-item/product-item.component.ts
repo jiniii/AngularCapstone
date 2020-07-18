@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { MessengerService } from 'src/app/services/messenger.service'
 import { CartService } from 'src/app/services/cart.service'
 import { Products } from 'src/app/models/user.model';

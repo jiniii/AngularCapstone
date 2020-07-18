@@ -24,10 +24,10 @@ export class ChartComponent implements OnInit {
     { data: [65, 59, 80, 81, 56, 55, 40], label: 'Top 10' },
   ];
   products: Products[];
-  constructor(private service:ProductService) { }
+  constructor(private service: ProductService) { }
 
   ngOnInit() {
-    
+
   }
 
   getDetails() {
@@ -35,5 +35,5 @@ export class ChartComponent implements OnInit {
       this.products = product;
     })
   }
-  
+
 }

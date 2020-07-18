@@ -23,3 +23,15 @@
     margin-top:15px;
     margin-right: 15px;
 }
+@media screen and (max-width: 400px) and (min-width: 320px) {
+   
+    .mybtn{
+        margin-top:15px;
+        width: 19%;
+        margin-right: 5px;
+    }
+    .font-shop {
+        font-size: 25px;
+    }
+
+}

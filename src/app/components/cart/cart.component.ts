@@ -18,7 +18,7 @@ export class CartComponent implements OnInit, OnDestroy {
   constructor(
     private msg: MessengerService,
     private cartService: CartService,
-    private route: Router 
+    private route: Router
   ) { }
 
   /**
