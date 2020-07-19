@@ -45,7 +45,7 @@ export class UpdateComponent implements OnInit, OnDestroy {
       mobileNum: new FormControl(''),
       src: new FormControl('')
     });;
-    this.images   = [
+    this.images = [
       "assets/technospark.jpg",
       "assets/lenovos60.jpg",
       "assets/samsung galaxyM21.jpg",
@@ -103,7 +103,7 @@ export class UpdateComponent implements OnInit, OnDestroy {
         manufacturer: new FormControl(this.products.manufacturer, Validators.required),
         quantity: new FormControl(this.products.quantity, Validators.required),
         price: new FormControl(this.products.price, Validators.required),
-        mobileNum: new FormControl(this.products.mobileNum, [Validators.required, Validators.minLength(10)]),
+        mobileNum: new FormControl(this.products.mobileNum, [Validators.required, Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]),
         src: new FormControl(this.products.src, Validators.required)
 
       });

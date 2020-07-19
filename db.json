@@ -1,5 +1,6 @@
 {
-    "register": [{
+    "register": [
+        {
             "firstName": "Mamatha",
             "lastName": "H",
             "email": "mamatha@gmail.com",
@@ -9,41 +10,29 @@
             "id": 1
         },
         {
-            "firstName": "new User",
-            "lastName": "asd",
-            "email": "user@gmail.com",
-            "password": "user1234567",
-            "location": "Kolkata",
-            "mobileNo": 9675674665,
-            "id": 2
-        },
-        {
-            "firstName": "a",
-            "lastName": "b",
-            "email": "ab@gmail.com",
-            "password": "1234567890",
+            "firstName": "Jinitha",
+            "lastName": "Paul",
+            "email": "jinitha@gmail.com",
+            "password": "jinitha123",
             "location": "Kochi",
-            "mobileNo": 9876543210,
-            "id": 3
+            "mobileNo": 9868578565,
+            "id": 2
         }
     ],
-    "authenticate": [{
+    "authenticate": [
+        {
             "email": "mamatha@gmail.com",
             "password": "mamatha123",
             "id": 1
         },
         {
-            "email": "user@gmail.com",
-            "password": "user1234567",
+            "email": "jinitha@gmail.com",
+            "password": "jinitha123",
             "id": 2
-        },
-        {
-            "email": "ab@gmail.com",
-            "password": "1234567890",
-            "id": 3
         }
     ],
-    "Products": [{
+    "Products": [
+        {
             "id": 0,
             "watch": 15,
             "productName": "Samsung Galaxy M31 (Ocean Blue, 6GB RAM, 128GB Storage)",
@@ -51,7 +40,7 @@
             "manufacturer": "Samsung",
             "quantity": "1",
             "price": 14999,
-            "mobileNum": "947738748",
+            "mobileNum": "9477387489",
             "src": "assets/samsunggalaxym31.jpg"
         },
         {
@@ -62,7 +51,7 @@
             "manufacturer": "Redmi",
             "quantity": "5",
             "price": 16999,
-            "mobileNum": "947738748",
+            "mobileNum": "9477387485",
             "src": "assets/redminote8.jpg"
         },
         {
@@ -174,44 +163,8 @@
             "src": "assets/OppoReno3.jpg",
             "id": 11,
             "watch": 0
-        },
-        {
-            "productName": "Mr mrs",
-            "productDes": "13MP primary camera with auto focus, flash, HDR, panorama, night shot modes, front camera with bokeh suport | 5MP front facing camera 17.52 centimeters (6.9 inch) FHD IPS LCD Display multi-touch capacitive touchscreen with 1080 x 2160 pixels resolution 16M color support with 81% screen-to-body ratio",
-            "manufacturer": "Lenovo",
-            "quantity": 4,
-            "price": 45545,
-            "mobileNum": 6896789675,
-            "src": "assets/redminote8.jpg",
-            "id": 12,
-            "watch": 0
         }
     ],
-    "cart": [{
-            "product": {
-                "productName": "Lenovo",
-                "productDes": "13MP primary camera with auto focus, flash, HDR, panorama, night shot modes, front camera with bokeh suport | 5MP front facing camera 17.52 centimeters (6.9 inch) FHD IPS LCD Display multi-touch capacitive touchscreen with 1080 x 2160 pixels resolution 16M color support with 81% screen-to-body ratio",
-                "manufacturer": "Lenovo",
-                "quantity": 3,
-                "price": 32323,
-                "mobileNum": 9678965656,
-                "src": "assets/OPPOF15.jpg",
-                "id": 13
-            },
-            "id": 3
-        },
-        {
-            "product": {
-                "id": 0,
-                "productName": "Samsung Galaxy M31 (Ocean Blue, 6GB RAM, 128GB Storage)",
-                "productDes": "64MP + 8MP + 5MP + 5MP rear camera | 32MP front facing camera,16.21 centimeters (6.4-inch) FHD+ capacitive touchscreen with 2340 x 1080 pixels resolution, 404 ppi pixel density and 16M color support",
-                "manufacturer": "Samsung",
-                "quantity": "1",
-                "price": 14999,
-                "mobileNum": "947738748",
-                "src": "assets/samsunggalaxym31.jpg"
-            },
-            "id": 4
-        }
-    ]
+    "cart": [],
+    "buy": []
 }

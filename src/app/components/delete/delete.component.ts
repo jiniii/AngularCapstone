@@ -16,7 +16,7 @@ export class DeleteComponent implements OnInit, OnDestroy {
 
   constructor(private route: Router,
     private activatedRoute: ActivatedRoute,
-    private proService: ProductService,
+    public proService: ProductService,
     private alertService: AlertService) { }
 
   /**

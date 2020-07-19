@@ -33,12 +33,9 @@ describe('ProductDetailsComponent', () => {
     const heading = fixture.debugElement.nativeElement.querySelector('h4');
     expect(heading.innerHTML).toBe('Product Details');
   });
-  it('should contain "Buy" button', () => {
-    const heading: HTMLElement = fixture.nativeElement.querySelectorAll('button')[0];
-    expect(heading.textContent).toContain('Buy');
-  });
+ 
   it('should contain "Back" button', () => {
-    const heading: HTMLElement = fixture.nativeElement.querySelectorAll('button')[1];
+    const heading: HTMLElement = fixture.nativeElement.querySelectorAll('button')[0];
     expect(heading.textContent).toContain('Back');
   });
 });

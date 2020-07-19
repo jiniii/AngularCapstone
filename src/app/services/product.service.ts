@@ -9,8 +9,6 @@ import { environment } from '../../environments/environment'
 })
 
 export class ProductService {
-  name: string;
-  quantity: number;
 
   constructor(private http: HttpClient) { }
 
@@ -28,6 +26,9 @@ export class ProductService {
 
   update(id, data) {
     return this.http.put(`${environment.apiUrl}/Products/${id}`, data)
+  }
+  buyProduct(data){
+    return this.http.post(`${environment.apiUrl}/buy`,data)
   }
 
   addWatch(data) {

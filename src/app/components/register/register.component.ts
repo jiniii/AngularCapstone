@@ -63,7 +63,7 @@ export class RegisterComponent implements OnInit, OnDestroy {
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(8)]],
       location: ['', Validators.required],
-      mobileNo: ['', [Validators.required, Validators.minLength(10)]],
+      mobileNo: ['', [Validators.required, Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]],
     });
     this.getRegisteredUsers();
   }
@@ -103,6 +103,7 @@ export class RegisterComponent implements OnInit, OnDestroy {
 
     // stop here if form is invalid
     if (this.form.invalid) {
+      console.log("form", this.form)
       return;
     }
     this.loading = true;

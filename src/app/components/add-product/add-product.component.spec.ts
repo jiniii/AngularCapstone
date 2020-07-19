@@ -26,10 +26,17 @@ describe('AddProductComponent', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
-
+  /*component testing*/
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should have "addProducts" populated ', () => {
+    component.ngOnInit();
+    expect(component.addProducts).toBeDefined();
+  });
+
+  /* Dom Testing*/
   it(`should render title in a h2 tag`, () => {
     const appDe: DebugElement = fixture.debugElement;
     const h1De = appDe.query(By.css('h2'));
@@ -72,5 +79,6 @@ describe('AddProductComponent', () => {
     const heading: HTMLElement = fixture.nativeElement.querySelectorAll('button')[1];
     expect(heading.textContent).toContain('Back');
   });
+  
 
 });

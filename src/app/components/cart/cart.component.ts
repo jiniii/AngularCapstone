@@ -4,6 +4,8 @@ import { Products } from '../../models/user.model';
 import { CartService } from 'src/app/services/cart.service';
 import { CartItem } from 'src/app/models/cart-item';
 import { Router } from '@angular/router';
+import { ProductService } from 'src/app/services/product.service';
+import { AlertService } from 'src/app/services/alert.service';
 
 @Component({
   selector: 'app-cart',
@@ -14,11 +16,14 @@ export class CartComponent implements OnInit, OnDestroy {
 
   cartItems: any;
   cartTotal: any;
+  purchasedProduct:any;
 
   constructor(
     private msg: MessengerService,
     private cartService: CartService,
-    private route: Router 
+    private route: Router,
+    private productSer: ProductService,
+    private alertService: AlertService
   ) { }
 
   /**
@@ -72,5 +77,16 @@ export class CartComponent implements OnInit, OnDestroy {
    */
   back() {
     this.route.navigate(['products']);
+  }
+  /**
+   * Buy product
+   * @param cartItem 
+   */
+  buy(cartItem:any){
+    this.productSer.buyProduct(cartItem).subscribe(data =>{
+      this.alertService.success('Your Product is Purchased Successfully! Thanks for the Purchase.', { keepAfterRouteChange: true });
+      this.purchasedProduct = data;
+      this.cartItems = [];
+    })
   }
 }

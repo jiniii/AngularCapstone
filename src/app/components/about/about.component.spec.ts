@@ -22,10 +22,21 @@ describe('AboutComponent', () => {
     fixture.detectChanges();
   });
 
+  /* Component testing*/
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
+  it('should have "users" populated ', () => {
+    component.ngOnInit();
+    expect(component.users).toBeDefined();
+  });
+  it('should call getRegisteredUsers() of AccountService on component Init', () => {
+    spyOn(component.accountService, 'getRegisteredUsers').and.callThrough();
+    component.ngOnInit();
+    expect(component.accountService.getRegisteredUsers).toHaveBeenCalled();
+  });
+  
+  /*Dom Testing*/
   it('should contain "E-commerce shopping cart"', () => {
     const heading: HTMLElement = fixture.nativeElement;
     expect(heading.textContent).toContain('E-commerce shopping cart');
@@ -38,5 +49,6 @@ describe('AboutComponent', () => {
     const heading: HTMLElement = fixture.nativeElement.querySelectorAll('p')[1];
     expect(heading.textContent).toEqual('New users? Please register !');
   });
+ 
 
 });

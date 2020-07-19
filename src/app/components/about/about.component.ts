@@ -12,12 +12,15 @@ export class AboutComponent implements OnInit, OnDestroy {
   myUser: any;
   displayUser: boolean = false;
 
-  constructor(private accountService: AccountService) { }
+  constructor(public accountService: AccountService) { }
 
   /**
    * ngOnInit():To initialize all the declared variables
    */
   ngOnInit(): void {
+    this.users = '';
+    this.myUser = '';
+    this.displayUser = false;
     this.currentUser = JSON.parse(localStorage.getItem("email"));
     this.getRegisteredUsers();
   }

@@ -23,7 +23,6 @@ export class CartItemComponent implements OnInit {
   removeItem(removedProduct) {
     this.cartService.removeProduct(removedProduct).subscribe(() => {
       this.msg.sendMsg(removedProduct);
-      alert("Product removed from cart Successfully!")
     })
   }
 
