@@ -2,11 +2,14 @@
     float: right;
     margin-bottom: 10px;
 }
-.view{
+
+.view {
     margin-left: 285px;
+    display: inline;
 }
-.display{
-    display:inline-block
+
+.display {
+    display: inline-block
 }
 
 a {
@@ -31,14 +34,15 @@ button {
 }
 
 @media screen and (min-width: 360px) and (max-width: 768px) {
-    .add {
+    /* .add {
         margin-top: 20px;
-    }
-    .view{
+    } */
+    .view {
         margin-top: 20px !important;
         margin-left: 0px !important;
     }
 }
+
 @media screen and (min-width: 320px) and (max-width: 359px) {
     .view {
         margin-left: -35px;

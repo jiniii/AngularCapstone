@@ -1,11 +1,11 @@
 <div class="container display">
-    <button class="add btn btn-dark" [routerLink]="['/products/addProduct']">
-        Add New Product
-    </button>
     <div class="col-sm-1 col-md-4 col-lg-2 view">
         <button routerLink="cart" class="btn btn-sm btn-dark cartbutton"><i class="fa fa-shopping-cart"
                 aria-hidden="true"></i> View Cart</button>
     </div>
+    <button class="add btn btn-dark" [routerLink]="['/products/addProduct']">
+        Add New Product
+    </button>
     <div class="form-group mb-4">
         <input class="form-control" type="text" [(ngModel)]="searchText" placeholder="Search">
     </div>
