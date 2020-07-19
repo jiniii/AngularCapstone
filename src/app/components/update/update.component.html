@@ -1,0 +1,80 @@
+<div class="container">
+    <div class="card m-3">
+        <h2 class="card-header">Update Product</h2>
+        <div class="card-body">
+            <form [formGroup]="editProduct" (ngSubmit)="updateProduct()">
+                <div class="form-group" [formGroup]="editProduct">
+                    <label>Product Name:</label>
+                    <input type="text" id="productName" class="form-control" formControlName="productName"
+                        [ngClass]="{ 'is-invalid': submitted && f.productName.errors }">
+                    <div *ngIf="submitted && f.productName.errors" class="invalid-feedback">
+                        <div *ngIf="f.productName.errors.required">Product Name is required</div>
+                    </div>
+                </div>
+
+                <div class="form-group" [formGroup]="editProduct">
+                    <label>Description:</label>
+                    <input type="text" id="productDes" class="form-control" formControlName="productDes"
+                        [ngClass]="{ 'is-invalid': submitted && f.productDes.errors }">
+                    <div *ngIf="submitted && f.productDes.errors" class="invalid-feedback">
+                        <div *ngIf="f.productDes.errors.required">Product Description is required</div>
+                    </div>
+                </div>
+
+                <div class="form-group" [formGroup]="editProduct">
+                    <label>Manufacturer:</label>
+                    <input type="text" id="productManu" class="form-control" formControlName="manufacturer"
+                        [ngClass]="{ 'is-invalid': submitted && f.manufacturer.errors }">
+                    <div *ngIf="submitted && f.manufacturer.errors" class="invalid-feedback">
+                        <div *ngIf="f.manufacturer.errors.required">Product Manufacturer is required</div>
+                    </div>
+
+                </div>
+                <div class="form-group" [formGroup]="editProduct">
+                    <label>Quantity:</label>
+                    <input type="number" id="mobileNum" class="form-control" formControlName="quantity"
+                        [ngClass]="{ 'is-invalid': submitted && f.quantity.errors }">
+                    <div *ngIf="submitted && f.quantity.errors" class="invalid-feedback">
+                        <div *ngIf="f.quantity.errors.required">Product Quantity is required</div>
+                    </div>
+                </div>
+                <div class="form-group" [formGroup]="editProduct">
+                    <label>Price:</label>
+                    <input type="number" id="productPrice" class="form-control" formControlName="price"
+                        [ngClass]="{ 'is-invalid': submitted && f.price.errors }">
+                    <div *ngIf="submitted && f.price.errors" class="invalid-feedback">
+                        <div *ngIf="f.price.errors.required">Product Price is required</div>
+                    </div>
+
+                </div>
+                <div class="form-group" [formGroup]="editProduct">
+                    <label>Mobile Number:</label>
+                    <input type="number" id="mobileNum" class="form-control"
+                        formControlName="mobileNum" [ngClass]="{ 'is-invalid': submitted && f.mobileNum.errors }" />
+                    <div *ngIf="submitted && f.mobileNum.errors" class="invalid-feedback">
+                        <div *ngIf="f.mobileNum.errors.required">Mobile Number is required</div>
+                        <div *ngIf="f.mobileNum.errors.pattern">Mobile Number must be at least 10 numbers</div>
+                    </div>
+
+                </div>
+                <div class="form-group" [formGroup]="editProduct">
+                    <label>Image:</label>
+                    <select class="custom-select" formControlName="src">
+                        <option value="">Choose your Image</option>
+                        <option *ngFor="let src of images" [ngValue]="src" (change)="changeCity($event)">{{src}}
+                        </option>
+                    </select>
+                    <div *ngIf="submitted && f.src.errors" class="invalid-feedback">
+                        <div *ngIf="f.src.errors.required">Product Image is required</div>
+                    </div>
+                </div>
+
+                <div class="form-group" [formGroup]="editProduct">
+                    <button class="btn btn-dark" type="submit">Update</button> &nbsp;
+                    <button class="btn btn-dark" (click)="cancel()">Back</button>
+                </div>
+                <p class="mt-5 mb-3 text-muted text-center">&copy; E.Cart</p>
+            </form>
+        </div>
+    </div>
+</div>

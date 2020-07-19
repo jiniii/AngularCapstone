@@ -1,0 +1,16 @@
+<h4 style="text-align: center;margin-top: 20px;">Delete Product</h4>
+<div class="container mt-5" style="text-align: left;float:right">
+
+     <label class="my-color">Product Name: </label> {{products.productName}}&nbsp;
+     <br>
+     <label class="my-color">Product Description: </label> {{products.productDes | slice: 0:80 }}...&nbsp;
+     <br>
+     <label class="my-color">Product Manufacturer: </label> {{products.manufacturer}}&nbsp;
+     <br>
+     <label class="my-color">Product Quantity: </label> {{products.quantity}}&nbsp;
+     <br>
+     <label class="my-color">Product Price: </label> {{products.price | currency:'INR'}}&nbsp;
+     <br><br>
+     <button type="button" class="btn btn-dark" (click)="delete()">Delete</button> &nbsp;
+     <button type="button" class="btn btn-dark" (click)="back()">Back</button>
+</div>

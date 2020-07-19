@@ -1,0 +1,51 @@
+<div class="container display">
+    <button class="add btn btn-dark" [routerLink]="['/products/addProduct']">
+        Add New Product
+    </button>
+    <div class="col-sm-1 col-md-4 col-lg-2 view">
+        <button routerLink="cart" class="btn btn-sm btn-dark cartbutton"><i class="fa fa-shopping-cart"
+                aria-hidden="true"></i> View Cart</button>
+    </div>
+    <div class="form-group mb-4">
+        <input class="form-control" type="text" [(ngModel)]="searchText" placeholder="Search">
+    </div>
+    <table class="table table-dark table-striped table-responsive"
+        *ngIf="(products | filter: searchText).length > 0; else noResults">
+
+        <thead>
+            <tr>
+                <th class="th-sm">Product Name</th>
+                <th class="th-sm">Manufacturer</th>
+                <th class="th-sm">Price</th>
+                <th class="th-sm">Update</th>
+                <th class="th-sm">Delete</th>
+                <th class="th-sm"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let i of products  | paginate: config | filter: searchText; let i = index">
+
+                <td><a [routerLink]="['/products',i.id]">{{i.productName | slice: 0:15}}</a></td>
+                <td>{{i.manufacturer}}</td>
+                <td>{{i.price | currency:'INR'}}</td>
+                <td> <button class="dis edit" [routerLink]="['/products/update',i.id]">
+                        <i class="fa fa-pencil" aria-hidden="true"></i></button>
+                </td>
+                <td> 
+                    <button type="button" class="btn btn-danger dis" [routerLink]="['/products/delete',i.id]">
+                        <i class="fa fa-trash" aria-hidden="true"></i></button>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-sm btn-primary product-btn" (click)="handleAddToCart(i)">
+                        Add to Cart</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
+
+    <ng-template #noResults>
+        <p>No results found for "{{searchText}}".</p>
+    </ng-template>
+</div>

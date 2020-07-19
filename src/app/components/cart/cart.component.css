@@ -1,0 +1,43 @@
+.bottom{
+    margin-bottom: 70px;
+}
+.empty-cart{
+    top: 10px;
+    margin: 5px;
+    width: 50%;
+}
+.shopping{
+    padding: 5px 5px 5px 5px;
+}
+.font-shop{
+    font-size: 30px;
+    margin-top: 15px;
+}
+.total{
+    font-size: 20px;
+}
+.alignment{
+    float: right;
+}
+.mybtn{
+    margin-top:15px;
+    margin-right: 15px;
+}
+.product-btn {
+    color: black;
+    margin-right:30px;
+    background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
+}
+
+@media screen and (max-width: 400px) and (min-width: 320px) {
+   
+    .mybtn{
+        margin-top:15px;
+        width: 19%;
+        margin-right: 5px;
+    }
+    .font-shop {
+        font-size: 25px;
+    }
+
+}

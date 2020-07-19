@@ -1,1 +1,55 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+/* @import '~bootstrap/dist/css/bootstrap.min.css'; */
+
+html,
+body {
+    height: 100%;
+    margin: 0px;
+}
+
+a {
+    cursor: pointer;
+}
+
+.app-container {
+    min-height: 320px;
+    overflow: hidden;
+}
+
+.btn-delete-user {
+    width: 40px;
+    text-align: center;
+    box-sizing: content-box;
+}
+
+.cart-item {
+    font-size: small
+}
+
+html,
+body {
+    height: 100%;
+    bottom:5px;
+}
+
+body {
+    margin: 0;
+   
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 2px;
+}
+.mt-5, .my-5 {
+    margin-top: 1rem !important;
+}
+@media screen and (min-width: 320px) and (max-width: 400px){
+    .ngx-pagination {
+        margin-left: -35px !important;
+    }
+    }
+
+

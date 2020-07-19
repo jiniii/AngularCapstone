@@ -1,0 +1,8 @@
+label {
+    font-size: large;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+.my-color{
+    color:crimson;
+}
