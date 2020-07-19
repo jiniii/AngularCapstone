@@ -1,22 +1,21 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { ReactiveFormsModule } from '@angular/forms';
+import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatCardModule } from '@angular/material/card';
+import { RouterModule } from '@angular/router';
+import { ChartsModule } from 'ng2-charts';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { FilterPipe } from 'src/app/filter.pipe';
+import { AddProductComponent } from '../add-product/add-product.component';
+import { CartItemComponent } from '../cart/cart-item/cart-item.component';
+import { CartComponent } from '../cart/cart.component';
+import { ChartComponent } from '../chart/chart.component';
+import { DeleteComponent } from '../delete/delete.component';
+import { ProductDetailsComponent } from '../product-details/product-details.component';
+import { ProductItemComponent } from '../product-item/product-item.component';
+import { UpdateComponent } from '../update/update.component';
 import { ProductsRoutingModule } from './products-routing.modules';
 import { ProductsComponent } from './products.component';
-import { UpdateComponent } from '../update/update.component';
-import { AddProductComponent } from '../add-product/add-product.component';
-import { ProductDetailsComponent } from '../product-details/product-details.component';
-import { DeleteComponent } from '../delete/delete.component';
-import { MatCardModule } from '@angular/material/card';
-import { CartComponent } from '../cart/cart.component';
-import { CartItemComponent } from '../cart/cart-item/cart-item.component';
-import { ProductItemComponent } from '../product-item/product-item.component';
-import { FilterPipe } from 'src/app/filter.pipe';
-import { NgxPaginationModule } from 'ngx-pagination';
-import { RouterModule } from '@angular/router';
-import { ChartComponent } from '../chart/chart.component';
-import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
     imports: [

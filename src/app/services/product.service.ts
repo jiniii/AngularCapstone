@@ -1,8 +1,8 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http'
-import { Products } from '../models/user.model';
 import { Observable } from 'rxjs';
-import { environment } from '../../environments/environment'
+import { environment } from '../../environments/environment';
+import { Products } from '../models/user.model';
 
 @Injectable({
   providedIn: 'root'
@@ -27,8 +27,8 @@ export class ProductService {
   update(id, data) {
     return this.http.put(`${environment.apiUrl}/Products/${id}`, data)
   }
-  buyProduct(data){
-    return this.http.post(`${environment.apiUrl}/buy`,data)
+  buyProduct(data) {
+    return this.http.post(`${environment.apiUrl}/buy`, data)
   }
 
   addWatch(data) {

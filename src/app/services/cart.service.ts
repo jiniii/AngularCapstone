@@ -1,11 +1,11 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { environment } from '../../environments/environment'
-
+import { environment } from '../../environments/environment';
 import { CartItem } from '../models/cart-item';
 import { Products } from '../models/user.model';
+
 
 @Injectable({
   providedIn: 'root'
@@ -27,7 +27,7 @@ export class CartService {
             if (cartItems[i].productId === item.product.id) {
               cartItems[i].qty++
               productExists = true
-             // cartItems[i].email
+              // cartItems[i].email
               break;
             }
           }
@@ -41,7 +41,7 @@ export class CartService {
       })
     );
   }
-  removeProduct(id){
+  removeProduct(id) {
     return this.http.delete(`${environment.apiUrl}/cart/${id}`);
   }
   addProductToCart(product: Products): Observable<any> {

@@ -1,11 +1,11 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { MessengerService } from 'src/app/services/messenger.service'
-import { Products } from '../../models/user.model';
-import { CartService } from 'src/app/services/cart.service';
-import { CartItem } from 'src/app/models/cart-item';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ProductService } from 'src/app/services/product.service';
+import { CartItem } from 'src/app/models/cart-item';
 import { AlertService } from 'src/app/services/alert.service';
+import { CartService } from 'src/app/services/cart.service';
+import { MessengerService } from 'src/app/services/messenger.service';
+import { ProductService } from 'src/app/services/product.service';
+import { Products } from '../../models/user.model';
 
 @Component({
   selector: 'app-cart',
@@ -16,7 +16,7 @@ export class CartComponent implements OnInit, OnDestroy {
 
   cartItems: any;
   cartTotal: any;
-  purchasedProduct:any;
+  purchasedProduct: any;
 
   constructor(
     private msg: MessengerService,
@@ -82,8 +82,8 @@ export class CartComponent implements OnInit, OnDestroy {
    * Buy product
    * @param cartItem 
    */
-  buy(cartItem:any){
-    this.productSer.buyProduct(cartItem).subscribe(data =>{
+  buy(cartItem: any) {
+    this.productSer.buyProduct(cartItem).subscribe(data => {
       this.alertService.success('Your Product is Purchased Successfully! Thanks for the Purchase.', { keepAfterRouteChange: true });
       this.purchasedProduct = data;
       this.cartItems = [];

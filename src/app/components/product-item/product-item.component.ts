@@ -1,7 +1,7 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { MessengerService } from 'src/app/services/messenger.service'
-import { CartService } from 'src/app/services/cart.service'
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Products } from 'src/app/models/user.model';
+import { CartService } from 'src/app/services/cart.service';
+import { MessengerService } from 'src/app/services/messenger.service';
 import { ProductService } from 'src/app/services/product.service';
 
 @Component({
@@ -63,7 +63,7 @@ export class ProductItemComponent implements OnInit, OnDestroy {
    * To change the page from current page
    * @param event 
    */
-  pageChanged(event){
+  pageChanged(event) {
     this.config.currentPage = event;
   }
   /**

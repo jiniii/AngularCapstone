@@ -5,6 +5,5 @@
   <span>{{ cartItem.qty }}</span>:
   <strong>{{ (cartItem.qty * cartItem.price) | currency:'INR' }}</strong>
   <br>
-  <button type="button" class="btn btn-dark my-btn"
-    (click)="removeItem(cartItem.id)">Remove</button>
+  <button type="button" class="btn btn-dark my-btn" (click)="removeItem(cartItem.id)">Remove</button>
 </div>

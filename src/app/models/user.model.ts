@@ -32,8 +32,4 @@ export class Products {
         this.price = price
         this.src = imageUrl
     }
-}
-export class ChartProduct {
-    watch: number;
-    productName: string;
-}  
+} 

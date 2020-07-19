@@ -1,12 +1,10 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 import { first } from 'rxjs/operators';
-import { AccountService } from '../../services/account.service';
-import { AlertService } from '../../services/alert.service'
-import { of } from 'rxjs';
-import { HttpResponse } from '@angular/common/http';
 import { User } from 'src/app/models/user.model';
+import { AccountService } from '../../services/account.service';
+import { AlertService } from '../../services/alert.service';
 
 @Component({
   selector: 'app-login',
@@ -20,7 +18,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   returnUrl: string;
   users: any;
   existingUser: any;
-  user:User
+  user: User
 
   /**
    * constructor that loads FormBuilder ,ActivatedRoute, Router, AccountService,  AlertService modules
