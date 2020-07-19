@@ -1,0 +1,15 @@
+<h3 style="padding-top: 15px;text-align: center;">E-commerce Registered User</h3>
+<div *ngIf="displayUser" style="padding-top: 15px;">
+    <h5>User Details</h5>
+    <label>FirstName: {{myUser.firstName}}</label><br>
+    <label>LastName: {{myUser.lastName}}</label><br>
+    <label>Location: {{myUser.location}}</label><br>
+    <label>MobileNo: {{myUser.mobileNo}}</label><br>
+    <label>Email Address: {{myUser.email}}</label>
+    <br>
+</div>
+<br>
+<div *ngIf="!displayUser" style="padding-top: 15px;text-align: center;">
+    <p>Login to view your cart</p>
+    <p>New users? Please register !</p>
+</div>

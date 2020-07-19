@@ -13,21 +13,6 @@
                     communities. We are smart, passionate builders with different backgrounds and goals, who
                     share a common desire to always be learning and inventing on behalf of our customers.</p>
             </div>
-            <div *ngIf="displayUser">
-                <h3>User Details</h3>
-                <label>FirstName: {{myUser.firstName}}</label><br>
-                <label>LastName: {{myUser.lastName}}</label><br>
-                <label>Location: {{myUser.location}}</label><br>
-                <label>MobileNo: {{myUser.mobileNo}}</label><br>
-                <label>Email Address: {{myUser.email}}</label>
-                <br>
-            </div>
-            <br>
-            <div *ngIf="!displayUser">
-                <p style="color: blue;">Login to view your cart</p>
-                <p style="color: blue;">New users? Please register !</p>
-            </div>
         </div>
-
     </div>
 </div>

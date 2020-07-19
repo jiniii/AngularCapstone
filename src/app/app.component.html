@@ -13,7 +13,9 @@
             <li class="nav-item ">
                 <a class="nav-link" routerLink="products" routerLinkActive="active">Products</a>
             </li>
-
+            <li class="nav-item ">
+                <a class="nav-link" routerLink="account/registeredUserDetails" routerLinkActive="active">Register Details</a>
+            </li>
             <li class="nav-item ">
                 <a class="nav-link" routerLink="about" routerLinkActive="active">About</a>
             </li>
@@ -23,7 +25,7 @@
             <button type="button" class="btn btn-outline-secondary ml-3" routerLink="account/login">
                 <i class="fa fa-fw fa-user"></i>Login</button>
         </div>
-        <a class="color nav-link" *ngIf="user" routerLink="about" routerLinkActive="active">Hello
+        <a class="color nav-link" *ngIf="user" routerLink="account/registeredUserDetails" routerLinkActive="active">Hello
             {{myUser.firstName}}!</a>
         <button class="btn btn-outline-secondary ml-3" *ngIf="user" (click)="logout()">Logout</button>
     </div>
