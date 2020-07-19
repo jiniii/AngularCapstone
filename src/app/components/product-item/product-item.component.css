@@ -33,7 +33,7 @@ button {
     background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
 }
 
-@media screen and (min-width: 360px) and (max-width: 768px) {
+@media screen and (min-width: 361px) and (max-width: 768px) {
     /* .add {
         margin-top: 20px;
     } */
@@ -43,8 +43,12 @@ button {
     }
 }
 
-@media screen and (min-width: 320px) and (max-width: 359px) {
+@media screen and (min-width: 320px) and (max-width: 360px) {
     .view {
-        margin-left: -35px;
+        padding: 0px;
+        margin-left: -5px;
+    }
+    .add {
+        padding: 5px;
     }
 }
