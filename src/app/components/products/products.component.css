@@ -29,6 +29,9 @@ button {
 .cartbutton {
     height: 40px;
 }
+.bottom{
+    margin-bottom: 50px;
+}
 
 @media screen and (min-width: 320px) and (max-width: 768px) {
     .row {
@@ -37,7 +40,5 @@ button {
   
     .cartbutton {
         margin-bottom: 10px;
-       
     }
-    
 }

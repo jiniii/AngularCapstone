@@ -1,18 +1,35 @@
-<div class="container">
-    <h3>E-commerce shopping cart</h3>
-    <div *ngIf="displayUser">
-        <br>
-        <h5>User Details</h5>
-        <label>FirstName: {{myUser.firstName}}</label><br>
-        <label>LastName: {{myUser.lastName}}</label><br>
-        <label>Location: {{myUser.location}}</label><br>
-        <label>MobileNo: {{myUser.mobileNo}}</label><br>
-        <label>Email Address: {{myUser.email}}</label>
-        <br>
-    </div>
-    <br>
-    <div *ngIf="!displayUser">
-        <p>Login to view your cart</p>
-        <p>New users? Please register !</p>
+<div class="bottom">
+    <div class="my-container">
+        <div class="padding">
+            <label style="color: #aab7b8;">ABOUT E-CART</label>
+            <h1 style="padding-top: 15px;">E-commerce shopping cart</h1>
+            <div class="sub-heading">
+                E-commerce is guided by four principles: customer obsession rather than competitor focus, passion for
+                invention, commitment to operational excellence, and long-term thinking.
+            </div>
+            <div>
+                <h3>Community</h3>
+                <p>E-cart is committed to ensuring children and young adults have the resources they need to build their
+                    best and brightest futures. We do this through philanthropy, advocacy, and educational
+                    opportunities, with a focus on under represented and underprivileged communities. E-Cart believes in
+                    using its scale for good, through programs like E-Cart Future Engineer and Disaster Relief by
+                    E-cart.</p>
+            </div>
+            <div *ngIf="displayUser">
+                <h3>User Details</h3>
+                <label>FirstName: {{myUser.firstName}}</label><br>
+                <label>LastName: {{myUser.lastName}}</label><br>
+                <label>Location: {{myUser.location}}</label><br>
+                <label>MobileNo: {{myUser.mobileNo}}</label><br>
+                <label>Email Address: {{myUser.email}}</label>
+                <br>
+            </div>
+            <br>
+            <div *ngIf="!displayUser">
+                <p style="color: blue;">Login to view your cart</p>
+                <p style="color: blue;">New users? Please register !</p>
+            </div>
+        </div>
+
     </div>
 </div>
