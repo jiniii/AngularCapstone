@@ -27,6 +27,11 @@ describe('DeleteComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it('should call getDetails() of ProductService on component Init', () => {
+    spyOn(component.proService, 'getProduct').and.callThrough();
+    component.ngOnInit();
+    expect(component.proService.getProduct).toHaveBeenCalled();
+  });
 
   it('should contain heading "Delete Product"', () => {
     const heading: HTMLElement = fixture.nativeElement.querySelector('h4');

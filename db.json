@@ -10,12 +10,12 @@
       "id": 1
     },
     {
-      "firstName": "a",
-      "lastName": "b",
-      "email": "ab@gmail.com",
-      "password": "1234567890",
+      "firstName": "Jinitha",
+      "lastName": "Paul",
+      "email": "jinitha@gmail.com",
+      "password": "jinitha123",
       "location": "Kochi",
-      "mobileNo": 9876543210,
+      "mobileNo": 9868578565,
       "id": 2
     }
   ],
@@ -26,8 +26,8 @@
       "id": 1
     },
     {
-      "email": "ab@gmail.com",
-      "password": "1234567890",
+      "email": "jinitha@gmail.com",
+      "password": "jinitha123",
       "id": 2
     }
   ],
@@ -44,15 +44,14 @@
       "src": "assets/samsunggalaxym31.jpg"
     },
     {
-      "id": 1,
-      "watch": 0,
       "productName": "Redmi Note 8 Pro (Electric Blue, 6GB RAM, 128GB Storage with Helio G90T Processor)",
       "productDes": "64MP AI Quad rear camera with Portrait ultra-wide lens, macro lens, led flash, AI support, beautify support | 20MP front facing camera, Performance: Smooth gaming experience with powerful Helio G90T gaming processor, Game turbo and Liquid cooling technology",
       "manufacturer": "Redmi",
       "quantity": "5",
       "price": 16999,
-      "mobileNum": "947738748",
-      "src": "assets/redminote8.jpg"
+      "mobileNum": 9477387485,
+      "src": "assets/redminote8.jpg",
+      "id": 1
     },
     {
       "id": 2,
@@ -165,10 +164,6 @@
       "watch": 0
     }
   ],
-  "cart": [
-    
-  ],
-  "buy": [
-
-  ]
+  "cart": [],
+  "buy": []
 }
