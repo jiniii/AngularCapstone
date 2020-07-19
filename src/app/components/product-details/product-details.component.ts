@@ -58,6 +58,7 @@ export class ProductDetailsComponent implements OnInit, OnDestroy {
     if ((this.router.url).includes("details")) {
       this.productSer.getProduct().subscribe(data => {
         this.products = data[this.productId];
+        data[this.productId].watch = data[this.productId].watch + 1;
       },
         error => {
           console.log(error);

@@ -12,10 +12,10 @@ export class ProductService {
   name: string;
   quantity: number;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   getProduct(): Observable<Products[]> {
-    return this.http.get<Products[]>(`${environment.apiUrl}/Products` );
+    return this.http.get<Products[]>(`${environment.apiUrl}/Products`);
   }
 
   deleteProduct(id) {
@@ -23,11 +23,14 @@ export class ProductService {
   }
 
   addProduct(data) {
-    return this.http.post(`${environment.apiUrl}/Products/`,data);
+    return this.http.post(`${environment.apiUrl}/Products/`, data);
   }
 
-  update(id,data) {
-    return this.http.put(`${environment.apiUrl}/Products/${id}`,data)
+  update(id, data) {
+    return this.http.put(`${environment.apiUrl}/Products/${id}`, data)
   }
 
+  addWatch(data) {
+    return this.http.post(`${environment.apiUrl}/Products/`, data);
+  }
 }
