@@ -4,6 +4,6 @@ export class Product {
     manufacturer: string;
     quantity: string;
     price: string;
-    mobileNum:number;
-    src:string;
+    mobileNum: number;
+    src: string;
 }

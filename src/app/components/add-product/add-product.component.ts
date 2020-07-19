@@ -1,8 +1,8 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ProductService } from '../../services/product.service';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AlertService } from '../../services/alert.service'
-import { FormGroup, Validators, FormBuilder } from '@angular/forms';
+import { AlertService } from '../../services/alert.service';
+import { ProductService } from '../../services/product.service';
 
 @Component({
   selector: 'app-add-product',

@@ -6,7 +6,7 @@ export class CartItem {
   productName: string;
   qty: number;
   price: number;
-  src:any;
+  src: any;
 
   constructor(id: number, product: Products, qty = 1) {
     this.id = id;

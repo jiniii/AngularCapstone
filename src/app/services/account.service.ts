@@ -1,10 +1,10 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { environment } from '../../environments/environment';
-import { User,LoggedUser } from '../models/user.model';
+import { LoggedUser, User } from '../models/user.model';
 
 @Injectable({ providedIn: 'root' })
 
@@ -49,7 +49,7 @@ export class AccountService {
         return this.http.get<User[]>(`${environment.apiUrl}/register`);
     }
 
-    getLoggedInUsers(){
+    getLoggedInUsers() {
         return this.http.get<LoggedUser[]>(`${environment.apiUrl}/authenticate`)
     }
 }

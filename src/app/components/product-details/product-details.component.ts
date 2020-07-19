@@ -1,6 +1,6 @@
-import { Component, OnInit, Input, OnDestroy } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
-import { ProductService } from '../../services/product.service'
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ProductService } from '../../services/product.service';
 
 @Component({
   selector: 'app-product-details',
@@ -58,6 +58,7 @@ export class ProductDetailsComponent implements OnInit, OnDestroy {
     if ((this.router.url).includes("details")) {
       this.productSer.getProduct().subscribe(data => {
         this.products = data[this.productId];
+        data[this.productId].watch = data[this.productId].watch + 1;
       },
         error => {
           console.log(error);

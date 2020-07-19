@@ -1,7 +1,7 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ProductService } from '../../services/product.service'
-import { Router, ActivatedRoute } from '@angular/router';
-import { AlertService } from '../../services/alert.service'
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { AlertService } from '../../services/alert.service';
+import { ProductService } from '../../services/product.service';
 
 @Component({
   selector: 'app-delete',

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Router, CanDeactivate } from '@angular/router';
+import { CanDeactivate, Router } from '@angular/router';
 import { AddProductComponent } from '../components/add-product/add-product.component';
 
 @Injectable({ providedIn: 'root' })
@@ -10,9 +10,9 @@ export class CanDeactivateFormGuard implements CanDeactivate<AddProductComponent
     ) { }
     canDeactivate(component: AddProductComponent) {
         let c = confirm("Do you want to navigate?");
-        if(c == true)
-        return component.hasUnsavedChanges === false;
-         else
-         return component.hasUnsavedChanges === true;
+        if (c == true)
+            return component.hasUnsavedChanges === false;
+        else
+            return component.hasUnsavedChanges === true;
     }
 }

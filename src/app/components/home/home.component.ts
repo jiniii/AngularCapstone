@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ProductService } from 'src/app/services/product.service';
 
 @Component({
@@ -27,8 +27,8 @@ export class HomeComponent implements OnInit, OnDestroy {
   /**
    * ngOnDestroy(): To Destroy all the declared variables
    */
-  ngOnDestroy(){
-    this.products= null;
+  ngOnDestroy() {
+    this.products = null;
   }
 
   /**
@@ -38,8 +38,8 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.proService.getProduct().subscribe(data => {
       this.products = data;
     },
-    error =>{
-      console.log(error);
-    })
+      error => {
+        console.log(error);
+      })
   }
 }
