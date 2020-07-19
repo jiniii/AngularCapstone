@@ -58,7 +58,8 @@ export class ProductDetailsComponent implements OnInit, OnDestroy {
     if ((this.router.url).includes("details")) {
       this.productSer.getProduct().subscribe(data => {
         this.products = data[this.productId];
-        data[this.productId].watch = data[this.productId].watch + 1;
+        // data[this.productId].watch = data[this.productId].watch + 1;
+        this.addWatch();
       },
         error => {
           console.log(error);
@@ -67,12 +68,17 @@ export class ProductDetailsComponent implements OnInit, OnDestroy {
     else {
       this.productSer.getProduct().subscribe(data => {
         this.products = data[this.productId];
+        this.addWatch();
       },
         error => {
           console.log(error);
         })
     }
 
+  }
+  addWatch() {
+    this.products.watch = this.products.watch + 1;
+    this.productSer.update(this.productId, this.products).subscribe(data => { });
   }
 
   /**
@@ -98,5 +104,4 @@ export class ProductDetailsComponent implements OnInit, OnDestroy {
         console.log(error);
       })
   }
-
 }

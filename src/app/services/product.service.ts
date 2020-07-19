@@ -27,11 +27,8 @@ export class ProductService {
   update(id, data) {
     return this.http.put(`${environment.apiUrl}/Products/${id}`, data)
   }
+  
   buyProduct(data) {
     return this.http.post(`${environment.apiUrl}/buy`, data)
-  }
-
-  addWatch(data) {
-    return this.http.post(`${environment.apiUrl}/Products/`, data);
   }
 }
