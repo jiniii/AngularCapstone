@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { AccountService } from 'src/app/services/account.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { AccountService } from 'src/app/services/account.service';
   templateUrl: './registration-details.component.html',
   styleUrls: ['./registration-details.component.css']
 })
-export class RegistrationDetailsComponent implements OnInit,OnDestroy {
+export class RegistrationDetailsComponent implements OnInit, OnDestroy {
   users: any;
   currentUser: string;
   myUser: any;
