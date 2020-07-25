@@ -74,7 +74,7 @@ export class AddProductComponent implements OnInit, OnDestroy {
    */
   Product() {
     this.submitted = true;
-    if (this.addProducts.invalid || this.addProducts.dirty) {
+    if (this.addProducts.invalid) {
       return;
     } else {
       this.myService.addProduct(this.addProducts.value).subscribe(data => {
@@ -90,7 +90,7 @@ export class AddProductComponent implements OnInit, OnDestroy {
    * to navigate back to products page
    */
   cancel() {
-    if(this.addProducts.dirty){
+    if(this.addProducts.invalid){
       let c = confirm("Are you Sure? Do you want to Navigate.")
         if(c == true){
           this.route.navigate(['products']);

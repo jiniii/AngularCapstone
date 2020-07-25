@@ -115,7 +115,7 @@ export class UpdateComponent implements OnInit, OnDestroy {
    */
   updateProduct() {
     this.submitted = true;
-    if (this.editProduct.invalid || this.editProduct.dirty) {
+    if (this.editProduct.invalid) {
       return;
     } else {
       this.proService.update(this.productId, this.editProduct.value).subscribe(data => {
@@ -131,7 +131,7 @@ export class UpdateComponent implements OnInit, OnDestroy {
    * cancel(): To navigate back to the products page
    */
   cancel() {
-    if(this.editProduct.dirty){
+    if(this.editProduct.invalid){
      let c = confirm("Are you Sure? Do You want to navigate.");
       if( c == true){
       this.route.navigate(['products']);
