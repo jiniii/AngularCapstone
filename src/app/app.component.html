@@ -14,9 +14,6 @@
                 <a class="nav-link" routerLink="products" routerLinkActive="active">Products</a>
             </li>
             <li class="nav-item ">
-                <a class="nav-link" routerLink="account/registeredUserDetails" routerLinkActive="active">Register Details</a>
-            </li>
-            <li class="nav-item ">
                 <a class="nav-link" routerLink="about" routerLinkActive="active">About</a>
             </li>
         </ul>
@@ -29,7 +26,6 @@
             {{myUser.firstName}}!</a>
         <button class="btn btn-outline-secondary ml-3" *ngIf="user" (click)="logout()">Logout</button>
     </div>
-
 </nav>
 
 <alert></alert>

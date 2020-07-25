@@ -16,7 +16,6 @@ export class CartComponent implements OnInit, OnDestroy {
 
   cartItems: any;
   cartTotal: any;
-  purchasedProduct: any;
 
   constructor(
     private msg: MessengerService,
@@ -85,8 +84,6 @@ export class CartComponent implements OnInit, OnDestroy {
   buy(cartItem: any) {
     this.productSer.buyProduct(cartItem).subscribe(data => {
       this.alertService.success('Your Product is Purchased Successfully! Thanks for the Purchase.', { keepAfterRouteChange: true });
-      this.purchasedProduct = data;
-      this.cartItems = [];
     })
   }
 }

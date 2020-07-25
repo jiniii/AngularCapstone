@@ -14,7 +14,6 @@ export class AddProductComponent implements OnInit, OnDestroy {
   addProducts: FormGroup;
   submitted: boolean;
   images: any;
-  hasUnsavedChanges: boolean
 
   constructor(private route: Router,
     private myService: ProductService,
@@ -53,7 +52,6 @@ export class AddProductComponent implements OnInit, OnDestroy {
       mobileNum: ['', [Validators.required, Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]],
       src: ['', Validators.required],
     });;
-    this.hasUnsavedChanges = false;
   }
 
   /**
@@ -63,7 +61,6 @@ export class AddProductComponent implements OnInit, OnDestroy {
     this.images = null;
     this.submitted = null;
     this.addProducts = null;
-    this.hasUnsavedChanges = null;
   }
 
 
@@ -77,7 +74,7 @@ export class AddProductComponent implements OnInit, OnDestroy {
    */
   Product() {
     this.submitted = true;
-    if (this.addProducts.invalid) {
+    if (this.addProducts.invalid || this.addProducts.dirty) {
       return;
     } else {
       this.myService.addProduct(this.addProducts.value).subscribe(data => {
@@ -93,6 +90,13 @@ export class AddProductComponent implements OnInit, OnDestroy {
    * to navigate back to products page
    */
   cancel() {
-    this.route.navigate(['products']);
-  }
+    if(this.addProducts.dirty){
+      let c = confirm("Are you Sure? Do you want to Navigate.")
+        if(c == true){
+          this.route.navigate(['products']);
+        }
+      } else{
+         this.route.navigate(['products']);
+      }
+    }
 }
